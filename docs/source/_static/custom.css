@@ -1,0 +1,11 @@
+.horizontal-figures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.horizontal-figures figure {
+    margin: 0;
+    flex: 0 1 auto;
+}
