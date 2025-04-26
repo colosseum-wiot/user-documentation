@@ -1,13 +1,11 @@
-=====================
-Colosseum Platform
-=====================
+===================================
+Colosseum Wireless Network Emulator
+===================================
 
-.. image:: _static/images/colosseum_logo.png
+.. image:: _static/images/logo.png
    :width: 300px
-   :alt: Colosseum Platform Logo
+   :alt: Colosseum Logo
    :align: center
-
-**The world's largest RF emulator for wireless research**
 
 .. toctree::
    :maxdepth: 2
