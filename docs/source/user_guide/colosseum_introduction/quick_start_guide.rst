@@ -14,7 +14,7 @@ If this is your first time using Colosseum, it is recommended that you complete 
 
    * The SSH Gateway is located at ``gw.colosseum.net``
    * The File Proxy Server (used to access your network storage when not logged in to an SRN) is located at ``file-proxy`` (from behind the SSH gateway)
-   * The SRNs are located at ``teamname-srn-###`` from behind the SSH gateway, where ``###`` is the SRN number, always expressed in 3-digit format, ex: 001, 043, 104
+   * The SRNs are located at ``teamname-srn###`` from behind the SSH gateway, where ``srn###`` is the SRN number, always expressed in 3-digit format, ex: 001, 043, 104
 
 
 Workflow of running an experiment in Colosseum
@@ -34,7 +34,7 @@ Workflow of running an experiment in Colosseum
 
 6. Once you've successfully made a reservation you will receive a confirmation pop-up notice. Users should reference the Colosseum website at https://experiments.colosseum.net for the most up-to-date information on their reservations.
 
-7. At your scheduled time, SSH into your SRN(s) at ``teamname-srn-###`` where ``###`` is the SRN number. Follow the instructions to :doc:`Logging into an SRN <logging_into_srn>`.
+7. At your scheduled time, SSH into your SRN(s) at ``teamname-srn###`` where ``srn###`` is the SRN number. Follow the instructions to :doc:`Logging into an SRN <logging_into_srn>`.
 
 8. Configure a scenario within the Massive Channel Emulator (MCHEM) following the instructions for scenario control through :doc:`Colosseum CLI <colosseum_cli>`. This will configure an RF channel between SRNs in your reservation.
 
