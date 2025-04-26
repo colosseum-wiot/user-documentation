@@ -7,3 +7,4 @@ User Guide
 
    colosseum_introduction/index
    colosseum_tutorials/index
+   colosseum_wiki/index
