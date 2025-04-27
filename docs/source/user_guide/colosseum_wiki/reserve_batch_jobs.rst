@@ -1,14 +1,6 @@
 Reserve Batch Jobs Without Using the Reservation Website
 =====================================================
 
-**Created:** 2020-03-31T14:59:37-04:00  
-**Updated:** 2020-03-31T14:59:37-04:00  
-
-**Tags:** batch job, API, curl, FD_V2_537243 Import
-
-Content
--------
-
 This page provides an overview of manipulating your team's Colosseum reservations without having to use the Colosseum website. A benefit of this approach is it allows a user to script job executions through their own scheduler. For example, automated batch job scheduling-and-execution of jobs during off-peak hours.
 
 The following actions are available:
@@ -128,7 +120,7 @@ Get a list of all active, pending, and completed batch jobs within a specified t
 
 .. code-block:: bash
 
-    curl -k -u username "https://experiments.colosseum.net/api/v1/batch/jobs/?start_time=EPOCH&stop_time=EPOCH"
+    curl -k -u <username> "https://experiments.colosseum.net/api/v1/batch/jobs/?start_time=<start_time_epoch>&stop_time=<stop_time_epoch>"
 
 Note: epoch refers to unix epoch time. To determine unix epoch time, use https://www.epochconverter.com/.
 
@@ -137,7 +129,7 @@ Example
 
 .. code-block:: bash
 
-    curl -k -u username "https://experiments.colosseum.net/api/v1/batch/jobs/?start_time=1537391100&stop_time=1537883000"
+    curl -k -u <username> "https://experiments.colosseum.net/api/v1/batch/jobs/?start_time=1537391100&stop_time=1537883000"
 
 Produces the following output...
 
