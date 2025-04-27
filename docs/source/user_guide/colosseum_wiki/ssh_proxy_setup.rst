@@ -1,14 +1,6 @@
 SSH Proxy Setup
 ==============
 
-**Created:** 2020-03-31T14:59:13-04:00  
-**Updated:** 2020-03-31T14:59:13-04:00  
-
-**Tags:** SSH, Proxy, FD_V2_537243 Import
-
-Content
--------
-
 Using the SSH Config File
 ------------------------
 
@@ -25,51 +17,56 @@ Procedure
 
    .. code-block:: bash
    
-       vi ~/.ssh/config
+       vim ~/.ssh/config
 
 2. Within the SSH config file, add the following lines and save the changes.
 
    .. code-block:: bash
    
-       # SSH Gateway
-       Host colosseum-gw
-           Hostname gw.colosseum.net
-           User username
-           IdentityFile ~/.ssh/id_rsa
+    # SSH Gateway
+    Host colosseum-gw
+       Hostname gw.colosseum.net
+       User username
+       IdentityFile ~/.ssh/id_rsa
        
-       # File Proxy Server
-       Host file-proxy
-           Hostname file-proxy
-           User username
-           ProxyCommand ssh -W %h:%p colosseum-gw 
+    # File Proxy Server
+    Host file-proxy
+       Hostname file-proxy
+       User username
+       ProxyCommand ssh -W %h:%p colosseum-gw 
        
-       # SRNs (User Container)
-       Host teamname-srn???
-           User root
-           StrictHostKeyChecking no
-           UserKnownHostsFile=/dev/null
-           ProxyCommand ssh -W %h:%p colosseum-gw
+    # SRNs (User Container)
+    Host teamname-srn???
+       User root
+       StrictHostKeyChecking no
+       UserKnownHostsFile=/dev/null
+       ProxyCommand ssh -W %h:%p colosseum-gw
 
-   **Note**: If you are not sure of your team name, just log into the Colosseum portal and open the "Reservations" page:
+   .. note::
 
-   **Note:** *The entry for the SSH Gateway may have already been created during the procedure to `Upload SSH Public Keys <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253402-upload-ssh-public-keys>`_.*
+    If you are not sure of your team name, just log into the Colosseum portal and open the "Reservations" page:
 
-   **Note**: The three question marks in the last entry are single-character wildcards. These will automatically match all of the SRN container hostnames. "teamname" is to be replaced by the corresponding team name.
+    .. figure:: /_static/images/user_guide/wiki/ssh_proxy_setup/team_name.png
 
-   **Note**: If a username besides root has been configured within the container to be used for SSH access, be sure to specify that username either in the config file or on the command line (for example: ssh otherusername@teamname-srn-001)
 
-   **Note**: The SRN hostnames and the file-proxy hostname listed above are only routable within the Colosseum network and are effectively "nicknames" used by the ssh command.
+   .. note::
 
-   **Note**: The default path for the private key for Linux systems is: /home/username/.ssh/id_rsa
+     * The entry for the SSH Gateway may have already been created during the procedure to :doc:`Upload SSH Public Keys <upload_ssh_keys>`
 
-3. Now it should be possible to ssh directly to one of the end destination hosts specified in the config file. For example, it should be possible to ssh to the File Proxy server using the following: ssh file-proxy. You will be prompted for a password for each intermediate host as well as the destination host.
+     * The three question marks in the last entry are single-character wildcards. These will automatically match all of the SRN container hostnames. "teamname" is to be replaced by the corresponding team name.
+
+     * The SRN hostnames and the file-proxy hostname listed above are only routable within the Colosseum network and are effectively "nicknames" used by the ssh command.
+
+     * The default path for the private key for Linux systems is: ``/home/username/.ssh/id_rsa``
+
+3. Now it should be possible to ssh directly to one of the end destination hosts specified in the config file. For example, it should be possible to ssh to the File Proxy server using the following: ``ssh file-proxy``. You will be prompted for a password for each intermediate host as well as the destination host.
 
 Details
 ------
 
 The ssh config file specifies parameters to use for specific hosts. This is a convenient way to instruct ssh to use a specific user name for specific hosts, or other similar parameters.
 
-In particular, the "ProxyCommand" parameter indicates a command to be run in order to connect to the specified host. In the example here, this instructs ssh that, for these hosts, it should first connect to the ssh gateway (gw.sc2colosseum.com) by ssh.
+In particular, the "ProxyCommand" parameter indicates a command to be run in order to connect to the specified host. In the example here, this instructs ssh that, for these hosts, it should first connect to the ssh gateway by ssh.
 
 References
 ---------

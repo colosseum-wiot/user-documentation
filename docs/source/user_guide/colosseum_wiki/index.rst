@@ -1,6 +1,6 @@
-===================
-Colosseum Platform
-===================
+==============
+Colosseum Wiki
+==============
 
 Documentation for the Colosseum Radio Frequency (RF) Emulation Testbed.
 
@@ -27,6 +27,7 @@ Platform Access
    ssh_proxy_setup
    logging_into_an_srn
    logging_into_a_gpu
+   file_upload_scp_rsync
 
 Reservations
 -----------
@@ -101,7 +102,6 @@ Scenarios and Blueprints
    scenario_looping
    environment_json_schema
    blueprints
-   training_bot_deployment
 
 News and Announcements
 --------------------
@@ -110,8 +110,3 @@ News and Announcements
    :maxdepth: 1
    
    colosseum_gpu_nodes_announcement
-
-Search
-======
-
-* :ref:`search`

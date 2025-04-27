@@ -1,14 +1,6 @@
 Collaboration Network
 =====================
 
-:Created: 2020-03-31T14:59:10-04:00
-:Updated: 2020-03-31T14:59:10-04:00
-
-:Tags: collaboration network, FD_V2_537243 Import
-
-Overview
---------
-
 The Colosseum supports a collaboration channel which allows users and bots to exchange messages outside of the RF environment. The collaboration system will be comprised of a wired IP network that connects user containers, bots, and the collaboration server. The server will act as a PUB/SUB for tracking which users and bots are available for collaboration messages. The collaboration server will publish the IPs of each user subscribed. For scrimmages and competition events, each team will only be allowed a single collaboration gateway in their network. For batch mode sessions, the user defines which nodes will function as a collaboration gateway. For interactive sessions, all nodes will be configured as a collaboration gateway to facilitate development.
 
 Network Design
@@ -58,7 +50,7 @@ For all competition events, the user collaboration gateway will be assigned by t
 Log Files
 --------
 
-Collaboration server log files and packet captures of all collaboration gateways will be saved for each session. The log files will be moved to the user's team folder on the NAS at the end of each reservation and stored in a folder named RESERVATION-### where the number corresponds to the reservation ID. The files will be named according to Table 3.
+Collaboration server log files and packet captures of all collaboration gateways will be saved for each session. The log files will be moved to the user's team folder on the NAS at the end of each reservation and stored in a folder named ``RESERVATION-###`` where the number corresponds to the reservation ID. The files will be named according to Table 3.
 
 .. list-table:: Table 3 - Collaboration System Log Files
    :header-rows: 1
@@ -67,6 +59,6 @@ Collaboration server log files and packet captures of all collaboration gateways
    * - File Type
      - Naming Format
    * - Collaboration Server Log
-     - __CollabServer_SRN_<hostname>_YYYYMMDD-HHMMSS.log
+     - <team name>_<ReservationID>_<SRN ID>_<Date-Time>.log
    * - Packet Capture Files
-     - __srn_colbr_<srn#>_YYYYMMDD-HHMMSS.pcap
+     - <team name>_<ReservationID>_<SRN ID>_<SRN_Network Bridge>_<Date-Time>.pcap

@@ -1,14 +1,6 @@
 Scenario JSON File Format
 =======================
 
-**Created:** 2020-03-31T14:59:12-04:00  
-**Updated:** 2020-03-31T14:59:12-04:00  
-
-**Tags:** json, format, radio map, FD_V2_537243 Import
-
-Content
--------
-
 RF Scenario Radio Map JSON File
 ------------------------------
 
@@ -30,7 +22,7 @@ To use this JSON file in the RF scenario request see the colosseum cli command b
 
     $ colosseumcli rf start 1 -m test.json
 
---radio-map and the name of the json must be added 
+``--radio-map`` and the name of the json must be added 
 
 JSON Examples and Descriptions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,7 +36,8 @@ Below are some descriptions of the entries in the above example:
 - ``"Node 4":{"SRN":23,"RadioA":0,"RadioB":1}`` indicates that SRN-023 USRP daughtercard A is disconnected and SRN-023 daughtercard B will be mapped to M-CHEM daughtercard 1
 - ``"Node 5":"None"`` will disregard the node completely and will not be mapped to an SRN.
 
-**Note: If a scenario has 10 Nodes, the user MUST include ALL 10 nodes in the JSON format. Colosseum will not automatically configure remaining nodes left out of the JSON file.**
+.. note::
+    If a scenario has 10 Nodes, the user MUST include ALL 10 nodes in the JSON format. Colosseum will not automatically configure remaining nodes left out of the JSON file.
 
 Traffic Scenario Node Map JSON File
 ---------------------------------

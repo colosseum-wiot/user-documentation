@@ -1,13 +1,8 @@
 Setting up and using a local SRN
 =============================
 
-**Created:** 2020-03-31T14:59:12-04:00  
-**Updated:** 2020-03-31T14:59:12-04:00  
-
-**Tags:** local, local SRN, FD_V2_537243 Import
-
-Content
--------
+.. warning::
+    The Ubuntu and dependency versions in this page are deprecated and should be updated.
 
 How to configure a user's development host to be similar to an SRN:
 -------------------------------------------------------------------
