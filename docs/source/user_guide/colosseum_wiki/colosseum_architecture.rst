@@ -1,12 +1,7 @@
 Colosseum Architecture
 =====================
 
-:Created: 2020-03-31T14:59:22-04:00
-:Updated: 2020-03-31T14:59:23-04:00
-
-:Tags: architecture, FD_V2_537243 Import
-
-The Colosseum has four Internet-facing components that users will interact with:
+The Colosseum has four Internet-facing components that users will interact with once connected to the VPN:
 
 .. list-table::
    :header-rows: 1
@@ -16,7 +11,7 @@ The Colosseum has four Internet-facing components that users will interact with:
      - Address
      - Description
    * - SSH Gateway
-     - 129.10.14.202
+     - gw.colosseum.net
      - This is the gateway for the user to access Colosseum resources 
    * - User Website
      - https://experiments.colosseum.net
@@ -41,7 +36,7 @@ From the SSH Gateway, users can access the following resources:
 
 This diagram shows a logical representation of Colosseum resources available to the user perspective.
 
-.. figure:: /_static/images/architecture.png
+.. figure:: /_static/images/user_guide/wiki/colosseum_architecture/colosseum_logical_diagram.png
    :alt: Colosseum Architecture Diagram
    :align: center
    
