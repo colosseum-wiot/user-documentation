@@ -250,6 +250,4 @@ NI/Ettus X310
    * - **Networking**
      - 10G ethernet
    * - **Reference Clock**
-     - | Internal 10 MHz
-       |
-       | https://www.ettus.com/content/files/X300_X310_Spec_Sheet.pdf
+     - Internal 10 MHz
