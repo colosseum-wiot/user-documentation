@@ -1,14 +1,6 @@
 USRP Sample Rate Benchmarks
 =========================
 
-**Created:** 2020-03-31T14:59:16-04:00  
-**Updated:** 2020-03-31T14:59:16-04:00  
-
-**Tags:** benchmarks, benchmark, UHD, USRP, USRPs, FD_V2_537243 Import
-
-Content
--------
-
 This page provides information as to the sample rates users can expect to achieve using the USRPs attached to the Colosseum SRNs.
 
 UHD Benchmarks

@@ -1,17 +1,11 @@
 USRPs
 =====
 
-**Created:** 2020-03-31T14:59:16-04:00  
-**Updated:** 2020-03-31T14:59:16-04:00  
-
-**Tags:** USRP, USRPs, FD_V2_537243 Import
-
-Content
--------
-
 This guide covers interaction with the USRPs with the default base container image. Any customization to the container image by the user may change the instructions provided here.
 
-**NOTE: DO NOT USE THE uhd_image_loader UTILITY PROVIDED IN UHD TO FLASH THE FPGA.**
+.. important::
+
+    DO NOT USE THE uhd_image_loader UTILITY PROVIDED IN UHD TO FLASH THE FPGA.
 
 USRP Connectivity
 ---------------
@@ -45,4 +39,4 @@ At the beginning of an SRN allocation, Colosseum flashes a default UHD FPGA imag
 
 Please never flash the USRPs over Ethernet (i.e. using the uhd_image_loader utility). There is no method to power cycle the USRPs, so flashing over Ethernet will not change the FPGA image you are running.
 
-For more information on accessing the FPGA (including the only supported flashing procedure), see `USRP FPGAs <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253374-usrp-fpgas>`_.
+For more information on accessing the FPGA (including the only supported flashing procedure), see :doc:`USRP FPGAs <usrp_fpgas>`.

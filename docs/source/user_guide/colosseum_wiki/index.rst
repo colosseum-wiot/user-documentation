@@ -64,7 +64,6 @@ SRN Specifications and Hardware
    usrp_sample_rate_benchmarks
    optimizing_srn_usrp_performance
    real_time_thread_priority
-   providing_gps_to_your_container
 
 Container Management
 ------------------

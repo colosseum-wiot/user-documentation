@@ -1,14 +1,6 @@
 Verifying Integrity of File Transfers
 =================================
 
-**Created:** 2020-03-31T14:59:17-04:00  
-**Updated:** 2020-03-31T14:59:17-04:00  
-
-**Tags:** file transfer, integrity, verify, verification, FD_V2_537243 Import
-
-Content
--------
-
 Most unix-based systems provide several command-line utilities for computing hashes of files. These hashes can be used to verify file integrity by calculating the hash value before and after the file transfer.
 
 Some commonly-available hash function utilities on unix-based systems:
