@@ -1,20 +1,16 @@
 USRP FPGA USB JTAG Flashing
 ==========================
 
-**Created:** 2020-03-31T14:59:15-04:00  
-**Updated:** 2020-03-31T14:59:15-04:00  
+.. warning::
 
-**Tags:** flash, flashing, USRP, FPGA, USB, JTAG, FD_V2_537243 Import
-
-Content
--------
+    This page might need revision after release of the new colosseumcli
 
 This page details how to flash a USRP FPGA image from an LXD container over USB JTAG. Note that this is the only option for programming a USRP FPGA within Colosseum. At the beginning of each SRN allocation, the stock FPGA image for the default version of UHD will be flashed to the attached USRP.
 
 Assumptions
 ---------
 
-- A stock Ettus or custom FPGA bitfile is available e.g. usrp_x310_fpga_HGS.bit
+- A stock Ettus or custom FPGA bitfile is available e.g., ``usrp_x310_fpga_HGS.bit``
 - The target USRP is attached to the machine via a USB JTAG cable
 - All SRN USRPs will be attached via USB and Ethernet. Only USB will be available to users for the purpose of changing the USRP FPGA image.
 
@@ -100,23 +96,28 @@ The first step in forwarding the USB JTAG device to a container is determining t
     Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 In this example, the second from bottom line is our JTAG device:
-**Bus 001 Device 003: ID 0403:6010 Future Technology Devices International, Ltd FT2232C Dual USB-UART/FIFO IC**
+
+.. code-block:: bash
+
+    Bus 001 Device 003: ID 0403:6010 Future Technology Devices International, Ltd FT2232C Dual USB-UART/FIFO IC
 
 Of particular interest are the bus and device numbers:
-**Bus 001 Device 003**
+
+.. code:: bash
+
+    Bus 001 Device 003
 
 In order to forward a USB device to an LXC container, the following command is called:
 
 .. code-block:: bash
 
-    lxc config device add CONTAINER usb unix-char path=/dev/bus/usb/BUS/DEVICE
+     lxc config device add <containerName> usb unix-char path=/dev/bus/usb/<busNum>/<deviceNum>
 
 Here is an example call and output:
 
 .. code-block:: bash
 
     sc2-user@sc2-srn-014:~$ lxc config device add b-fresh usb unix-char path=/dev/bus/usb/001/003
-    
     Device usb added to b-fresh
 
 After running this command, running lsusb in the container should show the same output as on the host machine and the container should have access to the JTAG device.

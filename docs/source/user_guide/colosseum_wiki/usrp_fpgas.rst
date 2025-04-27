@@ -1,13 +1,9 @@
 USRP FPGAs
 ==========
 
-**Created:** 2020-03-31T14:59:15-04:00  
-**Updated:** 2020-03-31T14:59:16-04:00  
+.. warning::
 
-**Tags:** USRP, FPGA, FD_V2_537243 Import
-
-Content
--------
+    This page might need revision after release of the new colosseumcli
 
 The FPGA within the SRN USRPs are accessible to users for development as part of their radio application. This page provides an overview of how to work with FPGAs.
 
@@ -20,26 +16,29 @@ If you encounter an error dealing with the EEPROM or find the need to flash the 
 
 If you are working with UHD, there are two options that are recommended to program the FPGA by JTAG:
 
-+-------------+--------------------------------------------+----------------------------------+---------------------------------------+
-| Utility     | Description                                | Preinstalled in Base Container?  | Recommended UHD Compatibility        |
-+=============+============================================+==================================+=======================================+
-| xc3sprog    | Light-weight utility for JTAG programming  | No                               | UHD < 3.10                           |
-|             | compatible with UHD installed in the base  |                                  |                                       |
-|             | container                                  |                                  |                                       |
-+-------------+--------------------------------------------+----------------------------------+---------------------------------------+
-| Vivado      | Design suite from Xilinx with a JTAG      | No                               | UHD >= 3.10                          |
-|             | programming utility which is compatible    |                                  |                                       |
-|             | with newer versions of UHD                 |                                  |                                       |
-+-------------+--------------------------------------------+----------------------------------+---------------------------------------+
+.. list-table:: JTAG Programming Utilities
+   :header-rows: 1
+   :widths: 15 40 20 25
+
+   * - Utility
+     - Description
+     - Preinstalled in Base Container?
+     - Recommended UHD Compatibility
+   * - xc3sprog
+     - Light-weight utility for JTAG programming compatible with UHD installed in the base container
+     - No
+     - UHD < 3.10
+   * - Vivado
+     - Design suite from Xilinx with a JTAG programming utility which is compatible with newer versions of UHD
+     - No
+     - UHD >= 3.10
 
 Default USRP FPGA Image
 ---------------------
 
-At the beginning of an SRN allocation, Colosseum flashes a default UHD FPGA image to the SRN USRP, overwriting the prior image. In order to flash the FPGA with a new image on SRN USRPs, you will need to use a USB JTAG programmer utility, which is described below. This image is available to users on the File Proxy server at:
+At the beginning of an SRN allocation, Colosseum flashes a default UHD FPGA image to the SRN USRP, overwriting the prior image. In order to flash the FPGA with a new image on SRN USRPs, you will need to use a USB JTAG programmer utility, which is described below. This image is available to users on the File Proxy server at: ``/share/nas/common/usrp_X310_fpga_HGS.bit``
 
-/share/nas/common/usrp_X310_fpga_HGS.bit
-
-For instructions on how to access the File Proxy and copy files to your team's shared drive, see the instructions for `Accessing Colosseum Resources <https://sc2colosseum.freshdesk.com/solution/articles/22000220463-accessing-colosseum-resources>`_.
+For instructions on how to access the File Proxy and copy files to your team's shared drive, see the instructions for :doc:`Accessing Colosseum Resources <../colosseum_introduction/accessing_colosseum_resources>`.
 
 USRP FPGA Interface
 -----------------
@@ -62,10 +61,9 @@ Users can load a custom x310 FPGA image using the "xc3sprog" utility on the cont
 Flashing the USRP FPGA
 --------------------
 
-Important!!!
-~~~~~~~~~~
+.. important::
 
-USB JTAG is the only method supported for flashing the USRP FPGA. Users **will not have the capability to power cycle** the FPGA and will need to be mindful of that limitation when developing and integrating with the SRN USRP FPGA.
+    USB JTAG is the only method supported for flashing the USRP FPGA. Users **will not have the capability to power cycle** the FPGA and will need to be mindful of that limitation when developing and integrating with the SRN USRP FPGA.
 
 This page details how to flash a USRP FPGA image from an LXD container over USB JTAG. Note that this is the only option for programming a USRP FPGA within Colosseum. At the beginning of each SRN allocation, the stock FPGA image for the default version of UHD will be flashed to the attached USRP.
 
@@ -246,14 +244,13 @@ In order to forward a USB device to an LXC container, the following command is c
 
 .. code-block:: bash
 
-    lxc config device add CONTAINER_NAME usb unix-char path=/dev/bus/usb/BUS/DEVICE
+    lxc config device add <containerName> usb unix-char path=/dev/bus/usb/<busNum>/<deviceNum>
 
 Here is an example call and output:
 
 .. code-block:: bash
 
     sc2-user@sc2-srn-014:~$ lxc config device add b-fresh usb unix-char path=/dev/bus/usb/001/003
-    
     Device usb added to b-fresh
 
 After running this command, running lsusb in the container should show the same output as on the host machine and the container should have access to the JTAG device.
