@@ -1,17 +1,6 @@
 Scenario Looping
 ===============
 
-**Created:** 2020-03-31T14:59:39-04:00  
-**Updated:** 2020-03-31T14:59:39-04:00  
-
-**Tags:** FD_V2_537243 Import
-
-Content
--------
-
-Overview
--------
-
 Scenario looping is a special operation of batch mode that allows users to execute RF for the same scenario multiple times.  
 
 The looping number is configurable and there are not currently any limitations to the number of loops. However, if more loops are selected than the reservation allows, the reservation will terminate before the loops are complete. Please ensure enough time is allocated in your reservation to account for loop execution. 
@@ -83,4 +72,4 @@ This example batch file demonstrates the usage of the "Loopinfo" parameter:
 References
 ---------
 
-`Batch Mode Format and Process <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253519-batch-mode-format-and-process>`_
+- :doc:`Batch Mode Format and Process <batch_mode_format>`
