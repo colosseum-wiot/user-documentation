@@ -1,14 +1,6 @@
 Colosseum CLI
 =============
 
-:Created: 2020-03-31T14:59:21-04:00
-:Updated: 2020-03-31T14:59:21-04:00
-
-:Tags: CLI, scenario control, FD_V2_537243 Import
-
-Overview
---------
-
 The ColosseumCLI is a command-line module to be installed in a user's container. The ColosseumCLI gives the users the ability to configure and control Colosseum resources (ex., traffic, RF, GPS, etc) during an interactive reservation. Note the ColosseumCLI is disabled during a batch reservation.
 
 Installing/Updating ColosseumCLI to v19.0.0
@@ -65,23 +57,21 @@ Start a RF scenario:
 
    $ colosseumcli rf start <rfid> [-m <radiomap>] [--cycle | -c]
 
-where:
 - ``<rfid>`` is a 4-digit ID from "rf scenario list"
 - optional: ``-m <radiomap>`` is a JSON-formatted file that specifies a custom SRN-to-ScenarioNode mapping.
 
-A description of the JSON format can be found on :doc:`Scenario JSON File Format <scenario_json_file_format>`.
+   - A description of the JSON format can be found on :doc:`Scenario JSON File Format <scenario_json_file_format>`.
+   - If not provided, the Colosseum will automatically create a mapping based on the following rules:
 
-If not provided, the Colosseum will automatically create a mapping based on the following rules:
+      - There will be one to one mapping of SRN IDs to Scenario Nodes.
+      - The mapping starts by mapping the lowest SRN ID to the lowest Scenario Node number.
+      - The mapping will sequentially progress from there until the number of nodes in the scenario is exhausted. If there are less SRNs allocated than number of nodes in the scenario, the higher unmapped nodes in the scenario will be disregarded by the channel emulator.
+      - If there are more SRNs than nodes in the scenario, SRNs with higher IDs will not be mapped into the channel emulator scenario.
+      - If a radiomap is used, it must define a mapping for every node in the scenario. The colosseum will NOT fill in omitted nodes in the radiomap.
 
-- There will be one to one mapping of SRN IDs to Scenario Nodes.
-- The mapping starts by mapping the lowest SRN ID to the lowest Scenario Node number.
-- The mapping will sequentially progress from there until the number of nodes in the scenario is exhausted. If there are less SRNs allocated than number of nodes in the scenario, the higher unmapped nodes in the scenario will be disregarded by the channel emulator.
-- If there are more SRNs than nodes in the scenario, SRNs with higher IDs will not be mapped into the channel emulator scenario.
-- If a radiomap is used, it must define a mapping for every node in the scenario. The colosseum will NOT fill in omitted nodes in the radiomap.
+- optional: ``--cycle`` (or ``-c``) is a flag to enable scenario repeat.
 
-optional: ``--cycle`` (or ``-c``) is a flag to enable scenario repeat.
-
-If this flag is not specified (read: do not repeat scenario), the MCHEM will clear all channels after the scenario completes and signals will not pass until a new scenario is started.
+   - If this flag is not specified (read: do not repeat scenario), the MCHEM will clear all channels after the scenario completes and signals will not pass until a new scenario is started.
 
 Stop a RF scenario:
 
@@ -89,7 +79,7 @@ Stop a RF scenario:
 
    $ colosseumcli rf stop
 
-The stop command is processed immediately, but the MCHEM RF channels may take up to 15 seconds until it is truly stopped. Therefore, it is good practice to run "rf info" after every "rf stop" to ensure MCHEM RF channels are in a stop state.
+- The stop command is processed immediately, but the MCHEM RF channels may take up to 15 seconds until it is truly stopped. Therefore, it is good practice to run "rf info" after every "rf stop" to ensure MCHEM RF channels are in a stop state.
 
 Get current/last RF scenario state:
 
@@ -120,20 +110,19 @@ Start a traffic scenario:
 
    $ colosseumcli tg start <trafid> [-m <nodemap>]
 
-where:
+
 - ``<trafid>`` is a 5-digit ID from "tg scenario list".
 - In interactive mode, all traffic starts 120 seconds after "tg start". So for example, if the mgn file specifies a start of 15.0, then traffic won't begin until 135 seconds after the user does "tg start."
 - optional: ``-m <nodemap>`` is a JSON-formatted file that specifies a custom SRN-to-ScenarioNode mapping.
 
-A description of the JSON format can be found on :doc:`Scenario JSON File Format <scenario_json_file_format>`.
+   - A description of the JSON format can be found on :doc:`Scenario JSON File Format <scenario_json_file_format>`.
+   - If not provided, the Colosseum will automatically create a mapping based on the following rules:
 
-If not provided, the Colosseum will automatically create a mapping based on the following rules:
-
-- There will be one to one mapping of SRN IDs to Scenario Nodes.
-- The mapping starts by mapping the lowest SRN ID to the lowest Scenario Node number.
-- The mapping will sequentially progress from there until the number of nodes in the scenario is exhausted. If there are less SRNs allocated than number of nodes in the scenario, the higher unmapped nodes in the scenario will be disregarded by the traffic generator.
-- If there are more SRNs than nodes in the scenario, SRNs with higher IDs will not be mapped into the traffic scenario.
-- The colosseum will not assign SRNs to omitted nodes in the node map.
+      - There will be one to one mapping of SRN IDs to Scenario Nodes.
+      - The mapping starts by mapping the lowest SRN ID to the lowest Scenario Node number.
+      - The mapping will sequentially progress from there until the number of nodes in the scenario is exhausted. If there are less SRNs allocated than number of nodes in the scenario, the higher unmapped nodes in the scenario will be disregarded by the traffic generator.
+      - If there are more SRNs than nodes in the scenario, SRNs with higher IDs will not be mapped into the traffic scenario.
+      - Colosseum will not assign SRNs to omitted nodes in the node map.
 
 Stop a traffic scenario:
 
@@ -141,7 +130,7 @@ Stop a traffic scenario:
 
    $ colosseumcli tg stop
 
-The stop command is processed immediately, but the traffic generator may take up to 15 seconds before it truly stops. Therefore, it is good practice to run "tg info" after every "tg stop" to ensure the traffic generators are in a stop state.
+- The stop command is processed immediately, but the traffic generator may take up to 15 seconds before it truly stops. Therefore, it is good practice to run "tg info" after every "tg stop" to ensure the traffic generators are in a stop state.
 
 Get current/last traffic scenario state:
 
@@ -155,28 +144,6 @@ Get the traffic node map for the current/last traffic scenario:
 
    $ colosseumcli tg nodemap
 
-GPS Scenario Control Process
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The *gps* family of commands allows the user to start and stop GPS scenarios for the current reservation. To see the positions of each node in a scenario, see :doc:`Scenarios <scenarios_summary_list>`.
-
-Start a GPS scenario:
-
-.. code-block:: bash
-
-   $ colosseumcli gps start <rfid> <nodeid>
-
-where:
-- ``<rfid>`` is a 4-digit ID from "rf scenario list".
-- ``<nodeid>`` is the node ID of a node in the RF scenario.
-- The GPS feed will immediately begin when "gps start" is entered.
-
-Stop a GPS scenario:
-
-.. code-block:: bash
-
-   $ colosseumcli gps stop
-
 USRP Control Process
 ~~~~~~~~~~~~~~~~~~
 
@@ -189,9 +156,12 @@ Get information on the USRP device:
    $ colosseumcli usrp info
 
 The info command queries the USRP device and returns a message containing:
+
 - The status of the USRP device, for example:
+
   - IDLE: the device is free and ready to use.
   - RUNNING: the device is busy operating.
+
 - The return message code (e.g., 200).
 
 Flash the USRP with a new UHD bitfile:
@@ -200,12 +170,14 @@ Flash the USRP with a new UHD bitfile:
 
    $ colosseumcli usrp flash [-f <bitfile>]
 
-The flash command flashes the USRP image with a new UHD bitfile.
+
+- The flash command flashes the USRP image with a new UHD bitfile.
 - If the ``-f <bitfile>`` option is not used, the command will flash the default USRP bitfile *usrp_x310_fpga_HGS_3_09.bit*
 - ``-f`` is optional, and specifies the name of the UHD bitfile.
-- The bitfile must be hosted in ``/share/<teamname>/usrp_images/``
-- By default, all teams have an empty usrp_images folder in their directory
-- After the bitfile image has been copied into the usrp_images directory, the command can be simply executed as ``colosseumcli usrp flash -f usrp_x310_fpga_HG.bit``
+
+   - The bitfile must be hosted in ``/share/<teamname>/usrp_images/``
+   - By default, all teams have an empty usrp_images folder in their directory
+   - After the bitfile image has been copied into the usrp_images directory, the command can be simply executed as ``colosseumcli usrp flash -f usrp_x310_fpga_HG.bit``
 
 Legacy ColosseumCLI 18.0.1 Installation (Not tested)
 -------------------------------------------------
