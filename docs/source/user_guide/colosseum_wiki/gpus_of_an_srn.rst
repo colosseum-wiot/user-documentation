@@ -1,11 +1,6 @@
 GPUs of an SRN
 ============
 
-:Created: 2020-03-31T14:59:34-04:00
-:Updated: 2020-03-31T14:59:34-04:00
-
-:Tags: GPU, cuda, nvidia, GPUs, FD_V2_537243 Import
-
 Prerequisites
 ------------
 
@@ -33,7 +28,7 @@ If neither command returns output, this likely means that the environment variab
 
 .. code-block:: bash
 
-   vi ~/.bashrc
+   vim ~/.bashrc
 
 Add the following lines to the end of the file:
 
@@ -91,6 +86,6 @@ References
 
 NVIDIA CUDA Quick Start Guide: `<https://developer.nvidia.com/compute/cuda/8.0/Prod2/docs/sidebar/CUDA_Quick_Start_Guide-pdf>`_
 
-See Section 4.1.5.1 for instructions for the Debian Installer in Ubuntu.
+- See Section 4.1.5.1 for instructions for the Debian Installer in Ubuntu.
 
 NVIDIA CUDA Toolkit Developer Information: `<https://developer.nvidia.com/cuda-toolkit>`_

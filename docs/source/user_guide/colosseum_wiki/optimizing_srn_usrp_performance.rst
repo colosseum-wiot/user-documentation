@@ -9,7 +9,7 @@ NI recommends using an LO Offset of -42 MHz for TX and +42 MHz for RX. See figur
 TX Settings
 ^^^^^^^^^^^
 
-.. figure:: /_static/images/user_guide/wiki/optimizing-srn-usrp-performance/tx_settings.png
+.. figure:: /_static/images/user_guide/wiki/optimizing_srn_usrp_performance/tx_settings.png
    :alt: TX Settings
    :align: center
 
@@ -30,7 +30,7 @@ Offset LO tuning has to be done in two steps because the radio and the digital u
 RX Settings
 ^^^^^^^^^^^
 
-.. figure:: /_static/images/user_guide/wiki/optimizing-srn-usrp-performance/rx_settings.png
+.. figure:: /_static/images/user_guide/wiki/optimizing_srn_usrp_performance/rx_settings.png
    :alt: RX Settings
    :align: center
 
