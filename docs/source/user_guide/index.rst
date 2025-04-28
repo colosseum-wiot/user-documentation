@@ -9,3 +9,4 @@ User Guide
    colosseum_tutorials/index
    colosseum_wiki/index
    scenarios/index
+   faq/index
