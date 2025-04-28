@@ -1,14 +1,6 @@
 Blueprints
 ==========
 
-:Created: 2024-05-03T11:40:32-04:00
-:Updated: 2024-05-03T11:40:32-04:00
-
-:Tags: blueprints, wiki
-
-What are Blueprints
-------------------
-
 Blueprints are predefined reservation information that can be used to pre-fill the details on the "Create New Reservation" page of the experiment website. This simplifies the process for users by reducing the need to manually select the number of nodes and their corresponding images each time. Only images from the common section are used in blueprints, as all blueprints are uniform for all users.
 
 How to use Blueprints
@@ -16,7 +8,7 @@ How to use Blueprints
 
 To use Blueprints, users can follow the steps below (refer to Figure below):
 
-1. Access the Blueprint page by clicking the Blueprint button on the top menu (see arrow number 1). `LINK HERE <https://experiments.colosseum.net/blueprints>`_.
+1. Access the `Blueprint page <https://experiments.colosseum.net/blueprints>`_ by clicking the Blueprint button on the top menu (see arrow number 1).
 
 2. On the new page, select the desired blueprint from the dropdown menu (see arrow number 2).
 
@@ -31,3 +23,8 @@ To use Blueprints, users can follow the steps below (refer to Figure below):
 
 .. note::
    Currently, users are not able to create new blueprints. If you believe that adding a new blueprint could be beneficial, please open a ticket on FreshDesk.
+
+.. figure:: /_static/images/user_guide/wiki/blueprints/blueprints_page.png
+   :width: 600px
+   :alt: Blueprints Page
+   :align: center
