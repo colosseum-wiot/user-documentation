@@ -16,7 +16,11 @@ Colosseum Wireless Network Emulator
    getting_started
    faq
    scenarios/index
-   user_guide/index
+   colosseum_introduction/index
+   colosseum_tutorials/index
+   colosseum_wiki/index
+   scenarios/index
+   faq/index
 
 Overview
 --------

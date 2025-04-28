@@ -2,10 +2,9 @@
 LTE and Wi-Fi Coexistence
 =============================
 
-Overview
---------
+**Overview**
 
-.. table:: Scenario Specifications
+.. table::
    :widths: 30 70
    
    +-------------------+------------------------------------------------+
@@ -34,8 +33,7 @@ Overview
    | Duration          | 70 seconds                                     |
    +-------------------+------------------------------------------------+
 
-Narrative
----------
+**Narrative**
 
 This scenario has been intended to study the interference of the WiFi IEEE802.11ac network on the LTE mobile UE with ISM band carrier aggregation in an urban campus scenario. In this scenario, a portion of the Northeastern University Boston campus is considered with WiFi coverage that serves students and staff with the Internet service. 
 
@@ -52,12 +50,11 @@ The green dots represent the sample of channels for the three mobile users inclu
 
    Figure 1: LTE-WiFi coexistence scenario in the Northeastern Boston campus wireless environment showing the positions of LTE BS, LTE UEs, WiFi AP, and WiFi UE.
 
-Node Placement
--------------
+**Node Placement**
 
 The table below indicates which node id's map to which label in the physically simulated wireless environment:
 
-.. table:: Node Mapping
+.. table::
    :widths: 30 70
    
    +------------+---------------+
@@ -75,8 +72,7 @@ The table below indicates which node id's map to which label in the physically s
    | 5          | WiFi UE       |
    +------------+---------------+
 
-Mobility Details
----------------
+**Mobility Details**
 
 The details for the mobility type, pattern and velocity can be found in the tables below.
 
@@ -94,10 +90,9 @@ The details for the mobility type, pattern and velocity can be found in the tabl
       :width: 200px
       :alt: Scenario table 3
 
-Scenario Parameters
-------------------
+**Scenario Parameters**
 
-.. table:: Full Scenario Parameters
+.. table::
    :widths: 30 70
    
    +------------------------+----------------------------------------+
@@ -143,7 +138,6 @@ Scenario Parameters
    | Antenna Spacing        | NA                                     |
    +------------------------+----------------------------------------+
 
-Additional Information
----------------------
+**Additional Information**
 
 See the `scenario manual </_static/docs/5005_manual.pdf>`_ for more information on how to use MATLAB to build RF scenarios for Colosseum.

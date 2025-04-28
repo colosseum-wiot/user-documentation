@@ -1,6 +1,6 @@
-=============
-RF Scenarios
-=============
+=========
+Scenarios
+=========
 
 Colosseum offers a variety of RF scenarios for different research purposes. These scenarios emulate various real-world environments and wireless conditions to enable repeatable and controlled experiments.
 
@@ -18,16 +18,6 @@ Colosseum's scenarios are characterized by:
 * **Center Frequency**: Default center frequency for the scenario
 * **Number of Nodes**: Maximum number of nodes supported in the scenario
 
-Scenario Categories
-------------------
-
-1. **LTE and Wi-Fi Coexistence** - Scenarios for studying interference between LTE and Wi-Fi networks
-2. **Integrated Access and Backhaul (IAB)** - Scenarios for testing large-scale IAB deployments in urban environments
-3. **Base Tests** - Simple scenarios with fixed pathloss, useful for basic testing
-4. **Cellular Scenarios** - Various cellular network scenarios in different locations
-5. **Urban Environments** - Scenarios modeling different urban areas (Rome, Boston, etc.)
-6. **Specialized Scenarios** - Anechoic chamber, LoRa, channel sounding, etc.
-
 Choosing a Scenario
 ------------------
 
@@ -41,13 +31,17 @@ When selecting a scenario for your experiment, consider:
 
 For assistance with scenario selection or to request custom scenarios, please contact the Colosseum support team.
 
-Selected Scenarios
-------------------
-
 .. toctree::
    :maxdepth: 2
    :caption: Available Scenarios:
 
-   lte_wifi
-   iab
+   cellular/index
+   digital_twin_scenarios
+   qualification_scenarios
+   channel_sounding_scenarios
+   fixed_pathloss_scenarios
+   real_field_scenarios
+   anechoic_chamber
+   file_format
+   test_scenarios
    other
