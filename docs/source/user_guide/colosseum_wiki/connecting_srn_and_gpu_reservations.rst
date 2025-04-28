@@ -1,11 +1,6 @@
 Connecting SRN and GPU Reservations
 =================================
 
-:Created: 2023-05-11T16:52:20-04:00
-:Updated: 2023-05-11T16:52:20-04:00
-
-:Tags: GPUs, LXC, Docker
-
 This guide helps Colosseum users to allow communication between an SRN reservation (LXC container) and a GPU reservation (Docker container).
 
 Prerequisites
@@ -83,11 +78,7 @@ This proves that the communication from SRN (LXC) to GPU (Docker) has been estab
 GPU Node
 ~~~~~~~
 
-The GPU reservation should be already all set to communicate with the SRN nodes through the can0 LXC interface.
-
-This can be tested by using the netcat command towards, for example, port 22. The IP of the can0 interface should be retrieved from the SRN node via the ifconfig command, as shown in the previous steps.
-
-For example, if the SRN ip is 172.18.1.101, the test would be similar to the following:
+The GPU reservation should be already all set to communicate with the SRN nodes through the can0 LXC interface. This can be tested by using the netcat command towards, for example, port 22. The IP of the can0 interface should be retrieved from the SRN node via the ifconfig command, as shown in the previous steps. For example, if the SRN ip is 172.18.1.101, the test would be similar to the following:
 
 .. code-block:: bash
 
