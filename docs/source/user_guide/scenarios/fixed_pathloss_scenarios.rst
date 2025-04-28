@@ -1,27 +1,30 @@
 Fixed Pathloss Scenarios
 =====================
 
-**Overview**
+Scenarios 51000-51100
+---------------------
 
 .. list-table::
    :widths: 30 70
-   :header-rows: 0
+   :header-rows: 1
 
+   * - Label
+     - Value
    * - Version
      - Formal
    * - RF ID
      - 51005, 51010, 51015, 51020, 51025, 51030
    * - RF Description
-     - 51005 (All Paths 5dB)
-     - 51010 (All Paths 10dB)
-     - 51015 (All Paths 15dB)
-     - 51020 (All Paths 20dB)
-     - 51025 (All Paths 25dB)
-     - 51030 (All Paths 30dB)
+     - 51005 (All Paths 5dB), 51010 (All Paths 10dB), 51015 (All Paths 15dB),
+       51020 (All Paths 20dB), 51025 (All Paths 25dB), 51030 (All Paths 30dB)
    * - Noise power BW (MHz)
      - 20
    * - Usable BW for transmissions (MHz)
      - 80
+   * - Traffic ID
+     - N/A
+   * - Traffic Description
+     - N/A
    * - Center Frequency
      - 1 GHz
    * - Number of Nodes
@@ -37,14 +40,12 @@ This set of scenarios derives from the base test scenario 1009 (All Paths 0 dB) 
 
 The locations of the nodes are not applicable in this set of scenarios. The channel characteristics have been created in a synthetic way. All the nodes are static, and the channel does not change during the whole scenario duration.
 
-**Scenario Parameters**
-
-.. list-table::
+.. list-table:: Parameters
    :widths: 30 70
    :header-rows: 0
 
    * - Title
-     - All Paths [5, 10, 15, 20, 25, 30]dB
+     - All Paths [5, 10, 15, 20, 25, 30] dB
    * - Scenario ID
      - 51005, 51010, 51015, 51020, 51025, 51030
    * - Scenario Duration
@@ -60,10 +61,8 @@ The locations of the nodes are not applicable in this set of scenarios. The chan
    * - Node Mobility
      - No
 
-**Channel Characteristics**
-
-.. list-table::
-   :widths: 25 25 25 25 25
+.. list-table:: Channel Characteristics
+   :widths: 15 15 15 10 20 25
    :header-rows: 1
 
    * - Scenario ID
@@ -109,31 +108,33 @@ The locations of the nodes are not applicable in this set of scenarios. The chan
      - 0
      - -30
 
-All scenarios have the same channel characteristics, i.e. single-tap with a tap delay of 0 ns for all links (also loopback 11, 22...) at 1 GHz center frequency, and differ just for the tap gain, which varies from 5 to 30 dB with 5 dB steps.
+All scenarios have the same channel characteristics, i.e. single-tap with a tap delay of 0 ns for all links (also loopback 1↔1, 2↔2, ...) at 1 GHz center frequency, and differ just for the tap gain, which varies from 5 to 30 dB with 5 dB steps.
 
-**Base 0dB Scenarios at Various Frequencies (52000-52100)**
+Base 0 dB Scenarios at Various Frequencies (52000-52100)
+-------------------------------------------------------
 
-**Overview**
-
-.. list-table::
+.. list-table:: Overview
    :widths: 30 70
-   :header-rows: 0
+   :header-rows: 1
 
+   * - Label
+     - Value
    * - Version
      - Formal
    * - RF ID
      - 52001, 52002, 52003, 52004, 52005, 52006
    * - RF Description
-     - 52001 (All Paths 0dB - 832 MHz)
-     - 52002 (All Paths 0dB - 2.4 GHz)
-     - 52003 (All Paths 0dB - 2.54 GHz)
-     - 52004 (All Paths 0dB - 3.6 GHz)
-     - 52005 (All Paths 0dB - 5.5 GHz)
-     - 52006 (All Paths 0dB - 5.9 GHz)
+     - 52001 (All Paths 0dB - 832 MHz), 52002 (All Paths 0dB - 2.4 GHz),
+       52003 (All Paths 0dB - 2.54 GHz), 52004 (All Paths 0dB - 3.6 GHz),
+       52005 (All Paths 0dB - 5.5 GHz), 52006 (All Paths 0dB - 5.9 GHz)
    * - Noise power BW (MHz)
      - 20
    * - Usable BW for transmissions (MHz)
      - 80
+   * - Traffic ID
+     - N/A
+   * - Traffic Description
+     - N/A
    * - Center Frequency
      - Various
    * - Number of Nodes
@@ -149,10 +150,31 @@ This set of scenarios derives from the base test scenario 1009 with the main dif
 
 The locations of the nodes are not applicable in this set of scenarios. The channel characteristics have been created in a synthetic way. All the nodes are static, and the channel does not change during the whole scenario duration.
 
-**Channel Characteristics**
+.. list-table:: Parameters
+   :widths: 40 60
+   :header-rows: 1
 
-.. list-table::
-   :widths: 20 20 20 20 20
+   * - Label
+     - Value
+   * - Title
+     - All Paths 0 dB - X MHz/GHz
+   * - Scenario ID
+     - 52001, 52002, 52003, 52004, 52005, 52006
+   * - Scenario Duration
+     - 1 second
+   * - Scenario Repeats at End?
+     - True
+   * - Number of Nodes
+     - 20
+   * - Center Frequency
+     - 832 MHz, 2.4 GHz, 2.54 GHz, 3.6 GHz, 5.5 GHz, 5.9 Ghz
+   * - Max Scenario Bandwidth
+     - 80 MHz
+   * - Node Mobility
+     - No
+
+.. list-table:: Channel Characteristics
+   :widths: 15 15 15 10 20 25
    :header-rows: 1
 
    * - Scenario ID
@@ -198,4 +220,4 @@ The locations of the nodes are not applicable in this set of scenarios. The chan
      - 10
      - 0
 
-All scenarios have the same channel characteristics, i.e. single-tap with a tap delay of 10 ns for all links (also loopback 11, 22...) and 0 dB pathloss, and differ just for the center frequency of operation, which varies from 832 MHz to 5.9 GHz.
+All scenarios have the same channel characteristics, i.e. single-tap with a tap delay of 10 ns for all links (also loopback 1↔1, 2↔2...) and 0 dB pathloss, and differ just for the center frequency of operation, which varies from 832 MHz to 5.9 GHz.
