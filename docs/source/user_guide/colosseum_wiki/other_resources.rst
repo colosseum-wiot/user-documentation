@@ -1,11 +1,6 @@
 Other Resources
 ==============
 
-:Created: 2020-03-31T15:00:15-04:00
-:Updated: 2020-03-31T15:00:15-04:00
-
-:Tags: FD_V2_537243 Import
-
 Software Defined Radio Resources
 -------------------------------
 
@@ -35,10 +30,6 @@ Xilinx FPGA Programming
 
 The `Xilinx FPGA <http://www.xilinx.com/support/documentation/data_sheets/ds180_7Series_Overview.pdf>`_ resources on each USRP X310 that are part of the Standard Radio Node are available to users to program. Xilinx provides many different tool chains for programming the XC7K410T FPGA. Perhaps the most comprehensive tool is the `Xilinx Vivado <https://www.xilinx.com/products/design-tools/vivado.html>`_ Design Suite.
 
-Xilinx is offering first come first serve vivado licenses to SC2 teams that may not otherwise have access to this or a similar tool chain. Requests for a Vivado Voucher in support of the DARPA Spectrum Collaboration Challenge Program will require an email to be sent to jasonv@xilinx.com, with the appropriate DARPA contact (sc2@darpa.mil) on copy of the email request. Once DARPA contact validates the requesters' participation in the program, they will send a simple response to jasonv@xilinx.com with one word "approved" or "denied".
-
-Xilinx has a list of IP cores in the Intellectual Property section of their website. This list includes those cores available for purchase and those that are bundled with Xilinx design tools. Xilinx is not planning to provide free licenses for any of those cores not bundled freely with their design tools. 
-
 CUDA
 ~~~~
 
@@ -47,13 +38,13 @@ CUDA
 Machine Learning & AI Resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Theano <http://deeplearning.net/software/theano/>`_ is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+`Theano <https://theano.readthedocs.io>`_ is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
 
 `Google's TensorFlow <https://www.tensorflow.org/>`_ is an open source software library for numerical computation using data flow graphs.
 
-`Keras <https://keras.io/>`_ is a high-level neural networks library, written in Python and capable of running on top of either `TensorFlow <https://www.tensorflow.org/>`_ or `Theano <http://deeplearning.net/software/theano/>`_.
+`Keras <https://keras.io/>`_ is a high-level neural networks library, written in Python and capable of running on top of either `TensorFlow <https://www.tensorflow.org/>`_ or `Theano <https://theano.readthedocs.io>`_.
 
-`OpenAI Gym <https://gym.openai.com/>`_ is a toolkit for developing and comparing reinforcement learning algorithms. It supports teaching agents everything from walking to playing games like Pong or Go.
+`Gymnasium <https://gymnasium.farama.org/>`_ is a toolkit for developing and comparing reinforcement learning algorithms. It supports teaching agents everything from walking to playing games like Pong or Go.
 
 `scikit-learn <http://scikit-learn.org/stable/>`_ is an opensource machine learning toolbox for Python
 

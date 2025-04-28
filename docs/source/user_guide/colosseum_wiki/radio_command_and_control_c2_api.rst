@@ -1,14 +1,6 @@
 Radio Command and Control (C2) API
 ================================
 
-**Created:** 2020-03-31T15:00:15-04:00  
-**Updated:** 2020-03-31T15:00:15-04:00  
-
-**Tags:** C2, API, radio, radio.conf, status.sh, statistics.sh, stop.sh, start.sh, colosseum_config.ini, FD_V2_537243 Import
-
-Content
--------
-
 RadioAPI Overview
 ----------------
 
@@ -21,7 +13,7 @@ The RadioAPI provides the following scenario control functions:
 - Mandated Outcomes: provide scenario-specific performance objective updates during scenario execution
 - Environment Updates: provide scenario-specific configuration parameter updates during scenario execution, such as available bandwidth, incumbent protection directives, and scenario stage resets
 
-Example RadioAPI scripts with default behavior can be found here: **https://gitlab.com/darpa-sc2-phase2/radio-api/**
+Example RadioAPI scripts with default behavior can be found `here <https://gitlab.com/darpa-sc2-phase2/radio-api/>`_.
 
 RadioAPI Update Log
 ~~~~~~~~~~~~~~~~~~
@@ -76,10 +68,19 @@ See the diagram below for the radio life cycle.
 
 The following timing limits will be enforced:
 
-- The radio has 10 minutes to get to READY once the batch job is running. Even if it is not READY at 10 minutes, start.sh will be called anyway. Note: this 10 minutes includes container instantiation time; so if your container takes 3 minutes to start up, then you only have 7 minutes left for any user-side startup-and-configure routines. - **Note that at the 10 minute mark of the reservation, the radio must return the READY state when status.sh is called in order to proceed to the ACTIVE stage of the reservation**
+- The radio has 10 minutes to get to READY once the batch job is running. Even if it is not READY at 10 minutes, start.sh will be called anyway. Note: this 10 minutes includes container instantiation time; so if your container takes 3 minutes to start up, then you only have 7 minutes left for any user-side startup-and-configure routines.
+
+ .. note::
+    At the 10 minute mark of the reservation, the radio must return the READY state when status.sh is called in order to proceed to the ACTIVE stage of the reservation
+
 - If the container is loaded and allocated within 5 minutes of the start of the reservation, its state will automatically be set to READY
 - It is recommended that status.sh be configured to return READY as soon as your radio application is prepared to enter the ACTIVE state
 - The radio has 2 minutes to log collect once stop.sh is called. If the log collect is not FINISHED within two minutes, the container will be stopped anyway (and whatever unfinished log collect is lost forever).
+
+.. figure:: /_static/images/user_guide/wiki/radio_command_and_control_c2_api/batch_workflow.png
+   :width: 600px
+   :alt: Batch Job Workflow
+   :align: center
 
 Radio State Descriptions
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -101,6 +102,10 @@ Parameters defined in these files are provided at the beginning of a reservation
 
 Mandated Outcomes Overview
 -------------------------
+
+.. warning::
+
+    Mandated outcome support is limited at this time
 
 Mandated Outcomes represent a set of objectives in a scenario that CIRNs must accomplish. Each CIRN must successfully complete its given Mandated Outcomes in order for the ensemble to succeed.
 
@@ -152,30 +157,48 @@ The colosseum_config.ini file is a INI-formatted, colosseum-generated configurat
 
 The fields in the colosseum_config.ini file are as follows:
 
-+---------------------+-------------+---------+----------------------------------------------------+
-| Parameter Name      | Format      | Units   | Description                                        |
-+=====================+=============+=========+====================================================+
-| center_frequency    | Integer     | Hz      | The center frequency of the scenario selected in   |
-|                     |             |         | the batch file.                                    |
-+---------------------+-------------+---------+----------------------------------------------------+
-| rf_bandwidth        | Integer     | Hz      | The allowed transmission bandwidth of the scenario |
-|                     |             |         | selected in the batch file.                        |
-|                     |             |         | **Note: Some scenarios have dynamic bandwidths.    |
-|                     |             |         | When bandwidth changes, users will be notified via |
-|                     |             |         | the environment.json by the Environment Updates    |
-|                     |             |         | feature.**                                         |
-+---------------------+-------------+---------+----------------------------------------------------+
-| collab_server_ip    | IP address  | N/A     | The IP address of the collaboration server and     |
-|                     | string      |         | associated port definitions.                       |
-|                     |             |         | For more information, see the Collaboration        |
-|                     |             |         | Protocol Specification.                            |
-+---------------------+-------------+---------+----------------------------------------------------+
-| collab_server_port  | Integer     | N/A     |                                                    |
-+---------------------+-------------+---------+----------------------------------------------------+
-| collab_client_port  | Integer     | N/A     |                                                    |
-+---------------------+-------------+---------+----------------------------------------------------+
-| collab_peer_port    | Integer     | N/A     |                                                    |
-+---------------------+-------------+---------+----------------------------------------------------+
+.. list-table:: Parameters
+   :widths: 20 15 10 55
+   :header-rows: 1
+
+   * - Parameter Name
+     - Format
+     - Units
+     - Description
+   * - center_frequency
+     - Integer
+     - Hz
+     - The center frequency of the scenario selected in the batch file.
+   * - rf_bandwidth
+     - Integer
+     - Hz
+     - The allowed transmission bandwidth of the scenario selected in the batch file.
+       
+       Note: Some scenarios have dynamic bandwidths. When bandwidth changes, users will be notified via the environment.json by the Environment Updates feature.
+   * - collab_server_ip
+     - IP address string
+     - N/A
+     - The IP address of the collaboration server and associated port definitions.
+       
+       For more information, see the Collaboration Protocol Specification.
+   * - collab_server_port
+     - Integer
+     - N/A
+     - The IP address of the collaboration server and associated port definitions.
+       
+       For more information, see the Collaboration Protocol Specification.
+   * - collab_client_port
+     - Integer
+     - N/A
+     - The IP address of the collaboration server and associated port definitions.
+       
+       For more information, see the Collaboration Protocol Specification.
+   * - collab_peer_port
+     - Integer
+     - N/A
+     - The IP address of the collaboration server and associated port definitions.
+       
+       For more information, see the Collaboration Protocol Specification.
 
 A.2 radio.conf
 ~~~~~~~~~~~~
@@ -194,52 +217,59 @@ mandated_outcomes.json is a json formatted file provided by Colosseum to every r
 
 The fields of each traffic goal in the list of goals in the mandated_outcomes.json file are as follows:
 
-+-------------------------+-------------+---------+----------------------------------------------------+
-| Parameter Name          | Format      | Units   | Description                                        |
-+=========================+=============+=========+====================================================+
-| goal_type               | string      | N/A     | This defines the type of outcome specified.        |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| flow_uid                | integer     | N/A     | The Flow Unique Identifier (Flow UID) is an        |
-|                         |             |         | integer than can be used to map between the        |
-|                         |             |         | individual objectives in mandated_outcomes. By     |
-|                         |             |         | policy, flow_uid will be used for both the flow_id |
-|                         |             |         | and destination port number for all MGEN flows.    |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| goal_set                | string      | N/A     | This defines which set of goals the mandated       |
-|                         |             |         | outcome maps to when visualizing scenario          |
-|                         |             |         | performance.                                       |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| hold_period             | integer     | seconds | This defines the period of time the requirements   |
-|                         |             |         | must be continuously met to satisfy the mandated   |
-|                         |             |         | outcome.                                           |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| requirements            | dictionary  | N/A     | A mapping between requirement name and the value   |
-|                         |             |         | specified for that requirement. One or more        |
-|                         |             |         | requirements will be specified for each goal type. |
-|                         |             |         | If a particular requirement is not specified then  |
-|                         |             |         | traffic associated with the flow will not be       |
-|                         |             |         | scored against that requirement. See below for     |
-|                         |             |         | descriptions of all of the potential requirements  |
-|                         |             |         | fields.                                            |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| **Potential Requirement Fields**                                                                     |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| max_latency_s           | float       | seconds | The maximum allowed latency in seconds for a       |
-|                         |             |         | packet to be counted by the scoring engine.        |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| min_throughput_bps      | float       | bits per| The minimum throughput in bits per second that    |
-|                         |             | second  | must be achieved for a flow to be considered to be |
-|                         |             |         | meeting its goal over a scoring interval.          |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| file_transfer_deadline_s| float       | seconds | The maximum per-packet time allowed for a file    |
-|                         |             |         | transfer. For example, if this field is set to    |
-|                         |             |         | 10.0, then every individual packet in this         |
-|                         |             |         | transfer must be received within 10.0 seconds from |
-|                         |             |         | the time of delivery (of that individual packet)   |
-|                         |             |         | in order to be considered successful.              |
-+-------------------------+-------------+---------+----------------------------------------------------+
-| file_size_bytes         | integer     | bytes   | The size of the file to be transferred, in bytes.  |
-+-------------------------+-------------+---------+----------------------------------------------------+
+.. list-table:: Parameters
+   :widths: 20 15 10 55
+   :header-rows: 1
+
+   * - Parameter Name
+     - Format
+     - Units
+     - Description
+   * - goal_type
+     - string
+     - N/A
+     - This defines the type of outcome specified.
+   * - flow_uid
+     - integer
+     - N/A
+     - The Flow Unique Identifier (Flow UID) is an integer than can be used to map between the individual objectives in mandated_outcomes. By policy, flow_uid will be used for both the flow_id and destination port number for all MGEN flows.
+   * - goal_set
+     - string
+     - N/A
+     - This defines which set of goals the mandated outcome maps to when visualizing scenario performance.
+   * - hold_period
+     - integer
+     - seconds
+     - This defines the period of time the requirements must be continuously met to satisfy the mandated outcome.
+   * - requirements
+     - dictionary
+     - N/A
+     - A mapping between requirement name and the value specified for that requirement. One or more requirements will be specified for each goal type. If a particular requirement is not specified then traffic associated with the flow will not be scored against that requirement. See below for descriptions of all of the potential requirements fields.
+
+.. list-table:: Potential Requirement Fields
+   :widths: 20 15 10 55
+   :header-rows: 1
+
+   * - Parameter Name
+     - Format
+     - Units
+     - Description
+   * - max_latency_s
+     - float
+     - seconds
+     - The maximum allowed latency in seconds for a packet to be counted by the scoring engine.
+   * - min_throughput_bps
+     - float
+     - bits per second
+     - The minimum throughput in bits per second that must be achieved for a flow to be considered to be meeting its goal over a scoring interval.
+   * - file_transfer_deadline_s
+     - float
+     - seconds
+     - The maximum per-packet time allowed for a file transfer. For example, if this field is set to 10.0, then every individual packet in this transfer must be received within 10.0 seconds from the time of delivery (of that individual packet) in order to be considered successful.
+   * - file_size_bytes
+     - integer
+     - bytes
+     - The size of the file to be transferred, in bytes.
 
 Mapping Mandated Outcomes to Packets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -262,46 +292,38 @@ The Colosseum will call **update_outcomes.sh** on each user node immediately fol
 A.4 environment.json
 ~~~~~~~~~~~~~~~~~~
 
-+---------------------------+-------------+---------+----------------------------------------------------+
-| Parameter Name            | Format      | Units   | Description                                        |
-+===========================+=============+=========+====================================================+
-| collab_network_type       | string      | N/A     | One of "INTERNET", "SATCOM", or "HF" indicating   |
-|                           |             |         | the type of collaboration network to which the     |
-|                           |             |         | node is connected                                  |
-+---------------------------+-------------+---------+----------------------------------------------------+
-| incumbent_protection      | JSON        | N/A     | This parameter contains the definition of a        |
-|                           |             |         | protected frequency band reserved for incumbent    |
-|                           |             |         | radio use. It contains three subfields in JSON     |
-|                           |             |         | format:                                            |
-|                           |             |         | - center_frequency: the center frequency in        |
-|                           |             |         |   integer Hz of the protected incumbent frequency  |
-|                           |             |         |   band at the actual RF frequency of the RF        |
-|                           |             |         |   channel emulator                                 |
-|                           |             |         | - *modeled_frequency: [this is currently a         |
-|                           |             |         |   placeholder parameter]*                          |
-|                           |             |         | - rf_bandwidth: the bandwidth in integer Hz of the |
-|                           |             |         |   of the protected incumbent frequency band        |
-|                           |             |         |   centered at the center_frequency parameter       |
-+---------------------------+-------------+---------+----------------------------------------------------+
-| *scenario_modeled_        | integer     | Hz      | *[This is currently a placeholder parameter]*      |
-| frequency*                |             |         |                                                    |
-+---------------------------+-------------+---------+----------------------------------------------------+
-| scenario_rf_bandwidth     | integer     | Hz      | While this field is present, this parameter        |
-|                           |             |         | supersedes the value specified by the              |
-|                           |             |         | rf_bandwidth parameter in the colosseum_config.ini |
-|                           |             |         | file and is the allowable RF bandwidth in integer  |
-|                           |             |         | Hz of the allowable transmission frequency range   |
-|                           |             |         | available to the radio centered at the             |
-|                           |             |         | scenario_center_frequency parameter.               |
-+---------------------------+-------------+---------+----------------------------------------------------+
-| scenario_center_frequency | integer     | Hz      | While this field is present, this parameter        |
-|                           |             |         | supersedes the value specified by the              |
-|                           |             |         | center_frequency parameter in the                  |
-|                           |             |         | colosseum_config.ini file and is the center        |
-|                           |             |         | frequency in integer Hz of the allowable           |
-|                           |             |         | transmission frequency range available to the      |
-|                           |             |         | radio.                                             |
-+---------------------------+-------------+---------+----------------------------------------------------+
+.. list-table:: Parameters
+   :widths: 20 15 10 55
+   :header-rows: 1
+
+   * - Parameter Name
+     - Format
+     - Units
+     - Description
+   * - collab_network_type
+     - string
+     - N/A
+     - One of "INTERNET", "SATCOM", or "HF" indicating the type of collaboration network to which the node is connected
+   * - incumbent_protection
+     - JSON
+     - N/A
+     - This parameter contains the definition of a protected frequency band reserved for incumbent radio use. It contains three subfields in JSON format:
+       
+       * center_frequency: the center frequency in integer Hz of the protected incumbent frequency band at the actual RF frequency of the RF channel emulator
+       * modeled_frequency: [this is currently a placeholder parameter]
+       * rf_bandwidth: the bandwidth in integer Hz of the of the protected incumbent frequency band centered at the center_frequency parameter
+   * - scenario_modeled_frequency
+     - integer
+     - Hz
+     - [This is currently a placeholder parameter]
+   * - scenario_rf_bandwidth
+     - integer
+     - Hz
+     - While this field is present, this parameter supersedes the value specified by the rf_bandwidth parameter in the colosseum_config.ini file and is the allowable RF bandwidth in integer Hz of the allowable transmission frequency range available to the radio centered at the scenario_center_frequency parameter.
+   * - scenario_center_frequency
+     - integer
+     - Hz
+     - While this field is present, this parameter supersedes the value specified by the center_frequency parameter in the colosseum_config.ini file and is the center frequency in integer Hz of the allowable transmission frequency range available to the radio.
 
 Environment Update Procedure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -326,11 +348,9 @@ The contents of this script can be defined as needed by the users in order to in
 
 **This script must return within 5 seconds.**
 
-**Inputs:** none.
-
-**Outputs:** none.
-
-**Example file:** `scenario_discontinuity.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/scenario_discontinuity.sh>`_
+- **Inputs:** none.
+- **Outputs:** none.
+- **Example file:** `scenario_discontinuity.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/scenario_discontinuity.sh>`_
 
 B.2 start.sh
 ~~~~~~~~~~
@@ -339,28 +359,11 @@ start.sh is called when the match begins (i.e. the radio is free to transmit) at
 
 **This script must return within 5 seconds.**
 
-**Inputs:** none.
+- **Inputs:** none.
+- **Outputs:** exit status (0 for success), stdout and stderr may be logged.
+- **Example file:** `start.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/start.sh>`_
 
-**Outputs:** exit status (0 for success), stdout and stderr may be logged.
-
-**Example file:** `start.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/start.sh>`_
-
-B.3 statistics.sh
-~~~~~~~~~~~~~~~
-
-**Note: currently not implemented.**
-
-statistics.sh is planned to be used to request radio information for visualization and scoring (i.e. center frequency, bandwidth). It is not currently supported and users do not need to implement statistics.sh at this time.
-
-**This script must return within 5 seconds.**
-
-**Inputs:** none.
-
-**Outputs:** none.
-
-**Example file:** `statistics.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/statistics.sh>`_
-
-B.4 status.sh
+B.3 status.sh
 ~~~~~~~~~~~
 
 status.sh is called to receive radio state information for system awareness (i.e. ready to start match). The script will not accept any inputs. Status should be returned by way of stdout and must contain one of the pre-defined states (OFF, BOOTING, READY, ACTIVE, STOPPING, FINISHED, ERROR) with an optional detailed message. The exit code will be logged by Colosseum. If users wish to save the output of their scripts, they should log this output to the /logs/ directory.
@@ -371,22 +374,21 @@ Users must use a JSON dictionary to stdout, with two entries: 'STATUS', which is
 
     { "STATUS": "READY", "INFO": "Everything is Awesome" }
 
-**Note that at the 10 minute mark of the reservation, the radio must return the READY state when status.sh is called in order to proceed to the ACTIVE stage of the reservation**
+.. note::
+    At the 10 minute mark of the reservation, the radio must return the READY state when status.sh is called in order to proceed to the ACTIVE stage of the reservation.
 
 - If the container is loaded and allocated within 5 minutes of the start of the reservation, its state will automatically be set to READY
 - It is recommended that status.sh be configured to return READY as soon as your radio application is prepared to enter the ACTIVE state
 
 **This script must return within 5 seconds.**
 
-**Inputs:** none.
-
-**Outputs:** exit status (0 for success), json status on stdout, stderr will not be logged.
-
-**Example file:** `status.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/status.sh>`_
+- **Inputs:** none.
+- **Outputs:** exit status (0 for success), json status on stdout, stderr will not be logged.
+- **Example file:** `status.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/status.sh>`_
 
 Note: the status json dictionary must contain a 'STATUS' entry listing a pre-defined state along with an 'INFO' entry which will be length limited (TBD)
 
-B.5 stop.sh
+B.4 stop.sh
 ~~~~~~~~~
 
 stop.sh is called when the match is over and the radio has 2 minutes to prepare for container teardown (i.e. collect logs). The script will not accept any inputs. The exit code will be logged by Colosseum. If users wish to save the output of their scripts, they should log this output to the /logs/ directory.
@@ -395,13 +397,11 @@ After 2 minutes the container will begin the teardown process without further no
 
 **This script must return within 5 seconds.**
 
-**Inputs:** none.
+- **Inputs:** none.
+- **Outputs:** exit status (0 for success), stdout and stderr may be logged.
+- **Example file:** `stop.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/stop.sh>`_
 
-**Outputs:** exit status (0 for success), stdout and stderr may be logged.
-
-**Example file:** `stop.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/stop.sh>`_
-
-B.6 update_environment.sh
+B.5 update_environment.sh
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 update_environment.sh is called immediately following an update to the environment.json configuration file in order to notify user radio applications that the contents have been updated and that it should be re-parsed.
@@ -410,13 +410,11 @@ The contents of this script can be defined as needed by the users in order to in
 
 **This script must return within 5 seconds.**
 
-**Inputs:** none.
+- **Inputs:** none.
+- **Outputs:** none.
+- **Example file:** `update_environment.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/update_environment.sh>`_
 
-**Outputs:** none.
-
-**Example file:** `update_environment.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/update_environment.sh>`_
-
-B.7 update_outcomes.sh
+B.6 update_outcomes.sh
 ~~~~~~~~~~~~~~~~~~~~
 
 update_outcomes.sh is called immediately following an update to the mandated_outcomes.json configuration file in order to notify user radio applications that the contents have been updated and that it should be re-parsed.
@@ -425,8 +423,6 @@ The contents of this script can be defined as needed by the users in order to in
 
 **This script must return within 5 seconds.**
 
-**Inputs:** none.
-
-**Outputs:** none.
-
-**Example file:** `update_outcomes.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/update_outcomes.sh>`_
+- **Inputs:** none.
+- **Outputs:** none.
+- **Example file:** `update_outcomes.sh <https://gitlab.com/darpa-sc2-phase2/radio-api/blob/master/update_outcomes.sh>`_
