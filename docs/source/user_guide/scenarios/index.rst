@@ -9,7 +9,7 @@ Colosseum offers a variety of RF scenarios for different research purposes. Thes
 
    test_scenarios
    cellular_scenarios
-   digital_twin_scenarios.rst
+   digital_twin_scenarios
    qualification_scenarios
    channel_sounding_scenarios
    fixed_pathloss_scenarios

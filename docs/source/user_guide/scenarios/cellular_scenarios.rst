@@ -1,6 +1,9 @@
 Cellular Scenarios
 ================
 
+SCOPE Scenarios
+---------------
+
 These are a set of RF cellular scenarios to use with the Colosseum wireless network emulator. Scenarios have been designed in three different urban setups:
 
 1. Rome, Italy
@@ -12,21 +15,29 @@ For the Rome and Boston scenarios, the locations of the base station reflect rea
 Different versions of the above scenarios have been created for different numbers of base stations and users, different distances from the base stations users are deployed, and different mobility speeds of the users. 
 
 Available distances between users and base stations:
+
 - **Close**: users are deployed within 20 m from the base stations
 - **Medium**: users are deployed within 50 m from the base stations
 - **Far**: users are deployed within 100 m from the base stations
 
 Available user mobility speeds:
+
 - **Static**: users do not move for the whole duration of the scenario
 - **Moderate**: users move at 3 m/s
 - **Fast**: users move at 5 m/s
 
-**Note**: These scenarios cluster nodes in groups of 5. This means that nodes 1-5 are emulated to be closer to each other than they are to the other nodes of the scenario. The same holds for the remaining nodes, i.e., nodes 6-10, 11-15, 16-20, 21-25, 26-30, 31-35, 36-40, 41-45, and 46-50.
+.. note::
+  These scenarios cluster nodes in groups of 5. This means that nodes 1-5 are emulated to be closer to each other than they are to the other nodes of the scenario. The same holds for the remaining nodes, i.e., nodes 6-10, 11-15, 16-20, 21-25, 26-30, 31-35, 36-40, 41-45, and 46-50.
 
 Rome Scenarios
-------------
+^^^^^^^^^^^^^^
 
 The Rome scenario captures the dynamics of the city center of Rome, Italy. A total of 50 nodes are involved: 10 BSs and 40 UEs (4 UEs assigned to each BS randomly scattered around it). This is one of the densest scenarios in Colosseum and covers an area of 0.5 km².
+
+.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/rome.jpg
+   :width: 300px
+   :alt: Rome Cellular Scenario
+   :align: center
 
 **Node Pattern**
 
@@ -89,9 +100,14 @@ The Rome scenario captures the dynamics of the city center of Rome, Italy. A tot
      - 4
 
 Boston Scenarios
--------------
+^^^^^^^^^^^^^^^^
 
 The Boston scenario captures the dynamics of downtown Boston, U.S. A total of 50 nodes are involved: 10 BSs and 40 users. This scenario covers an area of 0.95 km².
+
+.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/boston.jpeg
+   :width: 300px
+   :alt: Boston Cellular Scenario
+   :align: center
 
 The sequence of the nodes in the scenario follows the same pattern as the Rome scenarios shown above.
 
@@ -121,9 +137,14 @@ The sequence of the nodes in the scenario follows the same pattern as the Rome s
      - 4
 
 POWDER Scenarios
--------------
+^^^^^^^^^^^^^^^^
 
 The POWDER scenario mirrors the setup of the rooftop BSs deployed in the POWDER platform in Salt Lake City, U.S. A total of 40 nodes are involved: 8 BSs and 32 UEs. This scenario is the sparsest with an area of 3.6 km².
+
+.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/powder.jpg
+   :width: 300px
+   :alt: POWDER Testbed Cellular Scenario
+   :align: center
 
 The sequence of the nodes in the scenario follows the same pattern as the Rome scenarios shown above, but stops at node 40.
 
@@ -152,6 +173,13 @@ The sequence of the nodes in the scenario follows the same pattern as the Rome s
    * - Number of Users per Base Station
      - 4
 
+**References**
+
+- L. Bonati, S. D'Oro, S. Basagni, and T. Melodia, "SCOPE: An Open and Softwarized Prototyping Platform for NextG Systems," in Proceedings of ACM MobiSys, June 2021. [`pdf <https://ece.northeastern.edu/wineslab/papers/bonati2021scope.pdf>`_] [`bibtex <https://ece.northeastern.edu/wineslab/wines_bibtex/bonati2021scope.txt>`_]
+
+- POWDER Deployment. 2021. https://www.powderwireless.net/area.
+
+
 Cellular Rural Small Static Scenarios (35001-35005)
 ------------------------------------------------
 
@@ -159,25 +187,31 @@ Cellular Rural Small Static Scenarios (35001-35005)
 
 .. list-table::
    :widths: 30 70
-   :header-rows: 0
+   :header-rows: 1
 
+   * - Label
+     - Value
    * - Version
      - Formal
    * - RF ID
      - 35001, 35002, 35003, 35004, 35005
    * - RF Description
      - 35001 (Cellular Rural Small 1 GHz Static 1 + 40 dB)
-     - 35002 (Cellular Rural Small 3.6 GHz Static 1 + 51 dB)
-     - 35003 (Cellular Rural Small 3.6 GHz Static 1 + 40 dB)
-     - 35004 (Cellular Rural Small 3.6 GHz Static 1 at 3.6 GHz + 51 dB)
-     - 35005 (Cellular Rural Small 3.6 GHz Static 1 at 3.6 GHz + 40 dB)
+       35002 (Cellular Rural Small 3.6 GHz Static 1 + 51 dB)
+       35003 (Cellular Rural Small 3.6 GHz Static 1 + 40 dB)
+       35004 (Cellular Rural Small 3.6 GHz Static 1 at 3.6 GHz + 51 dB)
+       35005 (Cellular Rural Small 3.6 GHz Static 1 at 3.6 GHz + 40 dB)
    * - Noise power BW (MHz)
      - 20
    * - Usable BW for transmissions (MHz)
      - 80
+   * - Traffic ID
+     - N/A
+   * - Traffic Description
+     - N/A
    * - Center Frequency
      - 1 GHz (35001, 35002, 35003)
-     - 3.6 GHz (35004, 35005)
+       3.6 GHz (35004, 35005)
    * - Number of Nodes
      - 13
    * - Duration
@@ -190,20 +224,61 @@ This set of scenarios aims at replicating a generic rural environment with one c
 **Node Placement**
 
 The BS is located in the center of a 20x20 meters area, with the UEs randomly scattered around. The height of the nodes is:
+
 - BS-01 height: 3 meters
 - UE height: 1 meter
+
+.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/cellular_rural_node_placement.png
+   :width: 300px
+   :alt: Cellular Rural Node Placement
+   :align: center
+
+**Parameters**
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Label
+     - Value
+   * - Title
+     - Cellular Rural Small [1 GHz - 3.6 GHz] Static 1 [at 3.6 GHz] + [40 - 51] dB
+   * - Scenario ID
+     - 35001, 35002, 35003, 35004, 35005
+   * - Scenario Duration
+     - 1 second
+   * - Scenario Repeats at End?
+     - True
+   * - Number of Nodes
+     - 13
+   * - Max Scenario Bandwidth
+     - 80 MHz
+   * - Node Mobility
+     - No
+   * - Channel Simulation Frequency
+     - 1 GHz (35001)
+       3.6 GHz (35002, 35003, 35004, 35005)
+   * - Emulation Center Frequency
+     - 1 GHz (35001, 35002, 35003)
+       3.6 GHz (35004, 35005)
 
 **Channel Characteristics**
 
 The channel characteristics have been computed by following the free-space path loss formula:
 
-FSPL = 20*log10(d) + 20*log10(f) + 20*log10(4π/c)
+.. math::
+   FSPL = 20log_{10}\left(\frac{4\pi df}{c}\right)
 
 Where:
+
 - f = center frequency, which is equal to 1 GHz (35001) or 3.6 GHz (35002, 35003, 35004, 35005)
 - c = speed of light
 - d = 3D distance BS-UE
 
-The link is only defined between BS and UE. The link UE-UE and loopback links (BS-BS and same UE) are not defined and they are set to be empty channels with no transmission.
+The link is only defined between BS and UE. The link UE-UE and loopback links (BS-BS and same UE) are not defined and they are set to be empty channels with no transmission. Moreover, to compensate for the Colosseum Base Loss and to make the scenarios falling inside the Colosseum dynamic range, an increase in the path gains has been added equal for all the links: 40 dB (35001, 35003, 35005), and 51 dB (35002, 35004).
 
-Moreover, to compensate for the Colosseum Base Loss and to make the scenarios falling inside the Colosseum dynamic range, an increase in the path gains has been added equal for all the links: 40 dB (35001, 35003, 35005), and 51 dB (35002, 35004).
+**References**
+
+- D. Villa, M. Tehrani-Moayyed, C. Robinson,  L. Bonati, P. Johari, M. Polese, S. Basagni, T. Melodia, "Colosseum as a Digital Twin: Bridging Real-World Experimentation and Wireless Network Emulation," arXiv:2303.17063 [cs.NI], pp. 1-15, March 2023. [`pdf <https://arxiv.org/pdf/2303.17063>`_][`bibtex <https://ece.northeastern.edu/wineslab/wines_bibtex/villa2024dt.txt>`_]
+
+- D. Villa, M. Tehrani-Moayyed, P. Johari, S. Basagni, T. Melodia, "CaST: A Toolchain for Creating and Characterizing Realistic Wireless Network Emulation Scenarios", Proc. of the 16th ACM Workshop on Wireless Network Testbeds, Experimental evaluation & CHaracterization (WiNTECH 2022), Sydney, Australia, October 2022. [`pdf <https://ece.northeastern.edu/wineslab/papers/villa2022wintech.pdf>`_][`bibtex <https://ece.northeastern.edu/wineslab/wines_bibtex/villa2022wintech.txt>`_]
