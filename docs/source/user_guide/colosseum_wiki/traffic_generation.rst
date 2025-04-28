@@ -1,14 +1,6 @@
 Traffic Generation
 ================
 
-**Created:** 2020-03-31T15:00:20-04:00  
-**Updated:** 2020-03-31T15:00:20-04:00  
-
-**Tags:** tgen, Traffic Generator, traffic generation, traffic, rf domain, tun/tap, lxc container, ip addressing, quagga, FD_V2_537243 Import
-
-Content
--------
-
 The Colosseum allows for IPv4 traffic to be transmitted and received through different SRNs in order to test the capability of radios to deliver information. IP traffic is utilized by most internet applications today. IP traffic can provide good metrics for quality of success because IP packets can be counted and statistics such as bit rate throughput, latency, packet jitter inter-arrival time, and loss can be calculated. These metrics can be used for user practice, event scoring, and event visualization.
 
 All traffic will be limited to IPv4 and utilize both TCP and UDP transport protocols. Traffic will be instantiated as individual flows. A flow will define the characteristics of the traffic along with the desired ingress and egress SRN pair. Multiple flows can be instantiated simultaneously to both the same or different SRN pairs. There is no plan to enable Jumbo Frames on the traffic generators or switches. Fragmentation of packets is allowed. The traffic generators will not be doing any path MTU discovery. Note however that "messages" of any size can be transmitted through the system. (IE: a 1Mb message could be sent and will be fragmented.)
@@ -32,11 +24,9 @@ Each request to the traffic generation via the Colosseum CLI or Batch mode syste
 
 In interactive mode, all traffic starts 120 seconds after "tg start". So for example, if the mgn file specifies a start of 15.0, then traffic won't begin until 135 seconds after the user does "tg start."
 
-Details about TRPR can be found here: https://downloads.pf.itd.nrl.navy.mil/docs/proteantools/trpr.html
-
 There is a slight modification to the MGEN output files generated in Colosseum. A new field called frag is added to the MGEN output. An updated version of the TRPR tool that processes these files is provided below.
 
-Update (1/31/18): A new version of TRPR is now available which processes MGEN output files (which include the date in timestamps) generated since December 2017. This file can be found in the page attachments at the end of this article.
+**Update (1/31/18)**: A new version of TRPR is now available which processes MGEN output files (which include the date in timestamps) generated since December 2017. This file can be found in the page attachments at the end of this article.
 
 **Update (5/10/18)**: The source code for the 1/31/18 update to TRPR is now available on this page for download. If and when this source code appears on a public git repository, the source code attached to this page should be considered deprecated. In addition, a diff is available showing the changes that were made to version 2.1b3 which is available at the link above. See the README.TXT file for build instructions, but please note that there will be no help desk support for modification and compilation of the source code.
 
@@ -59,17 +49,18 @@ Users must devise a method to handle routing of traffic from the traffic interfa
 Packet Routing Steps
 ~~~~~~~~~~~~~~~~~~
 
-1. Traffic Generator creates a packet with SRC IP = 192.168.101.2 and DST IP = 192.168.222.2
-2. Traffic Generator at 192.168.101.2 sends this packet to its default gateway, which is the tr0 interface on the connected SRN (192.168.101.1)
-3. The Traffic Generator uses ARP requests to discover the MAC address of the tr0 interface on the connected SRN (192.168.101.1)
-4. The user software receives the packet on its interface to the Traffic Network
-5. The user software does an IP route table lookup on the DST IP to determine the next hop in the path, which will be over the radio network
-6. The user software must handle discovery of all IP subnets within its network (e.g., running a routing protocol or through static routes)
-7. If a TUN/TAP interface is used as a radio application interface, by default it will attempt to discover Layer 2 hardware addresses using ARP. It is up to the user to either implement this functionality or otherwise configure the interface to be consistent with their radio application design.
-8. The user software sends the packet to the next hop via the radio application running within the container
-9. The user radio application routes the packet as necessary until the packet arrives at the SRN that is directly attached to the destination traffic network (here, 192.168.222.0/24)
-10. The user software in the destination SRN forwards the packet from the radio application to the traffic destination (192.168.222.2).
-11. The container on the SRN uses ARP requests via tr0 to discover the MAC address of the connected traffic generator (192.168.222.2). The receiving Traffic Generator receives the packet and processes it.
+- Traffic Generator creates a packet with SRC IP = 192.168.101.2 and DST IP = 192.168.222.2
+- Traffic Generator at 192.168.101.2 sends this packet to its default gateway, which is the tr0 interface on the connected SRN (192.168.101.1)
+    - The Traffic Generator uses ARP requests to discover the MAC address of the tr0 interface on the connected SRN (192.168.101.1)
+- The user software receives the packet on its interface to the Traffic Network
+- The user software does an IP route table lookup on the DST IP to determine the next hop in the path, which will be over the radio network
+    - The user software must handle discovery of all IP subnets within its network (e.g., running a routing protocol or through static routes)
+    - If a TUN/TAP interface is used as a radio application interface, by default it will attempt to discover Layer 2 hardware addresses using ARP. It is up to the user to either implement this functionality or otherwise configure the interface to be consistent with their radio application design.
+- The user software sends the packet to the next hop via the radio application running within the container
+- The user radio application routes the packet as necessary until the packet arrives at the SRN that is directly attached to the destination traffic network (here, 192.168.222.0/24)
+- The user software in the destination SRN forwards the packet from the radio application to the traffic destination (192.168.222.2).
+    - The container on the SRN uses ARP requests via tr0 to discover the MAC address of the connected traffic generator (192.168.222.2).
+- The receiving Traffic Generator receives the packet and processes it.
 
 Initial ARP Discovery / Missing Initial Traffic Fix
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,10 +89,20 @@ Summary Diagram
 
 This diagram shows a high-level overview of the flow described above. The MGEN sender and listener are the traffic source and destination, respectively, and the SRNs in this diagram are effectively acting as routers in order to pass traffic over the RF network subnet.
 
+.. figure:: /_static/images/user_guide/wiki/traffic_generation/traffic_generation_workflow.png
+   :width: 600px
+   :alt: Traffic Generation Workflow
+   :align: center
+
 Detailed Diagram
 ~~~~~~~~~~~~~~
 
 This diagram expands on the summary diagram with more detail on an example container configuration. Users are not bound to this architecture and may implement a different solution. This is intended to provide an example with detail on the interfaces within and external to the container. Note that the tap0 interface must be created by the user within the container and the IP address assigned is defined by the users.
+
+.. figure:: /_static/images/user_guide/wiki/traffic_generation/traffic_generation_detailed.png
+   :width: 600px
+   :alt: Traffic Generation Detailed Diagram
+   :align: center
 
 Selecting an IP Addressing Scheme for your Radio Network
 ------------------------------------------------------
@@ -123,24 +124,24 @@ To configure a TUN/TAP in your Container, follow the steps below.
 
 NOTE: Repeat these steps for every Container; however, adjust the MAC address and IP address accordingly so that they are unique. For example, in Container one, use a MAC address of 12:34:56:78:90:01 and IP address of 172.20.22.1/24. In Container two, use 12:34:56:78:90:02 and 172.20.22.2/24. In Container three, use 12:34:56:78:90:03 and 172.20.22.3/24. And so on.
 
-Create the TAP interface:
+- Create the TAP interface:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     sudo ip tuntap add dev tap0 mode tap
 
-Setup and bring up the TAP interface:
+- Setup and bring up the TAP interface:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     ifconfig tap0 hw ether 12:34:56:78:90:01
     ifconfig tap0 mtu 1500
     ifconfig tap0 172.20.22.1/24
     ifconfig tap0 up
 
-TAP configuration is complete. To verify TAP interface, run ifconfig:
+- TAP configuration is complete. To verify TAP interface, run ifconfig:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     ifconfig tap0
 
@@ -155,21 +156,21 @@ Quagga is a software-based routing suite for Linux systems -- effectively allowi
 
 To install Quagga in your Container, follow the steps below. NOTE: After installing and configuring quagga, users may save and upload the image so it can be used for future reservations.
 
-Install the Quagga software using the Apt repositories:
+- Install the Quagga software using the Apt repositories:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     sudo apt-get install quagga
 
-Enable Quagga's Zebra and RIPd daemons:
+- Enable Quagga's Zebra and RIPd daemons:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     vim /etc/quagga/daemons
 
-Change the contents of 'daemons' so it matches the following:
+- Change the contents of 'daemons' so it matches the following:
 
-.. code-block:: none
+  .. code-block:: none
 
     zebra=yes
     bgpd=no
@@ -178,15 +179,15 @@ Change the contents of 'daemons' so it matches the following:
     ripd=yes
     ripngd=no
 
-Configure the Zebra daemon:
+- Configure the Zebra daemon:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     vim /etc/quagga/zebra.conf
 
-Change the contents of 'zebra' so it matches the following:
+- Change the contents of 'zebra' so it matches the following:
 
-.. code-block:: none
+  .. code-block:: none
 
     ! -*- zebra -*-
     !
@@ -213,15 +214,15 @@ Change the contents of 'zebra' so it matches the following:
     !
     log file /var/log/quagga/zebra.log
 
-Configure the RIPd daemon:
+- Configure the RIPd daemon:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     vim /etc/quagga/ripd.conf
 
-Change the contents of 'ripd' so it matches the following:
+- Change the contents of 'ripd' so it matches the following:
 
-.. code-block:: none
+  .. code-block:: none
 
     ! -*- rip -*-
     !
@@ -249,32 +250,32 @@ Change the contents of 'ripd' so it matches the following:
     !
     !log stdout
 
-Restart Quagga:
+- Restart Quagga:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     service quagga stop
     service quagga start
 
-Quagga configuration is complete. To verify operation, run tcpdump on the tap0 interface:
+- Quagga configuration is complete. To verify operation, run tcpdump on the tap0 interface:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     tcpdump -v -i tap0
 
-You should see periodic RIPv2 advertisement messages, advertising the Container's tr0 IP subnet.
+- You should see periodic RIPv2 advertisement messages, advertising the Container's tr0 IP subnet.
 
 Bring Up the RF Domain
 --------------------
 
 Now that the TUN/TAP interface and Quagga routing software is up and running, bring up your Container's RF modems. Quagga's RIP route advertisements will most likely be the first IP traffic flowing across the RF domain. To verify successful route advertisements, use the 'route' utility:
 
-On a Container, run route:
+- On a Container, run route:
 
-.. code-block:: bash
+  .. code-block:: bash
 
     route -n
 
-If the RIP route advertisements are successful, then the output of route will show the tr0 IP subnets of the other Containers. These routes will have a non-zero metric.
+- If the RIP route advertisements are successful, then the output of route will show the tr0 IP subnets of the other Containers. These routes will have a non-zero metric.
 
-The final verification is to ping the other Container's tap0 IP address. If the pings are successful, then the Containers are successfully communicating with each other using IP over the RF domain.
+- The final verification is to ping the other Container's tap0 IP address. If the pings are successful, then the Containers are successfully communicating with each other using IP over the RF domain.
