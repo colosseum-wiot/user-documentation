@@ -1,11 +1,6 @@
 Environment JSON Schema
 =====================
 
-:Created: 2020-03-31T14:59:41-04:00
-:Updated: 2020-03-31T14:59:41-04:00
-
-:Tags: environment json, FD_V2_537243 Import
-
 .. code-block:: json
 
    {
