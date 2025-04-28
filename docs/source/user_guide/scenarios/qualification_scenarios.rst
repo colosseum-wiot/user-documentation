@@ -83,6 +83,7 @@ SCE Qualification (9988)
 Scenario 9988 is a test scenario that supports practice for SCE qualification testing and updates the previous version to implement new Mandated Outcome fields required for compliance with Phase 3 scoring criteria.
 
 The scenario contains 10 nodes arrayed on a hypersphere so that every node has the same propagation loss to every other node. Propagation losses are designed so that per link SNR changes in two minute intervals according to the following schedule:
+
 * 0:00->2:15: Per link SNR = 20 dB
 * 2:15->4:15: Per link SNR = 15 dB
 * 4:15->6:15: Per link SNR = 10 dB
@@ -214,7 +215,7 @@ No GPS is provided as a theoretical geometry (hypersphere) is used to create the
      - Qual
 
 SCE CIL Qualification - Easy 13db Staring Pathloss (9991)
-------------------------------------------------------
+---------------------------------------------------------
 
 **Overview**
 
@@ -266,6 +267,7 @@ It repurposes the 7025 Passive Incumbent scenario for CIL validation purposes by
 Only a single team position is populated (excluding the Passive Incumbent) in this scenario so taps from 7025 can be reused.
 
 9991 is:
+
 * Large scale
 * 50 node
 * Small Packet
@@ -274,31 +276,36 @@ Only a single team position is populated (excluding the Passive Incumbent) in th
 **Node Assignments**
 
 .. list-table::
-   :widths: 50 50
+   :widths: 30 50 20
    :header-rows: 1
 
-   * - Nodes
+   * - 
+     - Nodes
      - Gateway
    * - Team #1
      - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+     - 1
    * - Team #2
      - 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+     - 11
    * - Team #3
      - 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+     - 21
    * - Team #4
      - 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
+     - 31
    * - Team #5
      - 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
+     - 41
    * - Incumbents #1
      - 51
+     - 51
 
-**Traffic Scoring**
-
-**Mandated flows**
+**Mandated Flows**
 
 Flow types: BFT, File, VOIP
 
-.. list-table::
+.. list-table:: Flow Counts by Team By Stage
    :widths: 20 20 20 20
    :header-rows: 1
 
@@ -327,7 +334,7 @@ Flow types: BFT, File, VOIP
      - 70
      - 70
 
-.. list-table::
+.. list-table:: Flow Types by Stage
    :widths: 30 30 30
    :header-rows: 1
 
@@ -342,7 +349,7 @@ Flow types: BFT, File, VOIP
 
 Points are accumulated by measurement period. Flows need to be held for the steady state period of 10 seconds in order to count.
 
-.. list-table::
+.. list-table:: Points by Flow Type by MP
    :widths: 30 70
    :header-rows: 1
 
@@ -355,7 +362,7 @@ Points are accumulated by measurement period. Flows need to be held for the stea
    * - VOIP
      - 1
 
-.. list-table::
+.. list-table:: Scoring Stage Lengths (sec)
    :widths: 30 30 30
    :header-rows: 1
 
@@ -366,9 +373,7 @@ Points are accumulated by measurement period. Flows need to be held for the stea
      - 210
      - 210
 
-**Max Points per MP by Team By Stage**
-
-.. list-table::
+.. list-table:: Max Points per MP by Team By Stage
    :widths: 20 20 20 20
    :header-rows: 1
 
@@ -397,9 +402,7 @@ Points are accumulated by measurement period. Flows need to be held for the stea
      - 70
      - 70
 
-**Max Points by Team By Stage (may be more if flows span stages)**
-
-.. list-table::
+.. list-table:: Max Points by Team By Stage (may be more if flows span stages)
    :widths: 20 20 20 20
    :header-rows: 1
 
@@ -443,9 +446,7 @@ Points earned in a measurement period above the threshold score bonus points.
      - 50
      - 50
 
-**Threshold Points per MP by Team By Stage**
-
-.. list-table::
+.. list-table:: Threshold Points per MP by Team By Stage
    :widths: 20 20 20 20
    :header-rows: 1
 
