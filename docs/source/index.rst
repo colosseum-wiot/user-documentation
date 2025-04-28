@@ -16,6 +16,7 @@ Colosseum Wireless Network Emulator
    getting_started
    faq
    scenarios/index
+   user_guide/index
 
 Overview
 --------
