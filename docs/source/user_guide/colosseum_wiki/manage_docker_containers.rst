@@ -1,11 +1,6 @@
 Manage Docker Containers
 ========================
 
-:Created: 2022-07-20T11:21:51-04:00
-:Updated: 2022-07-20T11:21:51-04:00
-
-:Tags: Docker, Container, upload, manage
-
 Users can manage their Docker containers on the Experiments website from its `Images page <https://experiments.colosseum.net/images>`_. Users must upload their Docker containers to the Colosseum Docker Registry to be able to use them in a GPU reservation. Each team has access to a team-specific sub-registry on the Colosseum Docker Registry server. From this page, a user is able to perform the following operations:
 
 * Push a new image from the NAS to the Colosseum Docker Registry ready to be used.
@@ -16,9 +11,10 @@ Users can manage their Docker containers on the Experiments website from its `Im
 Prerequisites
 ------------
 
-In order to access the File Proxy server, users must have already :doc:`Uploaded SSH Public Keys <upload_ssh_public_keys>`.  
+In order to access the File Proxy server, users must have already :doc:`Uploaded SSH Public Keys <upload_ssh_keys>`.  
 
-**The user MUST have their ssh client configured per the** :doc:`SSH Proxy Setup <ssh_proxy_setup>` **instructions.**
+.. note::
+   The user MUST have their ssh client configured per the** :doc:`SSH Proxy Setup <ssh_proxy_setup>` **instructions.
 
 Docker Image Requirements
 -----------------------
@@ -34,9 +30,9 @@ Push a new image
 
 In this subsection, users are able to push a new image from the NAS to the Colosseum Docker Registry. In this way, the pushed image can be selected and used during a reservation.
 
-Users are encouraged to verify that the container operates appropriately before uploading to the Colosseum. At minimum the container must be accessible via **SSH** to be used during an interactive session. Therefore, openssh-server needs to be installed correctly (see troubleshooting for more information).
+Users are encouraged to verify that the container operates appropriately before uploading to the Colosseum. At minimum the container must be accessible via **SSH** to be used during an interactive session. Therefore, **openssh-server** needs to be installed correctly (see troubleshooting for more information).
 
-Users should use the Docker Save command to export the image that needs to be pushed. The name of the image should be in the following format: "your-name.tar.gz".
+Users should use the **Docker Save** command to export the image that needs to be pushed. The name of the image should be in the following format: "your-name.tar.gz".
 
 In order to push a new image, a user should follow these steps:
 
@@ -52,9 +48,7 @@ In order to push a new image, a user should follow these steps:
 
 4. Press the button "Push" to start the pushing process from the NAS to the Colosseum Docker Registry.
 
-5. If the image is pushed correctly, a successful green message will appear, and the .tar.gz file in the NAS will be deleted.
-
-If the push image encounters an error, a red message will tell the user the issue. If the user is not able to resolve the error, please, open a new ticket on FreshDesk with the red message displayed.
+5. If the image is pushed correctly, a successful green message will appear, and the .tar.gz file in the NAS will be deleted. If the push image encounters an error, a red message will tell the user the issue. If the user is not able to resolve the error, please, open a new ticket on FreshDesk with the red message displayed.
 
 Commit an image
 -------------
@@ -71,9 +65,7 @@ In order to commit a Docker image, a user should perform these steps:
 
 3. Press the button "Commit" to start the committing process.
 
-4. A successful green message will be displayed when the committing process has been terminated. The image should now be ready to be used in a new reservation or to be exported in the NAS.
-
-If the commit image encounters an error, a red message will tell the user the issue. If the user is not able to resolve the error, please, open a new ticket on FreshDesk with the red message displayed.
+4. A successful green message will be displayed when the committing process has been terminated. The image should now be ready to be used in a new reservation or to be exported in the NAS. If the commit image encounters an error, a red message will tell the user the issue. If the user is not able to resolve the error, please, open a new ticket on FreshDesk with the red message displayed.
 
 Export an image
 -------------
@@ -105,7 +97,7 @@ In order to delete an image, a user should perform these steps:
 
 2. Press the button "Delete" to start the deletion process. A successful green message will notify the user that the process is completed.
 
-Once deleted, an image cannot be recovered, and cannot be used in any reservation or exported in any case.
+Once deleted, an image cannot be recovered, used in any reservation or exported.
 
 Troubleshooting
 -------------
@@ -156,7 +148,7 @@ Rsync
 
 The rsync utility provides a means to synchronize folder content between a local and remote host. The rsync utility inspects the content in each folder, identifies the differences in that content, and reconciles those differences by transferring the file differences. Using rsync requires a more command operation configuration, but the utility is a bit more flexible than scp and users may find it useful. Additionally, with proper configuration, rsync will allow the user to resume incomplete or partial transfers.
 
-See the following instructions on how to use rsync: :doc:`File Upload by scp and rsync <file_upload_by_scp_and_rsync>` 
+See the following instructions on how to use rsync: :doc:`File Upload by scp and rsync <file_upload_scp_rsync>`.
 
 .. note::
    rsync has the capability to remove files on either the remote or local folder as part of the reconciliation operation. If users are unfamiliar with rsync, it is recommended that they test its use on local folders which do not contain critical data. Colosseum Administrators may not be able to recover data accidentally lost.
@@ -166,7 +158,7 @@ Secure Copy (SCP)
 
 Secure copy is a version of the unix copy (cp) command that uses the SSH protocol to transfer files between remote machines. The scp utility provides a simple means to transfer one or many files between machines, leveraging the security provided by SSH. However, if the transfer is interrupted, progress is not saved, and the transfer must be started over from the beginning.
 
-See the following instructions on how to use SCP: :doc:`File Upload by scp and rsync <file_upload_by_scp_and_rsync>`.
+See the following instructions on how to use SCP: :doc:`File Upload by scp and rsync <file_upload_scp_rsync>`.
 
 .. note::
    If needed, users can check the integrity of their file transfer after completion. See the following instructions: :doc:`Verifying Integrity of File Transfers <verifying_integrity_of_file_transfers>`.
