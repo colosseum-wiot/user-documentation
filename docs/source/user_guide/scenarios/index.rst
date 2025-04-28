@@ -1,13 +1,12 @@
-Colosseum Scenarios Documentation
-================================
+Scenarios
+=========
 
-Welcome to the Colosseum Scenarios Documentation. This documentation covers various radio frequency (RF) scenarios available in the Colosseum wireless network emulator.
+Colosseum offers a variety of RF scenarios for different research purposes. These scenarios emulate various real-world environments and wireless conditions to enable repeatable and controlled experiments.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   introduction
    test_scenarios
    cellular_scenarios
    arena_scenarios
@@ -17,10 +16,3 @@ Welcome to the Colosseum Scenarios Documentation. This documentation covers vari
    real_field_scenarios
    anechoic_chamber
    file_format
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

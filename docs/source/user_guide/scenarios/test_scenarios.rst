@@ -42,6 +42,45 @@ This is a simple 10-node scenario where all paths between all nodes have the sam
 * No GPS is provided by this scenario.
 * Power levels assume default radio configurations.
 
+**Scenario Parameters**
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Label
+     - Value
+   * - Modeled Location
+     - N/A
+   * - Scenario Duration
+     - 1200.0 s
+   * - Scenario Repeats at End?
+     - True
+   * - Number of Nodes
+     - 10
+   * - Number of Teams
+     - 1
+   * - Government Controlled Radios
+     - 0
+   * - Center Frequency
+     - 1000.0 MHz
+   * - Max Scenario Bandwidth
+     - 80.0 MHz
+   * - SRN Separation Range
+     - N/A
+   * - Node Mobility
+     - Fixed
+   * - Link Reciprocity
+     - True
+   * - Self Channel (Gain to Own Antenna)
+     - 1
+   * - Antenna Pattern
+     - Omni
+   * - Number of Antennas Per Node
+     - 2
+   * - Antenna Spacing
+     - 0.1 m
+
 **Traffic Flow Detail**
 
 Bodycam video traffic for 1190 seconds with 83.66 packets per second and 1400 bytes per packet.
@@ -82,6 +121,45 @@ This is a simple 25-node scenario where all paths between all nodes have the sam
 
 * No GPS is provided by this scenario.
 * Power levels assume default radio configurations.
+
+**Scenario Parameters**
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Label
+     - Value
+   * - Modeled Location
+     - N/A
+   * - Scenario Duration
+     - 700.0 s
+   * - Scenario Repeats at End?
+     - True
+   * - Number of Nodes
+     - 25
+   * - Number of Teams
+     - 1
+   * - Government Controlled Radios
+     - 0
+   * - Center Frequency
+     - 1000.0 MHz
+   * - Max Scenario Bandwidth
+     - 10.0 MHz
+   * - SRN Separation Range
+     - N/A
+   * - Node Mobility
+     - Fixed
+   * - Link Reciprocity
+     - True
+   * - Self Channel (Gain to Own Antenna)
+     - 1
+   * - Antenna Pattern
+     - Omni
+   * - Number of Antennas Per Node
+     - 2
+   * - Antenna Spacing
+     - 0.1 m
 
 **Traffic Flow Detail**
 
@@ -125,6 +203,45 @@ This is a simple 10-node scenario where all paths between all nodes have the sam
 
 * No GPS is provided by this scenario.
 * Power levels assume default radio configurations.
+
+**Scenario Parameters**
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Label
+     - Value
+   * - Modeled Location
+     - N/A
+   * - Scenario Duration
+     - 1200.0 s
+   * - Scenario Repeats at End?
+     - True
+   * - Number of Nodes
+     - 10
+   * - Number of Teams
+     - 1
+   * - Government Controlled Radios
+     - 0
+   * - Center Frequency
+     - 2400.0 MHz
+   * - Max Scenario Bandwidth
+     - 80.0 MHz
+   * - SRN Separation Range
+     - N/A
+   * - Node Mobility
+     - Fixed
+   * - Link Reciprocity
+     - True
+   * - Self Channel (Gain to Own Antenna)
+     - 1
+   * - Antenna Pattern
+     - Omni
+   * - Number of Antennas Per Node
+     - 2
+   * - Antenna Spacing
+     - 0.1 m
 
 **Traffic Flow Detail**
 
@@ -170,6 +287,80 @@ This is a simple 5-node scenario where all paths between all nodes have the same
 * No GPS is provided by this scenario.
 * Power levels assume default radio configurations.
 
+**Node Placement**
+
+The table below indicates which node id's map to which team position.
+
+.. list-table::
+   :widths: 30 30 30
+   :header-rows: 1
+
+   * - Position
+     - Label
+     - Node #
+   * - 1
+     - Gateway
+     - 1
+   * - 2
+     - Node
+     - 2
+   * - 3
+     - Node
+     - 3
+   * - 4
+     - Node
+     - 4
+   * - 5
+     - Node
+     - 5
+
+**Scenario Parameters**
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Label
+     - Value
+   * - Modeled Location
+     - N/A
+   * - Scenario Duration
+     - 300.0 s
+   * - Scenario Repeats at End?
+     - True
+   * - Number of Nodes
+     - 5
+   * - Number of Teams
+     - 1
+   * - Government Controlled Radios
+     - 0
+   * - Center Frequency
+     - 1000.0 MHz
+   * - Max Scenario Bandwidth
+     - 80.0 MHz
+   * - SRN Separation Range
+     - N/A
+   * - Node Mobility
+     - Fixed
+   * - Link Reciprocity
+     - True
+   * - Self Channel (Gain to Own Antenna)
+     - 1
+   * - Antenna Pattern
+     - Omni
+   * - Number of Antennas Per Node
+     - 2
+   * - Antenna Spacing
+     - 0.1 m
+
+**Traffic Flow Detail**
+
+There is no traffic in this test scenario.
+
+**Mandated Outcome Parameters**
+
+There are no mandated outcomes in this test scenario.
+
 Test Scenario -70dbFS (9972)
 --------------------------
 
@@ -209,6 +400,80 @@ This is a simple 5-node scenario where all paths between all nodes have the same
 * No traffic is provided by this scenario.
 * No GPS is provided by this scenario.
 * Power levels assume default radio configurations.
+
+**Node Placement**
+
+The table below indicates which node id's map to which team position.
+
+.. list-table::
+   :widths: 30 30 30
+   :header-rows: 1
+
+   * - Position
+     - Label
+     - Node #
+   * - 1
+     - Gateway
+     - 1
+   * - 2
+     - Node
+     - 2
+   * - 3
+     - Node
+     - 3
+   * - 4
+     - Node
+     - 4
+   * - 5
+     - Node
+     - 5
+
+**Scenario Parameters**
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Label
+     - Value
+   * - Modeled Location
+     - N/A
+   * - Scenario Duration
+     - 300.0 s
+   * - Scenario Repeats at End?
+     - True
+   * - Number of Nodes
+     - 5
+   * - Number of Teams
+     - 1
+   * - Government Controlled Radios
+     - 0
+   * - Center Frequency
+     - 1000.0 MHz
+   * - Max Scenario Bandwidth
+     - 80.0 MHz
+   * - SRN Separation Range
+     - N/A
+   * - Node Mobility
+     - Fixed
+   * - Link Reciprocity
+     - TRUE
+   * - Self Channel (Gain to Own Antenna)
+     - 1
+   * - Antenna Pattern
+     - Omni
+   * - Number of Antennas Per Node
+     - 2
+   * - Antenna Spacing
+     - 0.1 m
+
+**Traffic Flow Detail**
+
+There is no traffic in this test scenario.
+
+**Mandated Outcome Parameters**
+
+There are no mandated outcomes in this test scenario.
 
 Test Scenario -90dbFS (9973)
 --------------------------
@@ -250,8 +515,76 @@ This is a simple 5-node scenario where all paths between all nodes have the same
 * No GPS is provided by this scenario.
 * Power levels assume default radio configurations.
 
-**Test Notes**
+**Node Placement**
 
-Scenario target loss of 90 dB is the same as sounder noise floor in the standard radio configuration with a 40 kHz front end.
+The table below indicates which node id's map to which team position.
 
-For full visibility of expected behavior, noise saturation is disabled in these verification results.
+.. list-table:: Node Mapping
+   :widths: 30 30 30
+   :header-rows: 1
+
+   * - Position
+     - Label
+     - Node #
+   * - 1
+     - Gateway
+     - 1
+   * - 2
+     - Node
+     - 2
+   * - 3
+     - Node
+     - 3
+   * - 4
+     - Node
+     - 4
+   * - 5
+     - Node
+     - 5
+
+**Scenario Parameters**
+
+.. list-table:: Scenario Parameters
+   :widths: 50 50
+   :header-rows: 1
+
+   * - Label
+     - Value
+   * - Modeled Location
+     - N/A
+   * - Scenario Duration
+     - 300.0 s
+   * - Scenario Repeats at End?
+     - True
+   * - Number of Nodes
+     - 5
+   * - Number of Teams
+     - 1
+   * - Government Controlled Radios
+     - 0
+   * - Center Frequency
+     - 1000.0 MHz
+   * - Max Scenario Bandwidth
+     - 80.0 MHz
+   * - SRN Separation Range
+     - N/A
+   * - Node Mobility
+     - Fixed
+   * - Link Reciprocity
+     - TRUE
+   * - Self Channel (Gain to Own Antenna)
+     - 1
+   * - Antenna Pattern
+     - Omni
+   * - Number of Antennas Per Node
+     - 2
+   * - Antenna Spacing
+     - 0.1 m
+
+**Traffic Flow Detail**
+
+There is no traffic in this test scenario.
+
+**Mandated Outcome Parameters**
+
+There are no mandated outcomes in this test scenario.
