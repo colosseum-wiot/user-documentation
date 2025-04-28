@@ -1,17 +1,11 @@
 Batch Mode Format and Process
 ===========================
 
-:Created: 2020-03-31T15:00:24-04:00
-:Updated: 2020-03-31T15:00:25-04:00
-
-:Tags: batch, json, format, batchjob, batch job, FD_V2_537243 Import
-
 Batch Mode File Locations
 ------------------------
 
-Batch configuration files must be saved to the network storage on the File Proxy at ``/share/nas/teamname/batch/``
-
-Modem configuration files must be saved to the network storage on the File Proxy at ``/share/nas/teamname/config/``
+- Batch configuration files must be saved to the network storage on the File Proxy at ``/share/nas/teamname/batch/``
+- Modem configuration files must be saved to the network storage on the File Proxy at ``/share/nas/teamname/config/``
 
 Batch Mode JSON File Format
 --------------------------
@@ -37,11 +31,11 @@ The file format will be a json file with the following parameters:
    * - RFScenario
      - Integer
      - Yes
-     - The RF Scenario number to be run. Must be a valid value. :doc:`Scenarios Summary List <scenarios_summary_list>`
+     - The RF Scenario number to be run. Must be a valid value. :doc:`Scenarios Summary List <../../scenarios/index>`
    * - TrafficScenario
      - integer
      - Yes
-     - The Traffic Scenario to be run. Must be a valid value. :doc:`Scenarios Summary List <scenarios_summary_list>`
+     - The Traffic Scenario to be run. Must be a valid value. :doc:`Scenarios Summary List <../../scenarios/index>`
    * - NodeData
      - array(batch_srn_map)
      - Yes
@@ -150,9 +144,6 @@ In batch mode, user radio applications and scenarios are controlled automaticall
 .. note::
    If the image name is not found in your team's /images directory, then Colosseum will check the /nas/common directory and if an image with the given name exists there, it will be loaded on the SRN. If there are two images with identical names in the team's /images directory and in the /nas/common directory, then the image in the team's /images directory will be loaded on the SRN.
 
-.. note::
-   Scrimmages and Tournament Events will be executed using batch mode with 'competitor' set for the node_type, so users can consider batch mode to be a representative test environment to prepare for those events.
-
 Batch Mode Steps
 ---------------
 
@@ -166,7 +157,7 @@ Batch Mode Steps
    b. Any scripts written by the user to execute on initialization are executed. Users are encouraged to consider making use of upstart (Reference 1) or sysvinit (Reference 2) to execute scripts at startup. This can be used to start the radio application, any supporting applications, and connect the traffic network interface to the radio application. Some useful tips to consider:
 
       * **Tip**: By placing an upstart script in /etc/init/, you can automatically execute your radio application on start. See Reference 1 and the existing scripts in /etc/init/ for examples.
-      * **Tip**: Within your upstart script, console logging can be used to log stdout and stderr. You can change the logging directory to /logs/ so they are automatically saved at the end of the batch job. See: http://upstart.ubuntu.com/cookbook/#console.
+      * **Tip**: Within your upstart script, console logging can be used to log stdout and stderr. You can change the logging directory to /logs/ so they are automatically saved at the end of the batch job.
 
    c. After boot, the SRN controller periodically calls the status.sh RadioAPI script to check the state of each container radio to check for the READY state.
    d. When the radio container is ready to begin the scenario, it needs to ensure that the status.sh script returns the READY state. Five minutes after container boot, the SRN controller calls the start.sh RadioAPI script regardless of whether or not the container radio is in the READY state.
@@ -182,18 +173,18 @@ Below is an example of the batch mode timeline for a batch mode reservation whic
 
 * **00:00 - 13:00** - Batch job starts; 13 minutes is given to flash the USRP, allocate/instantiate container, and run any initial startup scripts
 * **13:00** - Check components for readiness (assuming answer to all is yes)
+
    * Did all the containers' status.sh report a 'ready' state? 
    * Did the RF subsystem report ready? (Colosseum internal readiness check)
    * Did the Traffic subsystem report ready? (Colosseum internal readiness check)
+
 * **13:00 - 16:00** - 3 minutes for Colosseum scenario preparation
 * **16:00** - Scenario Starts
+
    * All SRNs receive a call to start.sh
+
 * **26:00** - Scenario Stops after 600 seconds (or after number of seconds specified in the batch file "Duration" field)
+
    * All SRNs receive a call to stop.sh 
+
 * **26:00 - 28:00** - 2 minutes for user radio application cleanup (e.g., copying any data to /logs/)
-
-References
----------
-
-1. Upstart: http://upstart.ubuntu.com/cookbook/
-2. SysVinit: http://www.manpages.info/linux/init.8.html
