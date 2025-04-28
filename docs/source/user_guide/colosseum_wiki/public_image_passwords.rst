@@ -1,12 +1,6 @@
 Public Image Passwords
 =====================
 
-**Created:** 2022-03-18T09:03:27-04:00  
-**Updated:** 2022-03-18T09:03:27-04:00  
-
-Content
--------
-
 SRN Images (LXC)
 ----------------
 

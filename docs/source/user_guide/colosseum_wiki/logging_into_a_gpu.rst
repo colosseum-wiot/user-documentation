@@ -1,12 +1,7 @@
 Logging into a GPU
 ===============
 
-:Created: 2022-06-09T11:17:31-04:00
-:Updated: 2022-06-09T11:17:31-04:00
-
-:Tags: SRN, Logging in, SSH, FD_V2_537243 Import
-
-When a team's reservation including GPUs becomes available, the selected Docker container will be loaded onto the selected GPU Server (DGX or Large Memory Node) with the assigned number of GPUs included in the reservation. Then, users may log into their team's containers running on the GPU Server through SSH. With the SSH proxy setup in place, users can use SSH directly from their local machine to access their containers. Otherwise, users will need to first ssh to the SSH gateway (:doc:`Accessing Colosseum Resources <accessing_colosseum_resources>`) and then ssh to the user account within their container.
+When a team's reservation including GPUs becomes available, the selected Docker container will be loaded onto the selected GPU Server (DGX or Large Memory Node) with the assigned number of GPUs included in the reservation. Then, users may log into their team's containers running on the GPU Server through SSH. With the :doc:`SSH proxy setup <ssh_proxy_setup>` in place, users can use SSH directly from their local machine to access their containers. Otherwise, users will need to first ssh to the SSH gateway (:doc:`Accessing Colosseum Resources <accessing_colosseum_resources>`) and then ssh to the user account within their container.
 
 The base containers provided in Colosseum have only one account, root. This account has a default password of "ChangeMe". Upon login, users can change the password by running the command 'passwd'. After the password is changed, use the 'commit' feature (:doc:`Manage Docker Containers <manage_docker_containers>`) to save a new container image. The next time a reservation is made, use the new container image which will have your new passwords set. A user can create as many accounts as he likes.
 
@@ -35,5 +30,10 @@ In this example, a user may receive a reservation response indicating that GPU D
 .. code-block:: bash
 
    ~$ ssh root@wineslab-1343.service.colosseum.prod.colosseum.net -p 24901
-   root@wineslab-1343.service.colosseum.prod.colosseum.net's password:
+   Password:
    root@wineslab-1343:~#
+
+.. figure:: /_static/images/user_guide/wiki/logging_into_gpu/gpu_reservation.png
+   :width: 600px
+   :alt: GPU Reservation
+   :align: center
