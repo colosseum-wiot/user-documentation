@@ -20,8 +20,6 @@ If this is your first time using Colosseum, it is recommended that you complete 
 Workflow of running an experiment in Colosseum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``TODO fix URLs below``
-
 1. Download a copy of the base container from the network storage on the File Proxy server, following the instructions for :doc:`Transferring the Base LXC Image from the NAS </container_mgmt/transferring_base_lxc_image>`.
 
 2. Modify the container offline from the Colosseum and prepare it to upload back to the Colosseum, following the instructions to :doc:`Prepare a New Container for Upload </container_mgmt/prepare_a_new_lxc_container_for_upload>`.
