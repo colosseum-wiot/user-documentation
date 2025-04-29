@@ -24,6 +24,7 @@ Colosseum Wireless Network Emulator
    srn/index
    container_mgmt/index
    radio_api_traffic/index
+   news_announcements/index
 
 Overview
 --------
