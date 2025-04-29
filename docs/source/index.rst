@@ -19,6 +19,8 @@ Colosseum Wireless Network Emulator
    wiki/index
    scenarios/index
    faq/index
+   architecture/index
+   reservations/index
 
 Overview
 --------

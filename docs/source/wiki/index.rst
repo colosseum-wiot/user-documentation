@@ -7,28 +7,6 @@ Documentation for the Colosseum Radio Frequency (RF) Emulation Testbed.
 Contents
 ========
 
-Architecture and Overview
-------------------------
-
-.. toctree::
-   :maxdepth: 1
-   
-   colosseum_architecture
-   colosseum_development_guide
-   other_resources
-
-Platform Access
--------------
-
-.. toctree::
-   :maxdepth: 1
-   
-   upload_ssh_keys
-   ssh_proxy_setup
-   logging_into_an_srn
-   logging_into_a_gpu
-   file_upload_scp_rsync
-
 Reservations
 -----------
 
@@ -40,13 +18,6 @@ Reservations
    connecting_srn_and_gpu_reservations
    reserve_batch_jobs
    batch_mode_format
-
-Command Line Tools
-----------------
-
-.. toctree::
-   :maxdepth: 1
-   
    colosseum_cli
    save_image_snapshot
 

@@ -36,7 +36,7 @@ From the SSH Gateway, users can access the following resources:
 
 This diagram shows a logical representation of Colosseum resources available to the user perspective.
 
-.. figure:: /_static/resources/user_guide/wiki/colosseum_architecture/colosseum_logical_diagram.png
+.. figure:: /_static/resources/colosseum_architecture/colosseum_logical_diagram.png
    :alt: Colosseum Architecture Diagram
    :align: center
    

@@ -56,4 +56,9 @@ After signing up and watching the introductory webinars, we recommend the follow
    accessing_colosseum_resources
    cisco_anyconnect_remote_vpn_access
    colosseum_user_guide
+   file_upload_scp_rsync
+   logging_into_a_gpu
+   logging_into_an_srn
    quick_start_guide
+   ssh_proxy_setup
+   upload_ssh_keys
