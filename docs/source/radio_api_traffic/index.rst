@@ -11,3 +11,6 @@ Radio APIs and Traffic
    collaboration_network
    colosseum_cli
    save_image_snapshot
+   scenario_json_file_format
+   scenario_looping
+   environment_json_schema

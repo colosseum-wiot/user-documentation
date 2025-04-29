@@ -13,9 +13,6 @@ Scenarios and Blueprints
 .. toctree::
    :maxdepth: 1
    
-   scenario_json_file_format
-   scenario_looping
-   environment_json_schema
    blueprints
 
 News and Announcements
