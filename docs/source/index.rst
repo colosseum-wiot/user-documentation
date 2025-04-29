@@ -16,7 +16,6 @@ Colosseum Wireless Network Emulator
    faq
    getting_started/index
    tutorials/index
-   wiki/index
    scenarios/index
    faq/index
    architecture/index

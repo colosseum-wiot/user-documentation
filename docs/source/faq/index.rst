@@ -7,5 +7,5 @@ FAQ, Users Collaboration Group, and Office Hours
 
    users_collaboration_group
    office_hours
+   issues
    faq
-   known_issues
