@@ -35,7 +35,7 @@ See detailed help for specific commands:
 RF Scenario Control Process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The *rf* family of commands allows the user to query, start, and stop RF scenarios for the current reservation. To see a detailed description of all RF scenarios and their respective scenario IDs, see :doc:`Scenarios <scenarios_summary_list>`.
+The *rf* family of commands allows the user to query, start, and stop RF scenarios for the current reservation. To see a detailed description of all RF scenarios and their respective scenario IDs, see :doc:`Scenarios </scenarios/index>`.
 
 Get a list of available RF scenarios:
 
@@ -60,7 +60,7 @@ Start a RF scenario:
 - ``<rfid>`` is a 4-digit ID from "rf scenario list"
 - optional: ``-m <radiomap>`` is a JSON-formatted file that specifies a custom SRN-to-ScenarioNode mapping.
 
-   - A description of the JSON format can be found on :doc:`Scenario JSON File Format <scenario_json_file_format>`.
+   - A description of the JSON format can be found on :doc:`Scenario JSON File Format </radio_api_traffic/scenario_json_file_format>`.
    - If not provided, the Colosseum will automatically create a mapping based on the following rules:
 
       - There will be one to one mapping of SRN IDs to Scenario Nodes.
@@ -96,7 +96,7 @@ Get the radio map for the current/last RF scenario:
 Traffic Scenario Control Process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The *tr* family of commands allows the user to query, start, and stop Traffic scenarios for the current reservation. To see a detailed description of all Traffic scenarios and their respective scenario IDs, see :doc:`Scenarios <scenarios_summary_list>`.
+The *tr* family of commands allows the user to query, start, and stop Traffic scenarios for the current reservation. To see a detailed description of all Traffic scenarios and their respective scenario IDs, see :doc:`Scenarios </scenarios/index>`.
 
 Get a list a of available traffic scenarios:
 
@@ -115,7 +115,7 @@ Start a traffic scenario:
 - In interactive mode, all traffic starts 120 seconds after "tg start". So for example, if the mgn file specifies a start of 15.0, then traffic won't begin until 135 seconds after the user does "tg start."
 - optional: ``-m <nodemap>`` is a JSON-formatted file that specifies a custom SRN-to-ScenarioNode mapping.
 
-   - A description of the JSON format can be found on :doc:`Scenario JSON File Format <scenario_json_file_format>`.
+   - A description of the JSON format can be found on :doc:`Scenario JSON File Format </radio_api_traffic/scenario_json_file_format>`.
    - If not provided, the Colosseum will automatically create a mapping based on the following rules:
 
       - There will be one to one mapping of SRN IDs to Scenario Nodes.
