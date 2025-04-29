@@ -9,9 +9,9 @@ The secure copy (scp) utility is useful for transferring small files between a u
 Prerequisites
 ~~~~~~~~~~~~
 
-These instructions require that the user has modified their SSH config file per the `SSH Proxy Setup <https://colosseumneu.freshdesk.com/a/solutions/articles/61000253369>`_ instructions. This will allow the user to transfer files directly to the network storage directory from their local environment.
+These instructions require that the user has modified their SSH config file per the `SSH Proxy Setup </getting_started/ssh_proxy_setup>` instructions. This will allow the user to transfer files directly to the network storage directory from their local environment.
 
-The user should also have verified the path of their team folder and that it is accessible on the File Proxy by the instructions for `Accessing Colosseum Resources <https://colosseumneu.freshdesk.com/a/solutions/articles/61000253362>`_.
+The user should also have verified the path of their team folder and that it is accessible on the File Proxy by the instructions for `Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>`.
 
 Using scp
 ~~~~~~~~~
@@ -33,7 +33,7 @@ Also, similar to cp, multiple files may be transferred using single directories 
 Required File Permissions for Containers on the NAS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Don't forget to update the file permissions for new containers on the NAS as described at the bottom of `Upload an LXC Container <https://colosseumneu.freshdesk.com/a/solutions/articles/61000253372>`_
+Don't forget to update the file permissions for new containers on the NAS as described at the bottom of `Upload an LXC Container </container_mgmt/upload_lxc_container>`
 
 References
 ~~~~~~~~~~
@@ -54,9 +54,9 @@ In the case of very large file transfers, such as LXC containers, any loss of co
 Prerequisites
 ~~~~~~~~~~~~
 
-These instructions require that the user has modified their SSH config file per the `SSH Proxy Setup <https://sc2colosseum.freshdesk.com/solution/articles/22000220458-ssh-proxy-setup>`_ instructions. This will allow the user to transfer files directly to the network storage directory from their local environment.
+These instructions require that the user has modified their SSH config file per the `SSH Proxy Setup </getting_started/ssh_proxy_setup>` instructions. This will allow the user to transfer files directly to the network storage directory from their local environment.
 
-The user should also have verified the path of their team folder and that it is accessible on the File Proxy by the instructions for `Accessing Colosseum Resources <https://colosseumneu.freshdesk.com/a/solutions/articles/61000253362>`_.
+The user should also have verified the path of their team folder and that it is accessible on the File Proxy by the instructions for `Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>`.
 
 Example Usage
 ~~~~~~~~~~~~
@@ -117,7 +117,7 @@ If this transfer fails due to an interrupted connection, simply rerun the same c
 Required File Permissions for Containers on the NAS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Don't forget to update the file permissions for new containers on the NAS as described at the bottom of `Upload an LXC Container <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253372-upload-an-lxc-container>`_
+Don't forget to update the file permissions for new containers on the NAS as described at the bottom of `Upload an LXC Container </getting_started/upload_lxc_container>`
 
 References
 ~~~~~~~~~~

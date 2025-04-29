@@ -48,7 +48,7 @@ In order to push a new image, a user should follow these steps:
 
 4. Press the button "Push" to start the pushing process from the NAS to the Colosseum Docker Registry.
 
-5. If the image is pushed correctly, a successful green message will appear, and the .tar.gz file in the NAS will be deleted. If the push image encounters an error, a red message will tell the user the issue. If the user is not able to resolve the error, please, open a new ticket on FreshDesk with the red message displayed.
+5. If the image is pushed correctly, a successful green message will appear, and the .tar.gz file in the NAS will be deleted. If the push image encounters an error, a red message will tell the user the issue.
 
 Commit an image
 -------------
@@ -65,7 +65,7 @@ In order to commit a Docker image, a user should perform these steps:
 
 3. Press the button "Commit" to start the committing process.
 
-4. A successful green message will be displayed when the committing process has been terminated. The image should now be ready to be used in a new reservation or to be exported in the NAS. If the commit image encounters an error, a red message will tell the user the issue. If the user is not able to resolve the error, please, open a new ticket on FreshDesk with the red message displayed.
+4. A successful green message will be displayed when the committing process has been terminated. The image should now be ready to be used in a new reservation or to be exported in the NAS. If the commit image encounters an error, a red message will tell the user the issue.
 
 Export an image
 -------------

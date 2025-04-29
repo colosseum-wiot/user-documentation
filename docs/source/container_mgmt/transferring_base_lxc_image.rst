@@ -8,14 +8,14 @@ Prerequisites
 
 Users should have already:
 
-- Uploaded their SSH public key to their account following the instructions in `Uploaded SSH Public Keys <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253402-upload-ssh-public-keys>`_.
-- Configured their ssh config following the instructions in `SSH Proxy Setup <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253369-ssh-proxy-setup>`_.
-- Be able to access the File Proxy server within the Colosseum following the instructions in `Accessing Colosseum Resources <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing-colosseum-resources>`_.
+- Uploaded their SSH public key to their account following the instructions in `Uploaded SSH Public Keys </getting_started/upload_ssh_keys>`.
+- Configured their ssh config following the instructions in `SSH Proxy Setup </getting_started/ssh_proxy_setup>`_.
+- Be able to access the File Proxy server within the Colosseum following the instructions in `Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>`.
 
 Procedure
 --------
 
-1. SSH into the File Proxy server in order to verify the path and file name of the base image you wish to transfer. See `Accessing Colosseum Resources <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing-colosseum-resources>`_ for more detail on how to access the File Proxy.
+1. SSH into the File Proxy server in order to verify the path and file name of the base image you wish to transfer. See `Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>` for more detail on how to access the File Proxy.
 
    .. code-block:: bash
 
