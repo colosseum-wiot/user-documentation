@@ -46,7 +46,7 @@ Procedure
 
     If you are not sure of your team name, just log into the Colosseum portal and open the "Reservations" page:
 
-    .. figure:: /_static/images/user_guide/wiki/ssh_proxy_setup/team_name.png
+    .. figure:: /_static/resources/user_guide/wiki/ssh_proxy_setup/team_name.png
 
 
    .. note::

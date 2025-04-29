@@ -6,7 +6,7 @@ Once a user has :doc:`Transferred the Base LXC Image from the NAS <transferring_
 Prerequisites
 ------------
 
-This article assumes that the user has :doc:`Transferred the Base LXC Image from the NAS <transferring_base_lxc_image>` and has the base container stored on their local machine at the path ``/home/localuser/myimages/`` and the filename is ``base-image-name.tar.gz``. Replace these placeholder path and file names as appropriate for your local computer.
+This article assumes that the user has :doc:`Transferred the Base LXC Image from the NAS <transferring_base_lxc_image>` and has the base container stored on their local machine at the path ``/home/localuser/myresources/`` and the filename is ``base-image-name.tar.gz``. Replace these placeholder path and file names as appropriate for your local computer.
 
 The user must also have lxd installed on their local machine and configured appropriately. For a tutorial on this process, users can reference the following article. For additional references on setting up and using the lxd environment, see the References section below. `<https://insights.ubuntu.com/2016/03/16/lxd-2-0-installing-and-configuring-lxd-212/>`_
 
@@ -32,7 +32,7 @@ Procedure
 
    .. code-block:: bash
 
-      ~$ lxc image import /home/localuser/myimages/base-image-name.tar.gz --alias base-image-name
+      ~$ lxc image import /home/localuser/myresources/base-image-name.tar.gz --alias base-image-name
 
 4. Verify that the image is available in your lxd image repository. You should see similar output identifying that the image has been imported.
 
@@ -40,7 +40,7 @@ Procedure
 
       ~$ lxc image list
 
-   .. figure:: /_static/images/user_guide/wiki/prepare_new_lxc_container/lxc_image_list.png
+   .. figure:: /_static/resources/user_guide/wiki/prepare_new_lxc_container/lxc_image_list.png
       :alt: LXC Image List
       :align: center
 
@@ -59,7 +59,7 @@ Procedure
 
       ~$ lxc list
 
-   .. figure:: /_static/images/user_guide/wiki/prepare_new_lxc_container/lxc_list.png
+   .. figure:: /_static/resources/user_guide/wiki/prepare_new_lxc_container/lxc_list.png
       :alt: LXC List
       :align: center
 
@@ -112,13 +112,13 @@ Procedure
 
     .. code-block:: bash
 
-       ~$ lxc image export new-base-image-name /home/localuser/myimages/my-new-image
+       ~$ lxc image export new-base-image-name /home/localuser/myresources/my-new-image
 
 14. Verify that a new tarball was added to the expected path.
 
     .. code-block:: bash
 
-       ~$ ls -l /home/localuser/myimages/
+       ~$ ls -l /home/localuser/myresources/
        total 1754848
        -rwxr-xr-x 1 qkw lxd 898475854 Feb 26 17:58 base-image-name.tar.gz
        -rw------- 1 qkw lxd 898477398 Mar  1 11:19 mynewimage.tar.gz

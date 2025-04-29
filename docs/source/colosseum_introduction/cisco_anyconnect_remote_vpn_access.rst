@@ -8,14 +8,14 @@ To obtain remote VPN access, you must obtain LDAP user credentials from the Colo
 1. Open your preferred browser and visit ``<REDACTED-VPN-URL>``
 2. Specify your LDAP username/password to login to the Cisco VPN Portal.
 
-.. figure:: /_static/images/vpn/vpn_prompt.png
+.. figure:: /_static/resources/vpn/vpn_prompt.png
    :width: 300px
    :alt: VPN Prompt
    :align: center
 
 3. Download Cisco AnyConnect Secure Mobility Client and install it on your computer on the next page.
 
-.. figure:: /_static/images/vpn/vpn_download.png
+.. figure:: /_static/resources/vpn/vpn_download.png
    :width: 600px
    :alt: VPN Download Page
    :align: center

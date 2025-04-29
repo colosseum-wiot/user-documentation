@@ -70,7 +70,7 @@ In this example, a user has a single file (e.g., an LXC container) that they wis
 
 .. code-block:: bash
 
-    rsync -vP -e ssh /local/path/mycontainer.tar.gz username@file-proxy:/share/nas/the-winning-team/images/
+    rsync -vP -e ssh /local/path/mycontainer.tar.gz username@file-proxy:/share/nas/the-winning-team/resources/
 
 In this example, the components of the command line are:
 
@@ -84,7 +84,7 @@ In this example, the components of the command line are:
 * /local/path/mycontainer.tar.gz: the local path and file to transfer
 * username: the user's username on the Colosseum
 * file-proxy: the hostname of the File Proxy server, or the fully-qualified domain name or IP address of the remote server which is the destination of the upload
-* /share/nas/the-winning-team/images/: the path on the remote system to where the local directory will be transferred -- in this case, the images directory
+* /share/nas/the-winning-team/resources/: the path on the remote system to where the local directory will be transferred -- in this case, the images directory
 
 If this transfer fails due to an interrupted connection, simply rerun the same command until the transfer completes.
 
@@ -95,7 +95,7 @@ In this example, a user has a local directory with large files that they wish to
 
 .. code-block:: bash
 
-    rsync -avP -e ssh /local/path/ username@file-proxy:/share/nas/the-winning-team/images/
+    rsync -avP -e ssh /local/path/ username@file-proxy:/share/nas/the-winning-team/resources/
 
 In this example, the components of the command line are:
 
@@ -110,7 +110,7 @@ In this example, the components of the command line are:
 * /local/path/: the local directory to be transferred and mirrored to the remote host
 * username: the user's username on the Colosseum
 * file-proxy: the hostname of the File Proxy server, or the fully-qualified domain name or IP address of the remote server which is the destination of the upload
-* /share/nas/the-winning-team/images/: the path on the remote system to where the local directory will be transferred -- in this case, the images directory
+* /share/nas/the-winning-team/resources/: the path on the remote system to where the local directory will be transferred -- in this case, the images directory
 
 If this transfer fails due to an interrupted connection, simply rerun the same command until the transfer completes.
 

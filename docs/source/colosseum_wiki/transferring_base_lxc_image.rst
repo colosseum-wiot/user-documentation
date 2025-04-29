@@ -36,6 +36,6 @@ Procedure
 
    .. code-block:: bash
 
-       ~$ rsync -vP -e ssh user@file-proxy:/share/nas/common/base-1604-cuda.tar.gz /home/localuser/myimages/
+       ~$ rsync -vP -e ssh user@file-proxy:/share/nas/common/base-1604-cuda.tar.gz /home/localuser/myresources/
 
 4. You can verify that the file transfer completed successfully by following the instructions to :doc:`Verify Integrity of File Transfers <verifying_integrity>`.

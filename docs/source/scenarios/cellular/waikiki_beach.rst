@@ -43,7 +43,7 @@ The locations of the nodes in Waikiki Beach aim to reflect a generic combination
 
 Contains 8 nodes with the ship moving along the beach at 10 m/s for 40 seconds.
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/waikiki_45101.png
+.. figure:: /_static/resources/scenarios/cellular/waikiki_45101.png
    :width: 300px
    :alt: Waikiki Beach  45101
    :align: center
@@ -67,7 +67,7 @@ Contains 8 nodes with the ship moving along the beach at 10 m/s for 40 seconds.
 
 Contains the same 8 nodes as 45101, but with the ship static at the position corresponding to t=20 seconds (midpoint of trajectory).
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/waikiki_45102.png
+.. figure:: /_static/resources/scenarios/cellular/waikiki_45102.png
    :width: 300px
    :alt: Waikiki Beach  45102
    :align: center
@@ -76,7 +76,7 @@ Contains the same 8 nodes as 45101, but with the ship static at the position cor
 
 Contains 9 nodes (same 8 as 45101 plus a sensor node positioned at the same location as the BS).
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/waikiki_45103.png
+.. figure:: /_static/resources/scenarios/cellular/waikiki_45103.png
    :width: 300px
    :alt: Waikiki Beach  45103
    :align: center
@@ -85,7 +85,7 @@ Contains 9 nodes (same 8 as 45101 plus a sensor node positioned at the same loca
 
 Contains 9 nodes (same as 45103), but with the ship static at the position corresponding to t=20 seconds.
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/waikiki_45104.png
+.. figure:: /_static/resources/scenarios/cellular/waikiki_45104.png
    :width: 300px
    :alt: Waikiki Beach  45104
    :align: center

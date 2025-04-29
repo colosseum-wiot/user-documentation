@@ -89,7 +89,7 @@ Summary Diagram
 
 This diagram shows a high-level overview of the flow described above. The MGEN sender and listener are the traffic source and destination, respectively, and the SRNs in this diagram are effectively acting as routers in order to pass traffic over the RF network subnet.
 
-.. figure:: /_static/images/user_guide/wiki/traffic_generation/traffic_generation_workflow.png
+.. figure:: /_static/resources/user_guide/wiki/traffic_generation/traffic_generation_workflow.png
    :width: 600px
    :alt: Traffic Generation Workflow
    :align: center
@@ -99,7 +99,7 @@ Detailed Diagram
 
 This diagram expands on the summary diagram with more detail on an example container configuration. Users are not bound to this architecture and may implement a different solution. This is intended to provide an example with detail on the interfaces within and external to the container. Note that the tap0 interface must be created by the user within the container and the IP address assigned is defined by the users.
 
-.. figure:: /_static/images/user_guide/wiki/traffic_generation/traffic_generation_detailed.png
+.. figure:: /_static/resources/user_guide/wiki/traffic_generation/traffic_generation_detailed.png
    :width: 600px
    :alt: Traffic Generation Detailed Diagram
    :align: center

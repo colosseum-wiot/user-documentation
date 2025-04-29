@@ -43,7 +43,7 @@ The LTE network can operate both in the dedicated licensed band as well as in an
 
 The green dots represent the sample of channels for the three mobile users including the WiFi users located in the campus Krentzman quadrangle. The arrangement of the LTE eNodeB and WiFi AP in this scenario demonstrates the combination of Line of Sight (LOS) and Non-Line of Sight (NLOS) communication channel states with respect to the location of the mobile users along their trajectory.
 
-.. figure:: /_static/images/5005/5005_map.png
+.. figure:: /_static/resources/scenarios/lte-wifi/map.png
    :width: 600px
    :alt: LTE and Wi-Fi coexistence scenario at Northeastern University campus
    :align: center
@@ -78,15 +78,15 @@ The details for the mobility type, pattern and velocity can be found in the tabl
 
 .. container:: horizontal-figures
 
-   .. figure:: /_static/5005/5005_table1.png
+   .. figure:: /_static/resources/scenarios/lte-wifi/table1.png
       :width: 200px
       :alt: Scenario table 1
    
-   .. figure:: /_static/5005/5005_table2.png
+   .. figure:: /_static/resources/scenarios/lte-wifi/table2.png
       :width: 200px
       :alt: Scenario table 2
    
-   .. figure:: /_static/5005/5005_table3.png
+   .. figure:: /_static/resources/scenarios/lte-wifi/table3.png
       :width: 200px
       :alt: Scenario table 3
 
@@ -140,4 +140,4 @@ The details for the mobility type, pattern and velocity can be found in the tabl
 
 **Additional Information**
 
-See the `scenario manual </_static/docs/5005_manual.pdf>`_ for more information on how to use MATLAB to build RF scenarios for Colosseum.
+See the `scenario manual </_static/resources/scenarios/lte-wifi/manual.pdf>`_ for more information on how to use MATLAB to build RF scenarios for Colosseum.

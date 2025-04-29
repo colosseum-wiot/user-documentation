@@ -46,7 +46,7 @@ In this example, an attempt to create a snapshot with the name "image2" will fai
 
 .. code-block:: bash
 
-   user@file-proxy:~$ ls -l /share/nas/teamname/images/
+   user@file-proxy:~$ ls -l /share/nas/teamname/resources/
    total 3032938203
    -rw-r--r-- 1 armory-user teamname  902251571 May 14 01:42 image1.tar.gz
    -rw-r--r-- 1 user        teamname 1492723499 Jun 01 15:12 image2.tar.gz

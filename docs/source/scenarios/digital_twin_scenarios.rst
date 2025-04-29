@@ -41,7 +41,7 @@ This set of scenarios replicates the Arena testbed, an over-the-air 64-antenna S
 
 The locations of the 32 nodes for scenarios 45001 and 45002 have all nodes at fixed locations following the real positions in a 4x8 grid at 2.84 meters from the ground.
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/arena/arena_45001_45002.png
+.. figure:: /_static/resources/scenarios/arena/arena_45001_45002.png
    :width: 600px
    :alt: Arena 45001 45002 Node Placement
    :align: center
@@ -53,7 +53,7 @@ Scenario 45003 consists of the same 32 nodes of previous scenarios, with the add
 - 8 nodes (blue squares, 33-40) are at static locations around the environment
 - 2 nodes (41-42) are mobile nodes that traverse the lab from one side to the other at a constant speed of 1.2 m/s and take a total of 37 seconds to cover their paths
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/arena/arena_45003.png
+.. figure:: /_static/resources/scenarios/arena/arena_45003.png
    :width: 600px
    :alt: Arena 45003 Node Placement
    :align: center

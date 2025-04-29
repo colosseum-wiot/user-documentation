@@ -96,7 +96,7 @@ Here is an example call to xc3sprog with corresponding output:
 
 .. code-block:: bash
 
-    root@b-fresh:~# xc3sprog -c nexys4 -v -p 0 ./uhd-images_003.009.005-release/share/uhd/images/usrp_x310_fpga_HGS.bit
+    root@b-fresh:~# xc3sprog -c nexys4 -v -p 0 ./uhd-images_003.009.005-release/share/uhd/resources/usrp_x310_fpga_HGS.bit
     
     XC3SPROG (c) 2004-2011 xc3sprog project $Rev: 785 $ OS: Linux
     

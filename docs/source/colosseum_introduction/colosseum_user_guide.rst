@@ -98,7 +98,7 @@ To see the contents of your team network storage folder, run:
 .. code-block:: bash
 
    sdruser@the-winning-team-container-v1-srn-001:~# ls /share
-   images/   other/
+   resources/   other/
 
 Exercising SRN Capabilities
 -------------------------

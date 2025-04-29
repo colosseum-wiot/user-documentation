@@ -77,7 +77,7 @@ The following timing limits will be enforced:
 - It is recommended that status.sh be configured to return READY as soon as your radio application is prepared to enter the ACTIVE state
 - The radio has 2 minutes to log collect once stop.sh is called. If the log collect is not FINISHED within two minutes, the container will be stopped anyway (and whatever unfinished log collect is lost forever).
 
-.. figure:: /_static/images/user_guide/wiki/radio_command_and_control_c2_api/batch_workflow.png
+.. figure:: /_static/resources/user_guide/wiki/radio_command_and_control_c2_api/batch_workflow.png
    :width: 600px
    :alt: Batch Job Workflow
    :align: center

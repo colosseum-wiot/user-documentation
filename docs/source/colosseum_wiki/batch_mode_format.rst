@@ -148,7 +148,7 @@ Batch Mode Steps
 ---------------
 
 1. User creates container with radio application that complies with the Radio API as described in :doc:`Radio Command and Control (C2) API <radio_command_and_control_c2_api>`.
-2. User uploads their container to their network storage images/ folder using the File Proxy. 
+2. User uploads their container to their network storage resources/ folder using the File Proxy. 
 3. User creates a batch mode configuration file following the Batch Mode File Format and uploads it to their network storage folder as indicated in those instructions. The batch file will specify radio.conf files to be used in their containers for the batch job. These files must also be available in the network storage folder indicated in the Batch Mode File Format instructions.
 4. User configures and requests a batch job through the website by selecting the desired batch file which will be executed as resources become available.
 5. Colosseum begins the batch job, which includes the following steps:

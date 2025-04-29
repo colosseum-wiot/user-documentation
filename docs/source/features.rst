@@ -15,7 +15,7 @@ Container Environment
 
 Colosseum provides users with preconfigured and ready-to-use LXC containers for basic testing. Users can customize these containers based on their needs to develop and implement their own radio codes. These customized container images can be uploaded to the Colosseum servers, and users may choose to load the default or customized containers onto the SRNs during their reserved session.
 
-.. figure:: _static/images/containers.png
+.. figure:: _static/resources/containers.png
    :width: 500px
    :alt: Colosseum container structure
    :align: center

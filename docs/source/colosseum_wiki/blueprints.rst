@@ -24,7 +24,7 @@ To use Blueprints, users can follow the steps below (refer to Figure below):
 .. note::
    Currently, users are not able to create new blueprints. If you believe that adding a new blueprint could be beneficial, please open a ticket on FreshDesk.
 
-.. figure:: /_static/images/user_guide/wiki/blueprints/blueprints_page.png
+.. figure:: /_static/resources/user_guide/wiki/blueprints/blueprints_page.png
    :width: 600px
    :alt: Blueprints Page
    :align: center

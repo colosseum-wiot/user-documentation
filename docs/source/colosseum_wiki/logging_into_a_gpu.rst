@@ -33,7 +33,7 @@ In this example, a user may receive a reservation response indicating that GPU D
    Password:
    root@wineslab-1343:~#
 
-.. figure:: /_static/images/user_guide/wiki/logging_into_gpu/gpu_reservation.png
+.. figure:: /_static/resources/user_guide/wiki/logging_into_gpu/gpu_reservation.png
    :width: 600px
    :alt: GPU Reservation
    :align: center

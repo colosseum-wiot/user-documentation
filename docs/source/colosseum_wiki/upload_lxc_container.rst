@@ -21,7 +21,7 @@ Prior to starting an upload, users should publish and export their local contain
 Uploading an LXC Container to the Colosseum File Proxy Server
 -----------------------------------------------------------
 
-The Colosseum reservation system checks a specific directory in each team's network attached storage space for containers to use in reservations. Containers must be uploaded to /share/nas/team-name/images/ to be available to the team when making a reservation.
+The Colosseum reservation system checks a specific directory in each team's network attached storage space for containers to use in reservations. Containers must be uploaded to /share/nas/team-name/resources/ to be available to the team when making a reservation.
 
 Users may use one of the following tools to upload their container.
 
@@ -55,11 +55,11 @@ After uploading your container to your team's network storage, from the File Pro
 .. code-block:: bash
 
     ~$ ssh file-proxy
-    user@file-proxy:~$ cd /share/nas/team-name/images/
-    user@file-proxy:/share/nas/team-name/images/$ ls -l
+    user@file-proxy:~$ cd /share/nas/team-name/resources/
+    user@file-proxy:/share/nas/team-name/resources/$ ls -l
     -rw------- 1 user        team-name        493476851 May 23 17:45 my-container-v0.tar.gz
-    user@file-proxy:/share/nas/team-name/images/$ chmod 755 my-container-v0.tar.gz
-    user@file-proxy:/share/nas/team-name/images/$ ls -l
+    user@file-proxy:/share/nas/team-name/resources/$ chmod 755 my-container-v0.tar.gz
+    user@file-proxy:/share/nas/team-name/resources/$ ls -l
     -rwxr-xr-x 1 user        team-name        493476851 May 23 17:45 my-container-v0.tar.gz
 
 References

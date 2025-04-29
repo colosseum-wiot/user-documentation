@@ -119,14 +119,14 @@ RF scenario 12350 emulates a wireless environment where nodes 1 ~ 9 are in a fix
 
 The figure below shows the anechoic chamber environment together with the positions and labels of the 9 base stations and UAV-1. The trajectory of UAV-1 is also shown. UAV-1 performs an 8-shape around the two racks with goods, and it comes back to its original position.
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/anechoic_chamber/anechoic_1.png
+.. figure:: /_static/resources/scenarios/anechoic_chamber/anechoic_1.png
    :width: 300px
    :alt: Anechoic Chamber Node Placement
    :align: center
 
 The figure below shows the anechoic chamber environment together with the positions and labels of UAV-2 and UAV-3 for all scenarios, and of the three UEs of scenario 12356. The trajectories for the UAVs are also shown. UAV-2 performs a circle on the left rack, while UAV-3 makes the circle on the rack on the right. The speed of the three UAVs is the same, meaning that UAV-2 and UAV-3 perform twice their trajectories while UAV-1 makes it once.
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/anechoic_chamber/anechoic_2.png
+.. figure:: /_static/resources/scenarios/anechoic_chamber/anechoic_2.png
    :width: 300px
    :alt: Anechoic Chamber Node Placement
    :align: center

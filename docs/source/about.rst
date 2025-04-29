@@ -12,7 +12,7 @@ Each SRN provides a platform for Software Defined Radio and Machine Learning app
 * A Dell R730 Server with an NVIDIA K40M GPU
 * An Ettus Research USRP X310 Software-defined Radio equipped with a XILINX Kintex 7 FPGA
 
-.. figure:: _static/images/architecture.png
+.. figure:: _static/resources/architecture.png
    :width: 600px
    :alt: Colosseum architecture diagram
    :align: center

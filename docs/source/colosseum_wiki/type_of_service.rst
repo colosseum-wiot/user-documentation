@@ -14,7 +14,7 @@ Delivering different messages is worth a different number of points depending on
 - The upper four bits specify message precedence
 - The lower four bits specify message class
 
-.. figure:: /_static/images/user_guide/wiki/type_of_service/type_of_service.png
+.. figure:: /_static/resources/user_guide/wiki/type_of_service/type_of_service.png
    :alt: Type of Service
    :align: center
 
@@ -39,7 +39,7 @@ Traffic Class
 
 The following four traffic classes are defined for PE1.
 
-.. figure:: /_static/images/user_guide/wiki/type_of_service/traffic_class.png
+.. figure:: /_static/resources/user_guide/wiki/type_of_service/traffic_class.png
    :alt: Traffic Class
    :align: center
 
@@ -51,13 +51,13 @@ Wireshark
 
 To get wireshark to display TOS data in columns, navigate to Edit->Preferences -> Appearance ->Columns. Then add a column (the + symbol), then instruct wireshark that the field type to display is IP DSCP Values.
 
-.. figure:: /_static/images/user_guide/wiki/type_of_service/wireshark.png
+.. figure:: /_static/resources/user_guide/wiki/type_of_service/wireshark.png
    :alt: Wireshark
    :align: center
 
 To see the DSCP value, view the packet details (check View->Packet Details) and the Differentiated Services field will show the TOS field / byte in hex as shown below. For scrimmage 4. only two TOS field values are planned - 0x80 and 0x00.
 
-.. figure:: /_static/images/user_guide/wiki/type_of_service/wireshark_2.png
+.. figure:: /_static/resources/user_guide/wiki/type_of_service/wireshark_2.png
    :alt: Wireshark 2
    :align: center
 

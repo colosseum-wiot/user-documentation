@@ -46,7 +46,7 @@ The BS is located in the center of a 20x20 meters area, with the UEs randomly sc
 - BS-01 height: 3 meters
 - UE height: 1 meter
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/cellular_rural_node_placement.png
+.. figure:: /_static/resources/scenarios/cellular/cellular_rural_node_placement.png
    :width: 300px
    :alt: Cellular Rural Node Placement
    :align: center

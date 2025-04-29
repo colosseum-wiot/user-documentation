@@ -175,7 +175,7 @@ Flash the USRP with a new UHD bitfile:
 - If the ``-f <bitfile>`` option is not used, the command will flash the default USRP bitfile *usrp_x310_fpga_HGS_3_09.bit*
 - ``-f`` is optional, and specifies the name of the UHD bitfile.
 
-   - The bitfile must be hosted in ``/share/<teamname>/usrp_images/``
+   - The bitfile must be hosted in ``/share/<teamname>/usrp_resources/``
    - By default, all teams have an empty usrp_images folder in their directory
    - After the bitfile image has been copied into the usrp_images directory, the command can be simply executed as ``colosseumcli usrp flash -f usrp_x310_fpga_HG.bit``
 

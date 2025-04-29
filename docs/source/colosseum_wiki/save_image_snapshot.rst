@@ -7,7 +7,7 @@ To check the existing images, check the network storage folder:
 
 .. code-block:: bash
 
-    root@team-name-srnXXX:~/$ ls /storage/nas/team-name/images/
+    root@team-name-srnXXX:~/$ ls /storage/nas/team-name/resources/
 
 To save a snapshot, run the following command.
 

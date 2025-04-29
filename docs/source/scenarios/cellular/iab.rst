@@ -26,7 +26,7 @@ For each scenario, four different variations have been implemented:
 
 **Florence, Italy**
 
-.. figure:: /_static/images/iab/iab_map_florence.png
+.. figure:: /_static/resources/scenarios/iab/iab_map_florence.png
    :width: 300px
    :alt: IAB Florence map
    :align: center
@@ -60,7 +60,7 @@ For each scenario, four different variations have been implemented:
 
 **Milan, Italy**
 
-.. figure:: /_static/images/iab/iab_map_milan.png
+.. figure:: /_static/resources/scenarios/iab/iab_map_milan.png
    :width: 300px
    :alt: IAB Milan map
    :align: center
@@ -94,7 +94,7 @@ For each scenario, four different variations have been implemented:
 
 **Barcelona, Spain**
 
-.. figure:: /_static/images/iab/iab_map_barcelona.png
+.. figure:: /_static/resources/scenarios/iab/iab_map_barcelona.png
    :width: 300px
    :alt: IAB Barcelona map
    :align: center
@@ -128,7 +128,7 @@ For each scenario, four different variations have been implemented:
 
 **Luxembourg**
 
-.. figure:: /_static/images/iab/iab_map_luxembourg.png
+.. figure:: /_static/resources/scenarios/iab/iab_map_luxembourg.png
    :width: 300px
    :alt: IAB Luxembourg map
    :align: center

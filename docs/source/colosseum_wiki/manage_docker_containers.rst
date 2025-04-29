@@ -40,7 +40,7 @@ In order to push a new image, a user should follow these steps:
 
    .. code-block:: bash
 
-      ~$ scp <image-name>.tar.gz @file-proxy:/share/nas/<teamname>/push-images/
+      ~$ scp <image-name>.tar.gz @file-proxy:/share/nas/<teamname>/push-resources/
 
 2. Go to the `experiments images tab <https://experiments.colosseum.net/images>`_, and select the image that needs to be pushed from the drop-down menu. If the image is not present, try to refresh the page.
 
@@ -84,7 +84,7 @@ In order to export an image, a user should follow the following instructions:
 
    .. code-block:: bash
 
-      ~$ scp <username>@file-proxy:/share/nas/<teamname>/exported-images/<image-name>.tar.gz <local-path>
+      ~$ scp <username>@file-proxy:/share/nas/<teamname>/exported-resources/<image-name>.tar.gz <local-path>
 
 Delete an image
 -------------
@@ -139,7 +139,7 @@ To allow ssh via the root user, the following line can be used:
 Uploading an LXC Container to the Colosseum File Proxy Server
 -----------------------------------------------------------
 
-The Colosseum reservation system checks a specific directory in each team's network attached storage space for containers to use in reservations. Containers must be uploaded to ``/share/nas/<teamname>/images/`` to be available to the team when making a reservation.
+The Colosseum reservation system checks a specific directory in each team's network attached storage space for containers to use in reservations. Containers must be uploaded to ``/share/nas/<teamname>/resources/`` to be available to the team when making a reservation.
 
 Users may use one of the following tools to upload their container. 
 
@@ -178,11 +178,11 @@ After uploading your container to your team's network storage, from the File Pro
 .. code-block:: bash
 
    ~$ ssh file-proxy
-   user@file-proxy:~$ cd /share/nas/team-name/images/
-   user@file-proxy:/share/nas/team-name/images/$ ls -l
+   user@file-proxy:~$ cd /share/nas/team-name/resources/
+   user@file-proxy:/share/nas/team-name/resources/$ ls -l
    -rw------- 1 user        team-name        493476851 May 23 17:45 my-container-v0.tar.gz
-   user@file-proxy:/share/nas/team-name/images/$ chmod 755 my-container-v0.tar.gz
-   user@file-proxy:/share/nas/team-name/images/$ ls -l
+   user@file-proxy:/share/nas/team-name/resources/$ chmod 755 my-container-v0.tar.gz
+   user@file-proxy:/share/nas/team-name/resources/$ ls -l
    -rwxr-xr-x 1 user        team-name        493476851 May 23 17:45 my-container-v0.tar.gz
 
 References

@@ -2,7 +2,7 @@
 Colosseum Wireless Network Emulator
 ===================================
 
-.. image:: _static/images/logo.png
+.. image:: _static/resources/logo.png
    :width: 300px
    :alt: Colosseum Logo
    :align: center

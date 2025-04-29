@@ -31,7 +31,7 @@ Rome Scenarios
 
 The Rome scenario captures the dynamics of the city center of Rome, Italy. A total of 50 nodes are involved: 10 BSs and 40 UEs (4 UEs assigned to each BS randomly scattered around it). This is one of the densest scenarios in Colosseum and covers an area of 0.5 km².
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/rome.jpg
+.. figure:: /_static/resources/scenarios/cellular/rome.jpg
    :width: 300px
    :alt: Rome Cellular Scenario
    :align: center
@@ -101,7 +101,7 @@ Boston Scenarios
 
 The Boston scenario captures the dynamics of downtown Boston, U.S. A total of 50 nodes are involved: 10 BSs and 40 users. This scenario covers an area of 0.95 km².
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/boston.jpeg
+.. figure:: /_static/resources/scenarios/cellular/boston.jpeg
    :width: 300px
    :alt: Boston Cellular Scenario
    :align: center
@@ -138,7 +138,7 @@ POWDER Scenarios
 
 The POWDER scenario mirrors the setup of the rooftop BSs deployed in the POWDER platform in Salt Lake City, U.S. A total of 40 nodes are involved: 8 BSs and 32 UEs. This scenario is the sparsest with an area of 3.6 km².
 
-.. figure:: /_static/images/user_guide/wiki/scenarios/cellular/powder.jpg
+.. figure:: /_static/resources/scenarios/cellular/powder.jpg
    :width: 300px
    :alt: POWDER Testbed Cellular Scenario
    :align: center
