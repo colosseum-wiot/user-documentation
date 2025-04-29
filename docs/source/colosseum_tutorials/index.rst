@@ -1,5 +1,5 @@
-Colosseum Tutorials
-===================
+Tutorials
+=========
 
 These pages include descriptions of and links to detailed Colosseum tutorials for users.
 
