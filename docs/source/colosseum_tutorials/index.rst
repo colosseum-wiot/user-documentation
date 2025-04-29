@@ -4,10 +4,9 @@ Colosseum Tutorials
 These pages include descriptions of and links to detailed Colosseum tutorials for users.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
-   interactive_job
-   custom_containers
-   interactive_mode
-   batch_mode
+   interactive_job_tutorial
+   interactive_mode_webinar
+   custom_containers_webinar
