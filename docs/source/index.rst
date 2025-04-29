@@ -13,10 +13,8 @@ Colosseum Wireless Network Emulator
 
    about
    features
-   getting_started
    faq
-   scenarios/index
-   colosseum_introduction/index
+   getting_started/index
    colosseum_tutorials/index
    colosseum_wiki/index
    scenarios/index

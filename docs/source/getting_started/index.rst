@@ -1,4 +1,3 @@
-===============
 Getting Started
 ===============
 
@@ -49,3 +48,12 @@ After signing up and watching the introductory webinars, we recommend the follow
 
 .. tip::
    Start with simple experiments using pre-configured containers before moving on to more complex custom setups.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   accessing_colosseum_resources
+   cisco_anyconnect_remote_vpn_access
+   colosseum_user_guide
+   quick_start_guide
