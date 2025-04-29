@@ -65,7 +65,7 @@ For example, if the GPU node reserved is DGX 4, the ping should be done as follo
    64 bytes from 10.100.13.153: icmp_seq=2 ttl=59 time=0.057 ms
    64 bytes from 10.100.13.153: icmp_seq=3 ttl=59 time=0.075 ms
 
-Finally, the reachability of the GPU reservation can be tested by leveraging the netcat command which allows specifying both an IP address and a port. The port of the reservation can be retrieved on the experiment website (see :doc:`Logging into a GPU <logging_into_a_gpu>`). For example, if the reservation port is 25743, a successful test would be similar to the following:
+Finally, the reachability of the GPU reservation can be tested by leveraging the netcat command which allows specifying both an IP address and a port. The port of the reservation can be retrieved on the experiment website (see :doc:`Logging into a GPU </getting_started/logging_into_a_gpu>`). For example, if the reservation port is 25743, a successful test would be similar to the following:
 
 .. code-block:: bash
 

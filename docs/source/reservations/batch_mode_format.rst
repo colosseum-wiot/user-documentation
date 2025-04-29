@@ -31,11 +31,11 @@ The file format will be a json file with the following parameters:
    * - RFScenario
      - Integer
      - Yes
-     - The RF Scenario number to be run. Must be a valid value. :doc:`Scenarios Summary List <../../scenarios/index>`
+     - The RF Scenario number to be run. Must be a valid value. :doc:`Scenarios Summary List </scenarios/index>`
    * - TrafficScenario
      - integer
      - Yes
-     - The Traffic Scenario to be run. Must be a valid value. :doc:`Scenarios Summary List <../../scenarios/index>`
+     - The Traffic Scenario to be run. Must be a valid value. :doc:`Scenarios Summary List </scenarios/index>`
    * - NodeData
      - array(batch_srn_map)
      - Yes
@@ -71,7 +71,7 @@ Each SRN will be mapped with an entry in the NodeData array defined as:
      - Yes
      - | Determines if the collaboration gateway is connected to this node. If set to true this node will be connected to the collaboration network. 
        | The user can choose that all, some, or none of the nodes have a collaboration gateway attached.
-       | More information on :doc:`Collaboration Network <collaboration_network>` can be found in this :doc:`link <collaboration_network>`.
+       | More information on :doc:`Collaboration Network </radio_api_traffic/collaboration_network>` can be found in this :doc:`link </radio_api_traffic/collaboration_network>`.
        | Can only be true or false
    * - TrafficNode_ID
      - Integer
@@ -147,13 +147,13 @@ In batch mode, user radio applications and scenarios are controlled automaticall
 Batch Mode Steps
 ---------------
 
-1. User creates container with radio application that complies with the Radio API as described in :doc:`Radio Command and Control (C2) API <radio_command_and_control_c2_api>`.
+1. User creates container with radio application that complies with the Radio API as described in :doc:`Radio Command and Control (C2) API </radio_api_traffic/radio_command_and_control_c2_api>`.
 2. User uploads their container to their network storage resources/ folder using the File Proxy. 
 3. User creates a batch mode configuration file following the Batch Mode File Format and uploads it to their network storage folder as indicated in those instructions. The batch file will specify radio.conf files to be used in their containers for the batch job. These files must also be available in the network storage folder indicated in the Batch Mode File Format instructions.
 4. User configures and requests a batch job through the website by selecting the desired batch file which will be executed as resources become available.
 5. Colosseum begins the batch job, which includes the following steps:
 
-   a. The specified containers are loaded on the SRNs, and the colosseum.ini file is copied into the container. If specified, the radio configuration is pre-loaded into the container. For information on this, see :doc:`Radio Command and Control (C2) API <radio_command_and_control_c2_api>`.
+   a. The specified containers are loaded on the SRNs, and the colosseum.ini file is copied into the container. If specified, the radio configuration is pre-loaded into the container. For information on this, see :doc:`Radio Command and Control (C2) API </radio_api_traffic/radio_command_and_control_c2_api>`.
    b. Any scripts written by the user to execute on initialization are executed. Users are encouraged to consider making use of upstart (Reference 1) or sysvinit (Reference 2) to execute scripts at startup. This can be used to start the radio application, any supporting applications, and connect the traffic network interface to the radio application. Some useful tips to consider:
 
       * **Tip**: By placing an upstart script in /etc/init/, you can automatically execute your radio application on start. See Reference 1 and the existing scripts in /etc/init/ for examples.

@@ -103,7 +103,7 @@ Manage Reservations
 Making a Batch Mode Reservation
 -----------------------------
 
-In order to make a batch mode reservation, please upload a config file to your team's NAS. See: :doc:`Batch Mode Format and Process <batch_mode_format>`. Please note that currently it is only possible to perform batch jobs for SRNs resource and not for GPUs.
+In order to make a batch mode reservation, please upload a config file to your team's NAS. See: :doc:`Batch Mode Format and Process </reservations/batch_mode_format>`. Please note that currently it is only possible to perform batch jobs for SRNs resource and not for GPUs.
 
 .. figure:: /_static/resources/user_guide/wiki/making_a_reservation/reservation_3.png
    :width: 600px
