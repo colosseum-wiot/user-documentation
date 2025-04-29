@@ -32,10 +32,10 @@ Procedure
        -rwxr-xr-x 1 armory-user sc2-group 898543811 Feb 27 23:52 base-1604-nocuda.tar.gz
        -rwxr-xr-x 1 armory-user sc2-group 7820838925 Feb 28 01:01 base-1604-cuda.tar.gz
 
-3. Open a new terminal window from your local terminal. Transfer the desired image using its filename and path on the file-proxy server to a folder on your local machine using rsync or scp (see :doc:`File Upload by rsync and scp <file_upload_scp_rsync>`). Rysnc is recommended for large file transfers.
+3. Open a new terminal window from your local terminal. Transfer the desired image using its filename and path on the file-proxy server to a folder on your local machine using rsync or scp (see :doc:`File Upload by rsync and scp </getting_started/file_upload_scp_rsync>`). Rysnc is recommended for large file transfers.
 
    .. code-block:: bash
 
        ~$ rsync -vP -e ssh user@file-proxy:/share/nas/common/base-1604-cuda.tar.gz /home/localuser/myresources/
 
-4. You can verify that the file transfer completed successfully by following the instructions to :doc:`Verify Integrity of File Transfers <verifying_integrity>`.
+4. You can verify that the file transfer completed successfully by following the instructions to :doc:`Verify Integrity of File Transfers </container_mgmt/verifying_integrity>`.

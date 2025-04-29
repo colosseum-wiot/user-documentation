@@ -1,12 +1,12 @@
 Prepare a New LXC Container for Upload
 ==================================
 
-Once a user has :doc:`Transferred the Base LXC Image from the NAS <transferring_base_lxc_image>` to their local machine, they can use lxd to run the image, make changes, and export the image for upload to the Colosseum.
+Once a user has :doc:`Transferred the Base LXC Image from the NAS </container_mgmt/transferring_base_lxc_image>` to their local machine, they can use lxd to run the image, make changes, and export the image for upload to the Colosseum.
 
 Prerequisites
 ------------
 
-This article assumes that the user has :doc:`Transferred the Base LXC Image from the NAS <transferring_base_lxc_image>` and has the base container stored on their local machine at the path ``/home/localuser/myresources/`` and the filename is ``base-image-name.tar.gz``. Replace these placeholder path and file names as appropriate for your local computer.
+This article assumes that the user has :doc:`Transferred the Base LXC Image from the NAS </container_mgmt/transferring_base_lxc_image>` and has the base container stored on their local machine at the path ``/home/localuser/myresources/`` and the filename is ``base-image-name.tar.gz``. Replace these placeholder path and file names as appropriate for your local computer.
 
 The user must also have lxd installed on their local machine and configured appropriately. For a tutorial on this process, users can reference the following article. For additional references on setting up and using the lxd environment, see the References section below. `<https://insights.ubuntu.com/2016/03/16/lxd-2-0-installing-and-configuring-lxd-212/>`_
 
@@ -123,10 +123,10 @@ Procedure
        -rwxr-xr-x 1 qkw lxd 898475854 Feb 26 17:58 base-image-name.tar.gz
        -rw------- 1 qkw lxd 898477398 Mar  1 11:19 mynewimage.tar.gz
 
-You are now ready to :doc:`Upload an LXC Container <upload_an_lxc_container>`.  
+You are now ready to :doc:`Upload an LXC Container </container_mgmt/upload_lxc_container>`.
 
 References
 ---------
 
 - The lxd homepage can be found at: `<https://linuxcontainers.org/lxd/>`_.
-- Also, Ubuntu hosts a helpful series of blog posts introducing users to the lxd environment: `<https://insights.ubuntu.com/2016/03/14/the-lxd-2-0-story-prologue/>`_.
+- Also, Ubuntu hosts a helpful series of blog posts introducing users to the lxd environment: `<https://insights.ubuntu.com/2016/03/14/the-lxd-2-0-story-prologue/>`_

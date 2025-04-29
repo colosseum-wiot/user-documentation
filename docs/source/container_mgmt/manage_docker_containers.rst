@@ -11,10 +11,10 @@ Users can manage their Docker containers on the Experiments website from its `Im
 Prerequisites
 ------------
 
-In order to access the File Proxy server, users must have already :doc:`Uploaded SSH Public Keys <upload_ssh_keys>`.  
+In order to access the File Proxy server, users must have already :doc:`Uploaded SSH Public Keys </getting_started/upload_ssh_keys>`.
 
 .. note::
-   The user MUST have their ssh client configured per the** :doc:`SSH Proxy Setup <ssh_proxy_setup>` **instructions.
+   The user MUST have their ssh client configured per the** :doc:`SSH Proxy Setup </getting_started/ssh_proxy_setup>` **instructions.
 
 Docker Image Requirements
 -----------------------
@@ -36,7 +36,7 @@ Users should use the **Docker Save** command to export the image that needs to b
 
 In order to push a new image, a user should follow these steps:
 
-1. Copy the image to be uploaded in the Network Attached Storage (NAS) in the user's team directory "push-images". The image can be exported `using docker save on your local machine. <https://docs.docker.com/engine/reference/commandline/save/>`_ A user can use scp or rsync to upload the image by following the instruction in :doc:`File Upload by scp and rsync <file_upload_by_scp_and_rsync>`. Verify that the image has been successfully copied and that it has the proper permissions set to '755', as shown in the troubleshooting section at the of this guide. As an example, with *scp* the command should be similar to this:
+1. Copy the image to be uploaded in the Network Attached Storage (NAS) in the user's team directory "push-images". The image can be exported `using docker save on your local machine. <https://docs.docker.com/engine/reference/commandline/save/>`_ A user can use scp or rsync to upload the image by following the instruction in :doc:`File Upload by scp and rsync </getting_started/file_upload_scp_rsync>`. Verify that the image has been successfully copied and that it has the proper permissions set to '755', as shown in the troubleshooting section at the of this guide. As an example, with *scp* the command should be similar to this:
 
    .. code-block:: bash
 
@@ -55,7 +55,7 @@ Commit an image
 
 With this feature, a user can save the current status of a running Docker container of an active reservation by committing a new image into the Colosseum Docker Registry. The committed image can then be used in a new GPU reservation, or exported in the NAS with the Export feature explained below.
 
-This feature is similar to the colosseumcli snapshot used to save an LXC container, as shown in :doc:`Save an Image Snapshot using ColosseumCLI <save_an_image_snapshot_using_colosseumcli>`. If a user wants to save both the Docker and LXC containers, he should perform the saving operations separately, i.e. by using the Commit feature for Docker, and the colosseumcli snapshot for LXC.
+This feature is similar to the colosseumcli snapshot used to save an LXC container, as shown in :doc:`Save an Image Snapshot using ColosseumCLI </radio_api_traffic/save_image_snapshot>`. If a user wants to save both the Docker and LXC containers, he should perform the saving operations separately, i.e. by using the Commit feature for Docker, and the colosseumcli snapshot for LXC.
 
 In order to commit a Docker image, a user should perform these steps:
 
@@ -148,7 +148,7 @@ Rsync
 
 The rsync utility provides a means to synchronize folder content between a local and remote host. The rsync utility inspects the content in each folder, identifies the differences in that content, and reconciles those differences by transferring the file differences. Using rsync requires a more command operation configuration, but the utility is a bit more flexible than scp and users may find it useful. Additionally, with proper configuration, rsync will allow the user to resume incomplete or partial transfers.
 
-See the following instructions on how to use rsync: :doc:`File Upload by scp and rsync <file_upload_scp_rsync>`.
+See the following instructions on how to use rsync: :doc:`File Upload by scp and rsync </getting_started/file_upload_scp_rsync>`.
 
 .. note::
    rsync has the capability to remove files on either the remote or local folder as part of the reconciliation operation. If users are unfamiliar with rsync, it is recommended that they test its use on local folders which do not contain critical data. Colosseum Administrators may not be able to recover data accidentally lost.
@@ -158,10 +158,10 @@ Secure Copy (SCP)
 
 Secure copy is a version of the unix copy (cp) command that uses the SSH protocol to transfer files between remote machines. The scp utility provides a simple means to transfer one or many files between machines, leveraging the security provided by SSH. However, if the transfer is interrupted, progress is not saved, and the transfer must be started over from the beginning.
 
-See the following instructions on how to use SCP: :doc:`File Upload by scp and rsync <file_upload_scp_rsync>`.
+See the following instructions on how to use SCP: :doc:`File Upload by scp and rsync </getting_started/file_upload_scp_rsync>`.
 
 .. note::
-   If needed, users can check the integrity of their file transfer after completion. See the following instructions: :doc:`Verifying Integrity of File Transfers <verifying_integrity_of_file_transfers>`.
+   If needed, users can check the integrity of their file transfer after completion. See the following instructions: :doc:`Verifying Integrity of File Transfers </container_mgmt/verifying_integrity>`.
 
 Verifying Image Name
 ~~~~~~~~~~~~~~~~~
