@@ -23,6 +23,7 @@ Colosseum Wireless Network Emulator
    reservations/index
    srn/index
    container_mgmt/index
+   radio_api_traffic/index
 
 Overview
 --------

@@ -10,5 +10,3 @@ Reservations
    connecting_srn_and_gpu_reservations
    reserve_batch_jobs
    batch_mode_format
-   colosseum_cli
-   save_image_snapshot

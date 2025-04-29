@@ -7,18 +7,6 @@ Documentation for the Colosseum Radio Frequency (RF) Emulation Testbed.
 Contents
 ========
 
-Radio APIs and Traffic
---------------------
-
-.. toctree::
-   :maxdepth: 1
-   
-   radio_command_and_control_c2_api
-   traffic_generation
-   type_of_service
-   collaboration_network
-   collaboration_protocol_heatmap
-
 Scenarios and Blueprints
 ----------------------
 
