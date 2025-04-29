@@ -2,7 +2,7 @@ FAQ, Users Collaboration Group, and Office Hours
 ============================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    users_collaboration_group

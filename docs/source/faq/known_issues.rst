@@ -1,5 +1,5 @@
-Known Issues/Bugs
-=============
+Known Issues
+============
 
 This page documents known issues and bugs in the Colosseum system, along with their current status and available workarounds.
 
@@ -13,17 +13,17 @@ In interactive sessions competitors may have trouble starting or stopping tgen/t
 
 .. code-block:: bash
 
-   root@teamname--srnX:~/name# colosseumcli tg info
+   root@teamname-srnX:~/name# colosseumcli tg info
    +-------------+--------+
    | Field       | Value  |
    +-------------+--------+
    | Scenario id | 12692  |
    | Status      | ACTIVE |
    
-   root@teamname--srnX:~/name# colosseumcli tg stop
+   root@teamname-srnX:~/name# colosseumcli tg stop
    Traffic Stop Failed Code: 500
    
-   root@teamname--srnX:~/name# colosseumcli tg start 12692
+   root@teamname-srnX:~/name# colosseumcli tg start 12692
    Colosseum failed to start traffic scenario: 12692
    HTTP POST Failed: 409
 
