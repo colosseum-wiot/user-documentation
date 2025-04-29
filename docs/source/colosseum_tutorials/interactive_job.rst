@@ -1,24 +1,22 @@
-How to use Colosseum: First Time Users - Running a Basic Interactive Job
-===================================================================
-
-``TODO fix links``
+First Time Users: Running a Basic Interactive Job
+=================================================
 
 This page provides a hands-on practice for first time Colosseum users to gain experience with Colosseum Interactive Mode of operation. By following the steps below, users will be able to experiment with a wifi transceiver that send/receives packet through a fixed-gain RF scenario emulated by Colosseum RF channel emulator.
 
-Pre-requisites
+Prerequisites
 ~~~~~~~~~~~~~
 
-- Setup the :doc:`Colosseum VPN <../user_guide/colosseum_introduction/cisco_anyconnect_remote_vpn_access>` on your local machine
-- Users have setup their ssh keys (:doc:`Upload SSH Public Keys <../user_guide/colosseum_introduction/upload_ssh_public_keys>`) and ssh proxy (:doc:`SSH Proxy Setup <../user_guide/colosseum_introduction/ssh_proxy_setup>`)
-- Users are able to successfully access to Colosseum resources (:doc:`Accessing Colosseum Resources <../user_guide/colosseum_introduction/accessing_colosseum_resources>`), e.g., log in to the SSH gateway and file-proxy servers.
+- Setup the :doc:`Colosseum VPN </getting_started/cisco_anyconnect_remote_vpn_access>` on your local machine
+- Users have setup their ssh keys (:doc:`Upload SSH Public Keys </colosseum_wiki/upload_ssh_keys>`) and ssh proxy (:doc:`SSH Proxy Setup </colosseum_wiki/ssh_proxy_setup>`)
+- Users are able to successfully access to Colosseum resources (:doc:`Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>`), e.g., log in to the SSH gateway and file-proxy servers.
 
 Interactive Mode Experiment Practice
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Follow these steps to practice the interactive jobs.
 
 1. Login to user website at https://experiments.colosseum.net
-2. Make a reservation with the ``webinar-interactive-v1`` image for two SRNs. (see instructions on :doc:`Making a Reservation <../user_guide/colosseum_introduction/making_a_reservation>`)
+2. Make a reservation with the ``webinar-interactive-v1`` image for two SRNs. (see instructions on :doc:`Making a Reservation </colosseum_wiki/making_a_reservation_interactive_and_batch_mode>`)
 
 .. figure:: /_static/resources/user_guide/tutorial/interactive/new_reservation.png
    :width: 600px
@@ -32,7 +30,7 @@ Follow these steps to practice the interactive jobs.
    :alt: Colosseum Reservation
    :align: center
 
-At your scheduled reservation time, open two terminals and ssh into the assigned SRNs. (see instructions on :doc:`Logging into an SRN <../user_guide/colosseum_introduction/logging_into_srn>`)
+At your scheduled reservation time, open two terminals and ssh into the assigned SRNs. (see instructions on :doc:`Logging into an SRN </colosseum_wiki/logging_into_an_srn>`)
 
 .. code-block:: bash
 
@@ -45,7 +43,7 @@ and ssh into SRN-15 in another terminal by running:
    ssh wineslab-015
 
 .. note::
-   It is assumed that users have setup their ssh config files by following the instructions in :doc:`SSH Proxy Setup <../user_guide/colosseum_introduction/ssh_proxy_setup>` (see the pre-requisites section for more information).
+   It is assumed that users have setup their ssh config files by following the instructions in :doc:`SSH Proxy Setup </colosseum_wiki/ssh_proxy_setup>` (see the pre-requisites section for more information).
 
 .. note::
    The password for the ``webinar-interactive-v1`` container is ``sunflower``
@@ -55,13 +53,13 @@ and ssh into SRN-15 in another terminal by running:
    :alt: SRN Login
    :align: center
 
-4. From inside one of the containers, run the following command to start a RF scenario (:doc:`Colosseum CLI <../user_guide/colosseum_introduction/colosseum_cli>`).
+4. From inside one of the containers, run the following command to start a RF scenario (:doc:`Colosseum CLI </colosseum_wiki/colosseum_cli>`).
 
 .. code-block:: bash
 
    colosseumcli rf start 1009 -c
 
-This will engage the Colosseum RF Channel Emulator and make the necessary connections between the USRPs of the reserved nodes based on the parameters set in the specific RF scenario (:doc:`Scenarios Summary List <../user_guide/colosseum_introduction/scenarios_summary_list>`). In this practice we use the Test Scenario All Paths 0 db (1009). Users can check if the RF scenario is active and running by executing the following command:
+This will engage the Colosseum RF Channel Emulator and make the necessary connections between the USRPs of the reserved nodes based on the parameters set in the specific RF scenario (:doc:`Scenarios Page </colosseum_wiki/scenarios/index>`). In this practice we use the Test Scenario All Paths 0 db (1009). Users can check if the RF scenario is active and running by executing the following command:
 
 .. code-block:: bash
 
@@ -104,7 +102,7 @@ Hit ``Ctrl+c`` in both terminals to stop the ``uhd_tx_tone.sh`` and ``uhd_rx_fft
 
 **Optional:** Users can edit the ``uhd_tx_tone.sh`` file to change the center frequency, repeat **Step 5** and see the results.
 
-6. In both terminals, cd to ``~/interactive-scripts`` and execute the ``tap_setup.sh`` file to setup a tap interface for each of the SRNs (see :doc:`Traffic Generation <../user_guide/colosseum_introduction/traffic_generation>` for more information on routing traffic in Colosseum):
+6. In both terminals, cd to ``~/interactive-scripts`` and execute the ``tap_setup.sh`` file to setup a tap interface for each of the SRNs (see :doc:`Traffic Generation </colosseum_wiki/traffic_generation>` for more information on routing traffic in Colosseum):
 
 .. code-block:: bash
 
@@ -174,7 +172,7 @@ Hit ``Ctrl+c`` to stop the ping in both SRNs.
 
    colosseumcli tg start 10090
 
-This will engage the Colosseum Traffic Generator TGEN (:doc:`Traffic Generation <../user_guide/colosseum_introduction/traffic_generation>`) and make the necessary connections between the TGEN and the reserved nodes based on the parameters set in the specific Traffic scenario (:doc:`Scenarios Summary List <../user_guide/colosseum_introduction/scenarios_summary_list>`). In this practice we use the Test Scenario All Paths 0 db (1009). Users can check if the Traffic scenario is active and running by executing the following command:
+This will engage the Colosseum Traffic Generator TGEN (:doc:`Traffic Generation </colosseum_wiki/traffic_generation>`) and make the necessary connections between the TGEN and the reserved nodes based on the parameters set in the specific Traffic scenario (:doc:`Scenarios Summary Page </colosseum_wiki/scenarios/index>`). In this practice we use the Test Scenario All Paths 0 db (1009). Users can check if the Traffic scenario is active and running by executing the following command:
 
 .. code-block:: bash
 
