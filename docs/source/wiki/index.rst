@@ -7,35 +7,6 @@ Documentation for the Colosseum Radio Frequency (RF) Emulation Testbed.
 Contents
 ========
 
-Reservations
------------
-
-.. toctree::
-   :maxdepth: 1
-   
-   making_a_reservation_interactive_and_batch_mode
-   using_srn_reservation
-   connecting_srn_and_gpu_reservations
-   reserve_batch_jobs
-   batch_mode_format
-   colosseum_cli
-   save_image_snapshot
-
-SRN Specifications and Hardware
------------------------------
-
-.. toctree::
-   :maxdepth: 1
-   
-   srn_specs
-   gpus_of_an_srn
-   usrps
-   usrp_fpgas
-   usrp_fpga_usb_jtag_flashing
-   usrp_sample_rate_benchmarks
-   optimizing_srn_usrp_performance
-   real_time_thread_priority
-
 Container Management
 ------------------
 

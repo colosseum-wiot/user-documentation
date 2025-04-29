@@ -21,6 +21,7 @@ Colosseum Wireless Network Emulator
    faq/index
    architecture/index
    reservations/index
+   srn/index
 
 Overview
 --------
