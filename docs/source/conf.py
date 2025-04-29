@@ -6,8 +6,8 @@ project = 'Colosseum'
 copyright = '2025, Colosseum @ Northeastern University WIoT'
 author = 'Colosseum'
 
-release = ''
-version = ''
+release = '1.0'
+version = '1.0.0'
 
 # -- General configuration
 
