@@ -22,6 +22,7 @@ Colosseum Wireless Network Emulator
    architecture/index
    reservations/index
    srn/index
+   container_mgmt/index
 
 Overview
 --------
