@@ -41,14 +41,14 @@ SRN Reservation Scheduler
 
 2. Select **Reservations** to view team reservation calendar.
 
-.. figure:: /_static/resources/user_guide/wiki/making_a_reservation/reservation_1.png
+.. figure:: /_static/resources/reservations/making_a_reservation/reservation_1.png
    :width: 600px
    :alt: Colosseum Reservation
    :align: center
 
 3. Select the |plus| icon to create a new reservation and view all resource availability.
 
-.. |plus| image:: /_static/resources/user_guide/wiki/making_a_reservation/new_reservation_icon.png
+.. |plus| image:: /_static/resources/reservations/making_a_reservation/new_reservation_icon.png
    :alt: New Reservation Icon
    :width: 20px
 
@@ -77,7 +77,7 @@ Manage Reservations
 
 2. Select **Reservations**.
 
-.. figure:: /_static/resources/user_guide/wiki/making_a_reservation/reservation_2.png
+.. figure:: /_static/resources/reservations/making_a_reservation/reservation_2.png
    :width: 600px
    :alt: Colosseum Reservation
    :align: center
@@ -92,11 +92,11 @@ Manage Reservations
 
 5. By clicking the |info| button next to the reservation, the reservation info dialog will be displayed.  
 
-.. |delete| image:: /_static/resources/user_guide/wiki/making_a_reservation/delete_reservation_icon.png
+.. |delete| image:: /_static/resources/reservations/making_a_reservation/delete_reservation_icon.png
    :alt: Delete Reservation Icon
    :width: 20px
 
-.. |info| image:: /_static/resources/user_guide/wiki/making_a_reservation/info_reservation_icon.png
+.. |info| image:: /_static/resources/reservations/making_a_reservation/info_reservation_icon.png
    :alt: Info Reservation Icon
    :width: 20px
 
@@ -105,7 +105,7 @@ Making a Batch Mode Reservation
 
 In order to make a batch mode reservation, please upload a config file to your team's NAS. See: :doc:`Batch Mode Format and Process </reservations/batch_mode_format>`. Please note that currently it is only possible to perform batch jobs for SRNs resource and not for GPUs.
 
-.. figure:: /_static/resources/user_guide/wiki/making_a_reservation/reservation_3.png
+.. figure:: /_static/resources/reservations/making_a_reservation/reservation_3.png
    :width: 600px
    :alt: Colosseum Reservation
    :align: center

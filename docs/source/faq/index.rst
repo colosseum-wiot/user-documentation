@@ -1,5 +1,5 @@
-FAQ, Users Collaboration Group, and Office Hours
-============================================
+Frequently Asked Questions
+==========================
 
 .. toctree::
    :maxdepth: 1

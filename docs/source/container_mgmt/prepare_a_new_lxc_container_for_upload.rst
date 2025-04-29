@@ -40,7 +40,7 @@ Procedure
 
       ~$ lxc image list
 
-   .. figure:: /_static/resources/user_guide/wiki/prepare_new_lxc_container/lxc_image_list.png
+   .. figure:: /_static/resources/container_mgmt/prepare_new_lxc_container/lxc_image_list.png
       :alt: LXC Image List
       :align: center
 
@@ -59,7 +59,7 @@ Procedure
 
       ~$ lxc list
 
-   .. figure:: /_static/resources/user_guide/wiki/prepare_new_lxc_container/lxc_list.png
+   .. figure:: /_static/resources/container_mgmt/prepare_new_lxc_container/lxc_list.png
       :alt: LXC List
       :align: center
 
