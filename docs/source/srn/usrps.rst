@@ -39,4 +39,4 @@ At the beginning of an SRN allocation, Colosseum flashes a default UHD FPGA imag
 
 Please never flash the USRPs over Ethernet (i.e. using the uhd_image_loader utility). There is no method to power cycle the USRPs, so flashing over Ethernet will not change the FPGA image you are running.
 
-For more information on accessing the FPGA (including the only supported flashing procedure), see :doc:`USRP FPGAs <usrp_fpgas>`.
+For more information on accessing the FPGA (including the only supported flashing procedure), see :doc:`USRP FPGAs </srn/usrp_fpgas>`.

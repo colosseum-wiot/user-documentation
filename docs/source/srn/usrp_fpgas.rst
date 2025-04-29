@@ -38,7 +38,7 @@ Default USRP FPGA Image
 
 At the beginning of an SRN allocation, Colosseum flashes a default UHD FPGA image to the SRN USRP, overwriting the prior image. In order to flash the FPGA with a new image on SRN USRPs, you will need to use a USB JTAG programmer utility, which is described below. This image is available to users on the File Proxy server at: ``/share/nas/common/usrp_X310_fpga_HGS.bit``
 
-For instructions on how to access the File Proxy and copy files to your team's shared drive, see the instructions for :doc:`Accessing Colosseum Resources <../colosseum_introduction/accessing_colosseum_resources>`.
+For instructions on how to access the File Proxy and copy files to your team's shared drive, see the instructions for :doc:`Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>`.
 
 USRP FPGA Interface
 -----------------
