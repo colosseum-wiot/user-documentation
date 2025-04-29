@@ -1,7 +1,7 @@
 Save an Image Snapshot using ColosseumCLI
 =======================================
 
-Users can save the state of their image through the :doc:`Colosseum CLI <colosseum_cli>`. This will allow the user to save a new image file to the images directory on the user's team network storage.
+Users can save the state of their image through the :doc:`Colosseum CLI </radio_api_traffic/colosseum_cli>`. This will allow the user to save a new image file to the images directory on the user's team network storage.
 
 To check the existing images, check the network storage folder:
 

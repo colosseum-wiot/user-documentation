@@ -45,14 +45,14 @@ This RF scenario emulates the wireless environment in Tampa, FL. around the Tamp
 
 Two simulation runs are considered where in the first run, the moving vehicles are traveling north and south in Meridian Ave. from the Selmon Extension intersection and turn around at Channelside Dr and back to the intersection.
 
-.. figure:: /_static/resources/user_guide/wiki/scenarios/real_field/tampa_1.png
+.. figure:: /_static/resources/scenarios/real_field/tampa_1.png
    :width: 600px
    :alt: Tampa Scenario
    :align: center
 
 The second run emulates the moving vehicles proceeding east and west in Twinggs St. from the intersection to N Florida Ave. and turn around to the Channelside Dr.
 
-.. figure:: /_static/resources/user_guide/wiki/scenarios/real_field/tampa_2.png
+.. figure:: /_static/resources/scenarios/real_field/tampa_2.png
    :width: 600px
    :alt: Tampa Scenario
    :align: center
@@ -76,7 +76,7 @@ Both scenarios are obtained by Wireless InSite ray-tracer and configured as 4 re
    * - 4
      - OBU#3
 
-.. figure:: /_static/resources/user_guide/wiki/scenarios/real_field/tampa_3.png
+.. figure:: /_static/resources/scenarios/real_field/tampa_3.png
    :width: 600px
    :alt: Tampa Scenario
    :align: center

@@ -8,15 +8,15 @@ Colosseum also requires specific file permissions to be set on each container fi
 Prerequisites
 -----------
 
-In order to access the File Proxy server, users must have already :doc:`Uploaded SSH Public Keys <upload_ssh_keys>`.
+In order to access the File Proxy server, users must have already :doc:`Uploaded SSH Public Keys </getting_started/upload_ssh_keys>`.
 
 .. note::
 
-    The user MUST have their ssh client configured per the :doc:`SSH Proxy Setup <ssh_proxy_setup>` instructions.
+    The user MUST have their ssh client configured per the :doc:`SSH Proxy Setup </getting_started/ssh_proxy_setup>` instructions.
 
 Users are encouraged to verify the container operates appropriately before uploading to the Colosseum. At minimum the container must be accessible via SSH to be useful during an interactive session.
 
-Prior to starting an upload, users should publish and export their local container by following the instructions in :doc:`Prepare a New Container for Upload <prepare_a_new_lxc_container_for_upload>`
+Prior to starting an upload, users should publish and export their local container by following the instructions in :doc:`Prepare a New Container for Upload </container_mgmt/prepare_a_new_lxc_container_for_upload>`
 
 Uploading an LXC Container to the Colosseum File Proxy Server
 -----------------------------------------------------------
@@ -30,22 +30,20 @@ Rsync
 
 The rsync utility provides a means to synchronize folder content between a local and remote host. The rsync utility inspects the content in each folder, identifies the differences in that content, and reconciles those differences by transferring the file differences. Using rsync requires a more command operation configuration, but the utility is a bit more flexible than scp and users may find it useful. Additionally, with proper configuration, rsync will allow the user to resume incomplete or partial transfers.
 
-See the following instructions on how to use rsync: :doc:`File Upload by scp and rsync <file_upload_scp_rsync>`
+See the following instructions on how to use rsync: :doc:`File Upload by scp and rsync </getting_started/file_upload_scp_rsync>`.
 
 .. note::
-
-    rsync has the capability to remove files on either the remote or local folder as part of the reconciliation operation. If users are unfamiliar with rsync, it is recommended that they test its use on local folders which do not contain critical data. Colosseum Administrators may not be able to recover data accidentally lost.
+   rsync has the capability to remove files on either the remote or local folder as part of the reconciliation operation. If users are unfamiliar with rsync, it is recommended that they test its use on local folders which do not contain critical data. Colosseum Administrators may not be able to recover data accidentally lost.
 
 Secure Copy (SCP)
 ~~~~~~~~~~~~~~~
 
 Secure copy is a version of the unix copy (cp) command that uses the SSH protocol to transfer files between remote machines. The scp utility provides a simple means to transfer one or many files between machines, leveraging the security provided by SSH. However, if the transfer is interrupted, progress is not saved, and the transfer must be started over from the beginning.
 
-See the following instructions on how to use SCP: :doc:`File Upload by scp and rsync <file_upload_scp_rsync>`.
+See the following instructions on how to use SCP: :doc:`File Upload by scp and rsync </getting_started/file_upload_scp_rsync>`.
 
 .. note::
-
-    If needed, users can check the integrity of their file transfer after completion. See the following instructions: :doc:`Verifying Integrity of File Transfers <verifying_integrity>`.
+   If needed, users can check the integrity of their file transfer after completion. See the following instructions: :doc:`Verifying Integrity of File Transfers </container_mgmt/verifying_integrity>`.
 
 Verifying Container Permissions
 -----------------------------

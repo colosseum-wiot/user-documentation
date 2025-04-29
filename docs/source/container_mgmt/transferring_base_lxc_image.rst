@@ -8,14 +8,14 @@ Prerequisites
 
 Users should have already:
 
-- Uploaded their SSH public key to their account following the instructions in `Uploaded SSH Public Keys <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253402-upload-ssh-public-keys>`_.
-- Configured their ssh config following the instructions in `SSH Proxy Setup <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253369-ssh-proxy-setup>`_.
-- Be able to access the File Proxy server within the Colosseum following the instructions in `Accessing Colosseum Resources <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing-colosseum-resources>`_.
+- Uploaded their SSH public key to their account following the instructions in `Uploaded SSH Public Keys </getting_started/upload_ssh_keys>`.
+- Configured their ssh config following the instructions in `SSH Proxy Setup </getting_started/ssh_proxy_setup>`_.
+- Be able to access the File Proxy server within the Colosseum following the instructions in `Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>`.
 
 Procedure
 --------
 
-1. SSH into the File Proxy server in order to verify the path and file name of the base image you wish to transfer. See `Accessing Colosseum Resources <https://colosseumneu.freshdesk.com/support/solutions/articles/61000253362-accessing-colosseum-resources>`_ for more detail on how to access the File Proxy.
+1. SSH into the File Proxy server in order to verify the path and file name of the base image you wish to transfer. See `Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>` for more detail on how to access the File Proxy.
 
    .. code-block:: bash
 
@@ -32,10 +32,10 @@ Procedure
        -rwxr-xr-x 1 armory-user sc2-group 898543811 Feb 27 23:52 base-1604-nocuda.tar.gz
        -rwxr-xr-x 1 armory-user sc2-group 7820838925 Feb 28 01:01 base-1604-cuda.tar.gz
 
-3. Open a new terminal window from your local terminal. Transfer the desired image using its filename and path on the file-proxy server to a folder on your local machine using rsync or scp (see :doc:`File Upload by rsync and scp <file_upload_scp_rsync>`). Rysnc is recommended for large file transfers.
+3. Open a new terminal window from your local terminal. Transfer the desired image using its filename and path on the file-proxy server to a folder on your local machine using rsync or scp (see :doc:`File Upload by rsync and scp </getting_started/file_upload_scp_rsync>`). Rysnc is recommended for large file transfers.
 
    .. code-block:: bash
 
        ~$ rsync -vP -e ssh user@file-proxy:/share/nas/common/base-1604-cuda.tar.gz /home/localuser/myresources/
 
-4. You can verify that the file transfer completed successfully by following the instructions to :doc:`Verify Integrity of File Transfers <verifying_integrity>`.
+4. You can verify that the file transfer completed successfully by following the instructions to :doc:`Verify Integrity of File Transfers </container_mgmt/verifying_integrity>`.

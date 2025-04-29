@@ -9,9 +9,9 @@ Once a team's reservation becomes available, users on that team will be able to 
 Logging on to an SRN
 ~~~~~~~~~~~~~~~~~~
 
-A user can log into the SRNs specified in the reservation response only through the SSH gateway. Users must have :doc:`Uploaded SSH Public Keys <upload_ssh_keys>` to the website and are recommended to have a :doc:`SSH Proxy Setup <ssh_proxy_setup>`.
+A user can log into the SRNs specified in the reservation response only through the SSH gateway. Users must have :doc:`Uploaded SSH Public Keys </getting_started/upload_ssh_keys>` to the website and are recommended to have a :doc:`SSH Proxy Setup </getting_started/ssh_proxy_setup>`.
 
-See the instruction for :doc:`Logging into an SRN <logging_into_an_srn>`.
+See the instruction for :doc:`Logging into an SRN </getting_started/logging_into_an_srn>`.
 
 Accessing Network Storage from an SRN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,27 +35,27 @@ Exercising SRN Capabilities
 Using SRN Hardware
 ~~~~~~~~~~~~~~~~
 
-Users should consult the :doc:`Colosseum Development Guide <colosseum_development_guide>` for information on how to access the hardware available from the containers on the SRNs.
+Users should consult the :doc:`Colosseum Development Guide </architecture/colosseum_development_guide>` for information on how to access the hardware available from the containers on the SRNs.
 
 ColosseumCLI for Practice Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SRNs now support a command line interface within the container which will allow users to request and configure resources during a practice-mode reservation. If users are using an older base container or an outdated ColosseumCLI, follow the instructions for :doc:`Installing or Updating ColosseumCLI <colosseum_cli>`.
+SRNs now support a command line interface within the container which will allow users to request and configure resources during a practice-mode reservation. If users are using an older base container or an outdated ColosseumCLI, follow the instructions for :doc:`Installing or Updating ColosseumCLI </radio_api_traffic/colosseum_cli>`.
 
 The ColosseumCLI supports the following capabilities:
 
-- Practice Scenarios: :doc:`Scenarios <../../scenarios/index>`
-- MCHEM Scenario Configuration: :doc:`Colosseum CLI <colosseum_cli>`
+- Practice Scenarios: :doc:`Scenarios </scenarios/index>`
+- MCHEM Scenario Configuration: :doc:`Colosseum CLI </radio_api_traffic/colosseum_cli>`
 
 RadioAPI for Batch Mode
 ~~~~~~~~~~~~~~~~~~~~
 
-In batch mode operation, users will need to conform to the Radio Command and Control (C2) API. This mode of operation is not yet supported within the Colosseum, but users are provided a description of this API to help plan for how to develop their Batch Mode containers in the :doc:`Colosseum Development Guide <colosseum_development_guide>`.
+In batch mode operation, users will need to conform to the Radio Command and Control (C2) API. This mode of operation is not yet supported within the Colosseum, but users are provided a description of this API to help plan for how to develop their Batch Mode containers in the :doc:`Colosseum Development Guide </architecture/colosseum_development_guide>`.
 
 Traffic Generation
 ~~~~~~~~~~~~~~~
 
-At this time, traffic generation is not supported. Examples are provided in the :doc:`Colosseum Development Guide <colosseum_development_guide>` for how to integrate a traffic interface within your radio applications.
+At this time, traffic generation is not supported. Examples are provided in the :doc:`Colosseum Development Guide </architecture/colosseum_development_guide>` for how to integrate a traffic interface within your radio applications.
 
 Prior to Session Tear-Down
 ------------------------
@@ -65,9 +65,9 @@ At the end of a reservation, the user's containers are removed from the SRNs. Th
 Save Image Snapshot
 ~~~~~~~~~~~~~~~~
 
-Users can save the state of their image through the :doc:`Colosseum CLI <colosseum_cli>`. This will allow the user to save a new image file to the images directory on the user's team network storage.
+Users can save the state of their image through the :doc:`Colosseum CLI </radio_api_traffic/colosseum_cli>`. This will allow the user to save a new image file to the images directory on the user's team network storage.
 
-See the instructions to :doc:`Save an Image Snapshot <save_image_snapshot>`.
+See the instructions to :doc:`Save an Image Snapshot </radio_api_traffic/save_image_snapshot>`.
 
 Copy files to Network Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

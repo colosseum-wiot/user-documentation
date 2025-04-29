@@ -28,7 +28,7 @@ A collaboration network and server will be allocated to each reservation. The ne
 Configuration File
 ~~~~~~~~~~~~~~~~~
 
-A configuration file will be pushed into each user container that provides the IP address of the collaboration server. For information on this file, see the colosseum_config.ini section of the :doc:`Radio Command and Control (C2) API <radio_command_and_control_c2_api>`.
+A configuration file will be pushed into each user container that provides the IP address of the collaboration server. For information on this file, see the colosseum_config.ini section of the :doc:`Radio Command and Control (C2) API </radio_api_traffic/radio_command_and_control_c2_api>`.
 
 Interactive Practice Sessions
 ----------------------------
@@ -40,7 +40,7 @@ Batch Mode Sessions
 
 For batch sessions, the user must specify which nodes will have the collaboration gateway interface attached. The user can choose that all, some, or none of the nodes have a collaboration gateway attached. A single server will be allocated to the reservation and identified via both the 3rd octet of the col0 interface and the configuration file. 
 
-In order to specify that a node be attached to the collaboration network, the user should set the variable of the batch file "isGateway" to true or false. For more information on the batch file format, see the :doc:`Batch Mode Format and Process <batch_mode_format>` document.
+In order to specify that a node be attached to the collaboration network, the user should set the variable of the batch file "isGateway" to true or false. For more information on the batch file format, see the :doc:`Batch Mode Format and Process </reservations/batch_mode_format>` document.
 
 SC2 Matches and Scrimmages
 -------------------------

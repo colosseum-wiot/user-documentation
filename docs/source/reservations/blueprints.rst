@@ -22,9 +22,9 @@ To use Blueprints, users can follow the steps below (refer to Figure below):
 4. Press the "Launch Blueprint" button (see arrow number 4) to be redirected to the "Create New Reservation" page, with the number of SRNs and corresponding images pre-filled based on the chosen blueprint.
 
 .. note::
-   Currently, users are not able to create new blueprints. If you believe that adding a new blueprint could be beneficial, please open a ticket on FreshDesk.
+   Currently, users are not able to create new blueprints.
 
-.. figure:: /_static/resources/user_guide/wiki/blueprints/blueprints_page.png
+.. figure:: /_static/resources/reservations/blueprints/blueprints_page.png
    :width: 600px
    :alt: Blueprints Page
    :align: center

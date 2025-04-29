@@ -1,7 +1,7 @@
 Logging into an SRN
 ================
 
-When a team's reservation becomes available, the selected container will be loaded onto all SRNs included in the reservation. Users may then log into their team's containers running on the SRN through SSH. With the :doc:`SSH proxy setup <ssh_proxy_setup>` in place, users can use ssh directly from their local machine to access their containers. Otherwise, users will need to first ssh to the SSH gateway (:doc:`Accessing Colosseum Resources <accessing_colosseum_resources>`) and then ssh to the user account within their container.
+When a team's reservation becomes available, the selected container will be loaded onto all SRNs included in the reservation. Users may then log into their team's containers running on the SRN through SSH. With the :doc:`SSH proxy setup </getting_started/ssh_proxy_setup>` in place, users can use ssh directly from their local machine to access their containers. Otherwise, users will need to first ssh to the SSH gateway (:doc:`Accessing Colosseum Resources </getting_started/accessing_colosseum_resources>`) and then ssh to the user account within their container.
 
 The base containers provided in the Colosseum have two accounts, root and srn-user. Both accounts have a default password of "ChangeMe". Upon login, users will be prompted to change the password. **Users should log in to both accounts to ensure that passwords are changed.** After the passwords are changed, use the ColosseumCLI to 'snapshot' a new container image. The next time a reservation is made, use the new container image which will have your new passwords set.
 
@@ -21,7 +21,7 @@ The hostname convention is ``<teamname>-<srn#>`` (example: myteamname-001). At y
    Password:
    root@the-winning-team-container-v1-srn-001:~#
 
-If users are using a non-root user in their containers and wish to ssh using that account, it should be specified either on the command line or specified within the ssh config file as mentioned in the :doc:`SSH Proxy Setup <ssh_proxy_setup>`. For example, if the user is ``sdruser``, the user would connect to their container by:
+If users are using a non-root user in their containers and wish to ssh using that account, it should be specified either on the command line or specified within the ssh config file as mentioned in the :doc:`SSH Proxy Setup </getting_started/ssh_proxy_setup>`. For example, if the user is ``sdruser``, the user would connect to their container by:
 
 .. code-block:: bash
 

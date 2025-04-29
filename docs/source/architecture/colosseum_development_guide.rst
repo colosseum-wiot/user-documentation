@@ -10,14 +10,14 @@ This document provides resources to guide the user in developing software to suc
 APIs
 ----
 
-:doc:`Radio Command and Control (C2) API <radio_command_and_control_c2_api>` describes the Command and Control API that user containers must support for Batch Mode, Scrimmages, and Events
+:doc:`Radio Command and Control (C2) API </radio_api_traffic/radio_command_and_control_c2_api>` describes the Command and Control API that user containers must support for Batch Mode, Scrimmages, and Events
 
-:doc:`Collaboration Protocol Specification <collaboration_protocol_specification>` describes the information exchange to be used collaboratively by CIRNs as well as the procedures for providing updates to the Collaboration Protocol.
+:doc:`Collaboration Protocol Specification </radio_api_traffic/collaboration_protocol_specification>` describes the information exchange to be used collaboratively by CIRNs as well as the procedures for providing updates to the Collaboration Protocol.
 
 SRN Configuration
 ---------------
 
-For users seeking to replicate the SRN configuration locally, see the instructions for :doc:`Setting up and using a local SRN <setting_up_and_using_a_local_srn>`.
+For users seeking to replicate the SRN configuration locally, see the instructions for :doc:`Setting up and using a local SRN </container_mgmt/setting_up_local_srn>`.
 
 SRN Base Container Software Specifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,8 +66,8 @@ One time root password for both machines is ChangeMe. Users can change their Col
 Prerequisites
 ~~~~~~~~~~~
 
-- Users must first :doc:`Upload their SSH Public Keys <upload_ssh_public_keys>`.
-- Users should have configured their SSH client following :doc:`SSH Proxy Setup <ssh_proxy_setup>`.
+- Users must first :doc:`Upload their SSH Public Keys </getting_started/upload_ssh_keys>`.
+- Users should have configured their SSH client following :doc:`SSH Proxy Setup </getting_started/ssh_proxy_setup>`.
 - Users must know their current password.
 
 Password Change Instructions
@@ -105,7 +105,7 @@ See the man page for passwd:
 ColosseumCLI
 ~~~~~~~~~~~
 
-The base containers have the ColosseumCLI pre-installed. To install ColosseumCLI in a different container, see instructions for Installing or Updating ColosseumCLI into a container: :doc:`ColosseumCLI <colosseum_cli>`
+The base containers have the ColosseumCLI pre-installed. To install ColosseumCLI in a different container, see instructions for Installing or Updating ColosseumCLI into a container: :doc:`ColosseumCLI </radio_api_traffic/colosseum_cli>`
 
 SRN Hardware Resources
 --------------------
@@ -195,14 +195,14 @@ Ettus USRP X310 SDR
 
 The USRP attached to each SRN is connected by a 10Gbps Ethernet interface which is used for control and data transfer to and from the USRP. In the baseline configuration within the SRN, the USRP is controlled by UHD over the Ethernet interface (see References for more details on using UHD with the USRP X310). Within the Base LXC container, the USRP Ethernet interface is mapped as usrp0 and can be reached from the SRN at the default IP of 192.168.40.2.
 
-See :doc:`USRPs <usrps>` for information on interacting with the USRP X310. For additional information on using the USRPs or the UHD driver, see the information listed below in the References section.
+See :doc:`USRPs </srn/usrps>` for information on interacting with the USRP X310. For additional information on using the USRPs or the UHD driver, see the information listed below in the References section.
 
-:doc:`Radio Command and Control (C2) API <radio_command_and_control_c2_api>`
+:doc:`Radio Command and Control (C2) API </radio_api_traffic/radio_command_and_control_c2_api>`
 
 At this time we do not intend to connect the SRN USRPs to an external precision 10MHz reference or 1PPS.
 
 .. important:: 
-  DO NOT USE THE uhd_image_loader UTILITY PROVIDED IN UHD TO FLASH THE FPGA. SEE DIRECTIONS IN :doc:`USRPs <usrps>`
+  DO NOT USE THE uhd_image_loader UTILITY PROVIDED IN UHD TO FLASH THE FPGA. SEE DIRECTIONS IN :doc:`USRPs </srn/usrps>`
 
 NVIDIA GPU
 ~~~~~~~~~
@@ -213,7 +213,7 @@ Each SRN contains NVIDIA GPU resources which may be used by the users within the
 * /dev/nvidia-uvm
 * /dev/nvidiactl
 
-See :doc:`GPUs <gpus_of_an_srn>` for more information on interacting with the NVIDIA GPU. For additional information on using or the NVIDIA GPU or CUDA, see the information listed below in the References section.
+See :doc:`GPUs </srn/gpus_of_an_srn>` for more information on interacting with the NVIDIA GPU. For additional information on using or the NVIDIA GPU or CUDA, see the information listed below in the References section.
 
 On-Board Memory
 ~~~~~~~~~~~~~
@@ -244,4 +244,4 @@ This is a temporary storage drive. Users should take measures to save data (or t
 Traffic Generation
 ~~~~~~~~~~~~~~~~
 
-Should users want to test traffic input to their radio designs prior to when the Colosseum traffic generation system is online, they may use networking tools available within the container to generate basic IP traffic. For some recommendations on how to test network connectivity into your application, see :doc:`Traffic Generation <traffic_generation>`.
+Should users want to test traffic input to their radio designs prior to when the Colosseum traffic generation system is online, they may use networking tools available within the container to generate basic IP traffic. For some recommendations on how to test network connectivity into your application, see :doc:`Traffic Generation </radio_api_traffic/traffic_generation>`.

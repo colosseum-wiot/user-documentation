@@ -14,7 +14,7 @@ RadioAPI functionality has not changed with scenario looping but please note the
 
 - **Each loop has an associated start.sh and stop.sh call**.
 - **The status.sh RadioAPI script must return "READY" status for each loop iteration**. 
-- For more details on Radio API please refer to: https://colosseumneu.freshdesk.com/support/solutions/articles/61000253495-radio-command-and-control-c2-api
+- For more details on Radio API please refer to: :doc:`Radio Command and Control (C2) API </radio_api_traffic/radio_command_and_control_c2_api>`
 
 Scenario Looping Batch File Specification
 ---------------------------------------
@@ -72,4 +72,4 @@ This example batch file demonstrates the usage of the "Loopinfo" parameter:
 References
 ---------
 
-- :doc:`Batch Mode Format and Process <batch_mode_format>`
+- :doc:`Batch Mode Format and Process </reservations/batch_mode_format>`
