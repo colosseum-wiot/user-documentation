@@ -4,7 +4,7 @@ Quick Start Guide
 If this is your first time using Colosseum, it is recommended that you complete the following steps to fully configure your account and familiarize yourself with Colosseum.
 
 .. note::
-   Access to Colosseum is only available through secure user VPN tunnel into the Colosseum environment for Tenants (Clients) connectivity. Please see :doc:`Cisco AnyConnect Remote VPN Access </getting_started/cisco_anyconnect_remote_vpn_access>` for more information.
+   Access to Colosseum is only available through secure user VPN tunnel into the Colosseum environment for users connectivity. Please see the :doc:`Cisco AnyConnect Remote VPN Access </getting_started/cisco_anyconnect_remote_vpn_access>` page for more information on how to install and setup the required VPN client on your local system.
 
 1. Login to the Reservation Website at https://experiments.colosseum.net/login, using the account information you received. This username and password will be used for accessing your account from the website as well as logging in to the Colosseum File Proxy.
 
