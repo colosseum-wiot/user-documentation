@@ -9,3 +9,7 @@
     margin: 0;
     flex: 0 1 auto;
 }
+
+section p {
+  text-align: justify;
+}
