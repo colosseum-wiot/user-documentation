@@ -5,7 +5,7 @@ The Colosseum now offers secure user VPN tunnel into the Colosseum environment f
 
 To obtain remote VPN access, you must obtain LDAP user credentials from the Colosseum Sponsor before seeking access to VPN (this is the username and password provided to you when you registered your team/accounts). Once your account has been provisioned and in good standing, follow the steps outlined below to download Cisco AnyConnect VPN client for Windows/Mac or Linux OS and establish remote VPN connectivity to the environment.
 
-1. Open your preferred browser and visit ``<REDACTED-VPN-URL>``
+1. Open your preferred browser and visit the Colosseum VPN page (you should have received the address of this page via email when your account was created).
 2. Specify your LDAP username/password to login to the Cisco VPN Portal.
 
 .. figure:: /_static/resources/getting_started/vpn/vpn_prompt.png
@@ -31,8 +31,8 @@ To obtain remote VPN access, you must obtain LDAP user credentials from the Colo
    
       sudo apt-get install libcanberra-gtk-module
 
-6. Specify Colosseum VPN URL (``<REDACTED-VPN-URL>``) to connect:
-7. You will be prompted to enter your LDAP credentials (your Colosseum username and password):
+6. Specify Colosseum VPN URL to connect (you should have received this address via email when your account was created).
+7. You will be prompted to enter your LDAP credentials (your Colosseum username and password).
 8. The VPN status page should show an established VPN tunnel to the Colosseum environment.
 9. Now you can access the Colosseum Experiments website as you normally would, and SSH into the Colosseum Resources and the SRN Containers for your reservation.
 
@@ -43,7 +43,7 @@ As an alternative to the GUI client, Linux users can connect using openconnect w
 
 .. code-block:: bash
 
-   openconnect <VPN-URL> --useragent=AnyConnect --user=
+   openconnect <colosseum-vpn-address> --useragent=AnyConnect --user=<your-colosseum-username>
 
 If you decide to use the command line, please make sure that the VPN route is not the default route in the system and is not in conflict with other links (e.g., WiFi or ethernet connection).
 
