@@ -31,6 +31,15 @@ templates_path = ['_templates']
 html_static_path = ['_static']
 html_css_files = ['custom.css']
 
+# -- Logo
+
+html_logo = "_static/resources/index/logo.png"
+
+html_theme_options = {
+    "logo_only": False,
+    "display_version": True
+}
+
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
