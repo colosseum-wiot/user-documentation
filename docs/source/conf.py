@@ -33,12 +33,7 @@ html_css_files = ['custom.css']
 
 # -- Logo
 
-html_logo = "_static/resources/index/logo.png"
-
-html_theme_options = {
-    "logo_only": False,
-    "display_version": True
-}
+# html_logo = "_static/resources/index/logo.png"
 
 # -- Options for HTML output
 
