@@ -91,9 +91,14 @@ Getting Started
 .. note::
    If you are interested in becoming a Colosseum user, you can request a new team and account via the `signup form <https://docs.google.com/forms/d/e/1FAIpQLScHZ7gNyO4TB8b2xXPnbvPCSzGv22i0NREQ7p2XZyhF-dNQWA/viewform>`_
 
+Colosseum Help Desk
+-------------------
+
+In case of technical issues with Colosseum, you can open a new support ticket `here <https://colosseum-wireless.atlassian.net/servicedesk>`_.
+
 .. toctree::
    :maxdepth: 2
-   :caption: Additional Resources:
+   :caption: Additional Resources
 
    getting_started/index
    tutorials/index
