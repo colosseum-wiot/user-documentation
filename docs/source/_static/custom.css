@@ -11,5 +11,11 @@
 }
 
 section p {
-  text-align: justify;
+    text-align: justify;
+}
+
+a.icon.icon-home img.logo {
+  width: 150px;
+  height: auto;
+  max-width: 100%;
 }
