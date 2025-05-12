@@ -172,12 +172,12 @@ Flash the USRP with a new UHD bitfile:
 
 
 - The flash command flashes the USRP image with a new UHD bitfile.
-- If the ``-f <bitfile>`` option is not used, the command will flash the default USRP bitfile *usrp_x310_fpga_HGS_3_09.bit*
+- If the ``-f <bitfile>`` option is not used, the command will flash the default USRP bitfile *usrp_x310_fpga_HGS_3_09.bit* with compatibility number 19.0. For more info on compatibility numbers, please refer to the `official Ettus guide <https://files.ettus.com/manual/page_compat.html>`_).
 - ``-f`` is optional, and specifies the name of the UHD bitfile.
 
    - The bitfile must be hosted in ``/share/<teamname>/usrp_images/``
-   - By default, all teams have an ``usrp_images`` folder in their directory with some default bitfiles
-   - After the bitfile image has been copied into the usrp_images directory, the command can be simply executed as ``colosseumcli usrp flash -f usrp_x310_fpga_HG.bit``
+   - By default, all teams have an ``usrp_images`` folder in their directory containing default bitfiles, such as those with compatibility numbers 36.0 (*usrp_x310_fpga_HG_c36.bit*) and 39.0 (*usrp_x310_fpga_HG_c39.bit*)
+   - After the bitfile image has been copied into the usrp_images directory, the command can be simply executed as ``colosseumcli usrp flash -f usrp_x310_fpga_HG_c36.bit``
 
 Legacy ColosseumCLI 18.0.1 Installation (Not tested)
 -------------------------------------------------
