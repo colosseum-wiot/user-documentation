@@ -172,7 +172,7 @@ Flash the USRP with a new UHD bitfile:
 
 
 - The flash command flashes the USRP image with a new UHD bitfile.
-- If the ``-f <bitfile>`` option is not used, the command will flash the default USRP bitfile *usrp_x310_fpga_HGS_3_09.bit* with compatibility number 19.0. For more info on compatibility numbers, please refer to the `official Ettus guide <https://files.ettus.com/manual/page_compat.html>`_).
+- If the ``-f <bitfile>`` option is not used, the command will flash the default USRP bitfile *usrp_x310_fpga_HGS_3_09.bit* with compatibility number 19.0. For more info on compatibility numbers, please refer to the `official Ettus guide <https://files.ettus.com/manual/page_compat.html>`_.
 - ``-f`` is optional, and specifies the name of the UHD bitfile.
 
    - The bitfile must be hosted in ``/share/<teamname>/usrp_images/``
