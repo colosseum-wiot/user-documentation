@@ -169,22 +169,25 @@ Batch Mode Steps
 Batch Mode Timeline
 -----------------
 
-Below is an example of the batch mode timeline for a batch mode reservation which specifies a 600 second duration (28 minute total reservation). Aside from the scenario duration, all the other intervals are fixed.
+Below is an example of the batch mode timeline for a batch mode reservation which specifies a 600 second duration (20 minute total reservation). Aside from the scenario duration, all the other intervals are fixed.
 
-* **00:00 - 13:00** - Batch job starts; 13 minutes is given to flash the USRP, allocate/instantiate container, and run any initial startup scripts
-* **13:00** - Check components for readiness (assuming answer to all is yes)
+.. note::
+  We are currently testing a reduction in the batch job start time. The batch job start time has been decreased from 13 to 5 minutes to remove system overhead and speed up batch processing.
+
+* **00:00 - 5:00** - Batch job starts; 5 minutes are given to flash the USRP, allocate/instantiate container, and run any initial startup scripts
+* **5:00** - Check components for readiness (assuming answer to all is yes)
 
    * Did all the containers' status.sh report a 'ready' state? 
    * Did the RF subsystem report ready? (Colosseum internal readiness check)
    * Did the Traffic subsystem report ready? (Colosseum internal readiness check)
 
-* **13:00 - 16:00** - 3 minutes for Colosseum scenario preparation
-* **16:00** - Scenario Starts
+* **5:00 - 8:00** - 3 minutes for Colosseum scenario preparation
+* **8:00** - Scenario Starts
 
    * All SRNs receive a call to start.sh
 
-* **26:00** - Scenario Stops after 600 seconds (or after number of seconds specified in the batch file "Duration" field)
+* **18:00** - Scenario Stops after 600 seconds (or after number of seconds specified in the batch file "Duration" field)
 
    * All SRNs receive a call to stop.sh 
 
-* **26:00 - 28:00** - 2 minutes for user radio application cleanup (e.g., copying any data to /logs/)
+* **18:00 - 20:00** - 2 minutes for user radio application cleanup (e.g., copying any data to /logs/)
