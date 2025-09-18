@@ -142,3 +142,7 @@ Contains 9 nodes (same as 45103), but with the ship static at the position corre
 - D. Villa, M. Tehrani-Moayyed, P. Johari, S. Basagni, T. Melodia, "CaST: A Toolchain for Creating and Characterizing Realistic Wireless Network Emulation Scenarios", Proc. of the 16th ACM Workshop on Wireless Network Testbeds, Experimental evaluation & CHaracterization (WiNTECH 2022), Sydney, Australia, October 2022. [`pdf <https://ece.northeastern.edu/wineslab/papers/villa2022wintech.pdf>`_][`bibtex <https://ece.northeastern.edu/wineslab/wines_bibtex/villa2022wintech.txt>`_]
 
 - Unwired Labs. Accessed April 2025. OpenCelliD. https://opencellid.org.
+
+**Acknowledgments**
+
+Partially supported by Keysight Technologies and by the U.S. National Science Foundation under grants CNS-1925601 and CNS-2112471.
