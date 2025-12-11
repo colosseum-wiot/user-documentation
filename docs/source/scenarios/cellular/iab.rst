@@ -16,7 +16,7 @@ For the placement of the gNBs, a heuristic developed by Gemmi et al. has been us
 
 For generating these scenarios, first a visibility graph among all the gNB locations was computed. This allowed discerning Line-of-Sight (LoS) links from Non-Line-of-Sight (NLoS) links. Afterward, the Urban Micro (UMi) channel model documented by ETSI in the technical report TR38.901 was applied.
 
-Since Colosseum has a base pathloss of around 50dB, this value has been subtracted from the calculated pathloss to compensate. More details on this approach are available in the original research: `CaST <https://ece.northeastern.edu/wineslab/papers/villa2022wintech.pdf>`_.
+Since Colosseum has a base pathloss of around 50dB, this value has been subtracted from the calculated pathloss to compensate. More details on this approach are available in the original research: `CaST <https://dl.acm.org/doi/pdf/10.1145/3556564.3558243>`_.
 
 For each scenario, four different variations have been implemented:
 * 28GHz with all links
