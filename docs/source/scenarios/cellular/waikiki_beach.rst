@@ -137,9 +137,9 @@ Contains 9 nodes (same as 45103), but with the ship static at the position corre
 
 **References**
 
-- D. Villa, D. Uvaydov, L. Bonati, P. Johari, J. M. Jornet, and T. Melodia, "Twinning Commercial Radio Waveforms in the Colosseum Wireless Network Emulator," Proc. of the 17th ACM Workshop on Wireless Network Testbeds, Experimental evaluation & CHaracterization (WiNTECH 2023), Madrid, Spain, October 2023. [`pdf <https://ece.northeastern.edu/wineslab/papers/villa2023wintech.pdf>`_] [`bibtex <https://ece.northeastern.edu/wineslab/wines_bibtex/villa2023wintech.txt>`_]    
+- D. Villa, D. Uvaydov, L. Bonati, P. Johari, J. M. Jornet, and T. Melodia, "Twinning Commercial Radio Waveforms in the Colosseum Wireless Network Emulator," Proc. of the 17th ACM Workshop on Wireless Network Testbeds, Experimental evaluation & CHaracterization (WiNTECH 2023), Madrid, Spain, October 2023. [`pdf <https://dl.acm.org/doi/pdf/10.1145/3615453.3616519>`_]
 
-- D. Villa, M. Tehrani-Moayyed, P. Johari, S. Basagni, T. Melodia, "CaST: A Toolchain for Creating and Characterizing Realistic Wireless Network Emulation Scenarios", Proc. of the 16th ACM Workshop on Wireless Network Testbeds, Experimental evaluation & CHaracterization (WiNTECH 2022), Sydney, Australia, October 2022. [`pdf <https://ece.northeastern.edu/wineslab/papers/villa2022wintech.pdf>`_][`bibtex <https://ece.northeastern.edu/wineslab/wines_bibtex/villa2022wintech.txt>`_]
+- D. Villa, M. Tehrani-Moayyed, P. Johari, S. Basagni, T. Melodia, "CaST: A Toolchain for Creating and Characterizing Realistic Wireless Network Emulation Scenarios", Proc. of the 16th ACM Workshop on Wireless Network Testbeds, Experimental evaluation & CHaracterization (WiNTECH 2022), Sydney, Australia, October 2022. [`pdf <https://dl.acm.org/doi/pdf/10.1145/3556564.3558243>`_]
 
 - Unwired Labs. Accessed April 2025. OpenCelliD. https://opencellid.org.
 

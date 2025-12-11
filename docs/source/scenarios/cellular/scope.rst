@@ -172,6 +172,6 @@ The sequence of the nodes in the scenario follows the same pattern as the Rome s
 
 **References**
 
-- L. Bonati, S. D'Oro, S. Basagni, and T. Melodia, "SCOPE: An Open and Softwarized Prototyping Platform for NextG Systems," in Proceedings of ACM MobiSys, June 2021. [`pdf <https://ece.northeastern.edu/wineslab/papers/bonati2021scope.pdf>`_] [`bibtex <https://ece.northeastern.edu/wineslab/wines_bibtex/bonati2021scope.txt>`_]
+- L. Bonati, S. D'Oro, S. Basagni, and T. Melodia, "SCOPE: An Open and Softwarized Prototyping Platform for NextG Systems," in Proceedings of ACM MobiSys, June 2021. [`pdf <https://dl.acm.org/doi/pdf/10.1145/3458864.3466863>`_]
 
 - POWDER Deployment. 2021. https://www.powderwireless.net/area.
